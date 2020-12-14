@@ -1,18 +1,45 @@
 #!/usr/bin/env python3
+"""
+Author: Bradley Fernando
+Purpose: Uses a for-loop to print the inventory items in the host and group
+         vars. 
 
+Usage: 
+    python ex2.py
+
+Output:
+
+rtr1
+--------------------
+hostname: rtr1.sjc
+groups: ['ios']
+platform: ios
+username: admin
+password: cisco
+port: 22
+
+
+rtr2
+--------------------
+hostname: rtr2.sjc
+groups: ['ios']
+platform: ios
+username: admin
+password: cisco
+port: 22
+"""
 from nornir import InitNornir
 
 nr = InitNornir()
-nr_hosts = nr.inventory.hosts
 
-for key in nr_hosts:
+for key,val in nr.inventory.hosts.items():
     print()
-    print(nr_hosts[key])
+    print(val)
     print('-' * 20)
-    print(f"hostname: {nr_hosts[key].hostname}")
-    print(f"groups: {nr_hosts[key].groups}")
-    print(f"platform: {nr_hosts[key].platform}")
-    print(f"username: {nr_hosts[key].username}")
-    print(f"password: {nr_hosts[key].password}")
-    print(f"port: {nr_hosts[key].port}")
+    print(f"hostname: {val.hostname}")
+    print(f"groups: {val.groups}")
+    print(f"platform: {val.platform}")
+    print(f"username: {val.username}")
+    print(f"password: {val.password}")
+    print(f"port: {val.port}")
     print()
