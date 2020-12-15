@@ -1,0 +1,10 @@
+---
+rtr1:
+  hostname: rtr1.sjc
+  groups:
+    - ios
+
+rtr2:
+  hostname: rtr2.sjc
+  groups:
+    - ios
