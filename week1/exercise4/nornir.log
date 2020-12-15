@@ -28,3 +28,6 @@
 2020-12-14 17:47:48,979 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
 2020-12-14 17:48:52,802 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
 2020-12-14 17:48:57,704 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 22:00:21,822 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 22:00:41,644 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 22:06:34,462 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
