@@ -1,0 +1,12 @@
+---
+rtr1:
+  hostname: rtr1.sjc
+  groups:
+    - ios
+  data:
+    dns1: 8.8.8.8
+
+rtr2:
+  hostname: rtr2.sjc
+  groups:
+    - ios

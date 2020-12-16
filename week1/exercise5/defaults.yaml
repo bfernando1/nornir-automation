@@ -1,0 +1,6 @@
+---
+username: netops
+password: Cisco
+data:
+  dns1: 1.1.1.1
+  dns2: 1.0.0.1

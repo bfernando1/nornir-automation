@@ -1,0 +1,115 @@
+2020-12-14 17:12:33,728 -  nornir.core -     INFO -        run() - Running task 'print_hello' with args {} on 1 hosts
+2020-12-14 17:12:57,026 -  nornir.core -     INFO -        run() - Running task 'print_hello' with args {} on 1 hosts
+2020-12-14 17:15:11,253 -  nornir.core -     INFO -        run() - Running task 'first_task' with args {} on 1 hosts
+2020-12-14 17:18:28,193 -  nornir.core -     INFO -        run() - Running task 'first_task' with args {} on 1 hosts
+2020-12-14 17:18:40,873 -  nornir.core -     INFO -        run() - Running task 'first_task' with args {} on 1 hosts
+2020-12-14 17:19:05,811 -  nornir.core -     INFO -        run() - Running task 'first_task' with args {} on 1 hosts
+2020-12-14 17:27:06,596 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:27:06,597 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:27:49,049 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:27:49,050 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:34:40,166 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:34:40,167 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:36:14,932 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:36:14,933 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:39:13,867 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:39:13,869 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:39:26,101 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:40:06,648 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:40:23,119 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:41:38,486 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:41:55,803 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:42:53,697 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:43:28,376 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:44:30,970 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:45:00,309 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:47:06,618 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:47:26,065 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:47:48,979 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:48:52,802 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 17:48:57,704 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 22:00:21,822 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 22:00:41,644 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-14 22:06:34,462 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-15 16:40:33,574 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-15 16:46:10,984 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-15 16:46:10,986 - nornir.core.task -    ERROR -      start() - Host 'rtr1': task 'my_task' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise5.py", line 27, in my_task
+    print(f"dns: {task.data}")
+AttributeError: 'Task' object has no attribute 'data'
+
+2020-12-15 16:46:10,986 - nornir.core.task -    ERROR -      start() - Host 'rtr2': task 'my_task' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise5.py", line 27, in my_task
+    print(f"dns: {task.data}")
+AttributeError: 'Task' object has no attribute 'data'
+
+2020-12-15 16:48:51,207 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-15 16:48:51,208 - nornir.core.task -    ERROR -      start() - Host 'rtr1': task 'my_task' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise5.py", line 27, in my_task
+    print(f"dns: {task.default.data}")
+AttributeError: 'Task' object has no attribute 'default'
+
+2020-12-15 16:48:51,208 - nornir.core.task -    ERROR -      start() - Host 'rtr2': task 'my_task' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise5.py", line 27, in my_task
+    print(f"dns: {task.default.data}")
+AttributeError: 'Task' object has no attribute 'default'
+
+2020-12-15 16:49:01,892 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-15 16:49:01,893 - nornir.core.task -    ERROR -      start() - Host 'rtr1': task 'my_task' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise5.py", line 27, in my_task
+    print(f"dns: {task.defaults.data}")
+AttributeError: 'Task' object has no attribute 'defaults'
+
+2020-12-15 16:49:01,894 - nornir.core.task -    ERROR -      start() - Host 'rtr2': task 'my_task' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise5.py", line 27, in my_task
+    print(f"dns: {task.defaults.data}")
+AttributeError: 'Task' object has no attribute 'defaults'
+
+2020-12-15 16:56:15,590 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-15 16:56:37,614 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-15 16:57:19,632 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-15 16:58:13,852 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-15 16:58:29,021 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-15 16:58:55,555 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-15 16:58:55,558 - nornir.core.task -    ERROR -      start() - Host 'rtr1': task 'my_task' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "<ipython-input-30-cef00230fbad>", line 2, in my_task
+    print(task.host.dns1)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 168, in __getattribute__
+    return object.__getattribute__(self, name)
+AttributeError: 'Host' object has no attribute 'dns1'
+
+2020-12-15 16:58:55,558 - nornir.core.task -    ERROR -      start() - Host 'rtr2': task 'my_task' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "<ipython-input-30-cef00230fbad>", line 2, in my_task
+    print(task.host.dns1)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 168, in __getattribute__
+    return object.__getattribute__(self, name)
+AttributeError: 'Host' object has no attribute 'dns1'
+
+2020-12-15 17:04:11,857 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-15 17:07:40,873 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-15 17:08:02,377 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
+2020-12-15 17:12:57,909 -  nornir.core -     INFO -        run() - Running task 'my_task' with args {} on 2 hosts
