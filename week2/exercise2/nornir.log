@@ -92,3 +92,10 @@ netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data n
 2020-12-18 14:30:52,177 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run | inc hostname'} on 2 hosts
 2020-12-18 14:32:32,175 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run | inc hostname'} on 2 hosts
 2020-12-18 14:33:28,396 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run | inc hostname'} on 2 hosts
+2020-12-18 14:44:15,242 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run | inc hostname'} on 2 hosts
+2020-12-18 14:44:52,781 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run | inc hostname'} on 2 hosts
+2020-12-18 14:52:36,912 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run | inc hostname'} on 2 hosts
+2020-12-18 15:09:12,097 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run | inc hostname'} on 2 hosts
+2020-12-18 15:15:43,840 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run | inc hostname'} on 2 hosts
+2020-12-18 15:17:28,635 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run | inc hostname'} on 2 hosts
+2020-12-18 15:22:46,227 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run | inc hostname'} on 2 hosts

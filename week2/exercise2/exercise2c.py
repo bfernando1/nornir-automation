@@ -1,13 +1,17 @@
 #! /usr/bin/env python3
 """
 Author: Bradley Fernando
-Purpose: Performs a task that uses the Netmiko_send_command and output the object type of the 
-         result. 
-Usage: 
-    python exercise2b.py
+Purpose: Prints the object for cisco3 from the parent Netmik_send_command object
+
+Usage:
+    python exerice2c.py
 
 Output:
-    Object type: <class 'nornir.core.task.AggregatedResult'>
+
+    Object for cisco3:
+    --------------------
+    MultiResult: [Result: "netmiko_send_command"]
+    
 """
 
 import ipdb
@@ -28,11 +32,15 @@ my_results = nr.run(task=netmiko_send_command,
                  command_string="show run | inc hostname"
 )
 
-ipdb.set_trace()
+#ipdb.set_trace()
+
+# Retrieve the results from cisco3
+host_results = my_results['cisco3']
 
 print()
-print(f"Object type: {type(my_results)}")
+print("Object for cisco3:")
+print("-" * 20)
+print(host_results)
 print()
-
 
 
