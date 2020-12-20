@@ -21,23 +21,21 @@ from nornir import InitNornir
 from nornir.core.filter import F
 from nornir.plugins.tasks.networking import netmiko_send_command
 
-# Create a Nornir object 
 nr = InitNornir(config_file="../config.yaml")
-# ipdb.set_trace()
 
-# Filter for devices in both ios and group
+# Filter for devices in both ios and group.
 ios_filt = F(groups__contains="ios")
 eos_filt = F(groups__contains="eos")
 nr = nr.filter(ios_filt | eos_filt)
 
-# Send command `show ip arp` via Netmiko
+# Send command `show ip arp` via Netmiko.
 my_results = nr.run(task=netmiko_send_command,
-                 command_string="show ip arp"
+                    command_string="show ip arp"
 )
 
+# Assume that 10.220.88.1 is the gateway for all devices. 
 print()
-for key,val in my_results.items():
+for host, val in my_results.items():
     gateway = val.result.splitlines()[1].rsplit()
-    print(f"Host: {key}, Gateway: {' '.join(gateway)}")
+    print(f"Host: {host}, Gateway: {' '.join(gateway)}")
 print()
-#ipdb.set_trace()
