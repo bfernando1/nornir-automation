@@ -19,7 +19,7 @@ from nornir import InitNornir
 from nornir.core.filter import F
 
 # Create a Nornir object 
-nr = InitNornir(config_file="../config.yaml")
+nr = InitNornir(config_file="../../config.yaml")
 # ipdb.set_trace()
 
 # Filter for devices in the ios group

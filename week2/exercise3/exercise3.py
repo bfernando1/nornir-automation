@@ -1,7 +1,7 @@
 #! /usr/bin/env python3
 """
 Author: Bradley Fernando
-Purpose: Filters the output for the gateway of Cisco and Arista devices using `show ip arp` 
+Purpose: Filters the output for the gateway of Cisco and Arista devices using `show ip arp` and Netmiko
 
 Usage: 
     python exercise3.py      
@@ -21,7 +21,7 @@ from nornir import InitNornir
 from nornir.core.filter import F
 from nornir.plugins.tasks.networking import netmiko_send_command
 
-nr = InitNornir(config_file="../config.yaml")
+nr = InitNornir(config_file="../../config.yaml")
 
 # Filter for devices in both ios and group.
 ios_filt = F(groups__contains="ios")
