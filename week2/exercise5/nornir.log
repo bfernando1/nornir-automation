@@ -1,0 +1,1 @@
+2020-12-21 22:04:48,326 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int brief'} on 2 hosts
