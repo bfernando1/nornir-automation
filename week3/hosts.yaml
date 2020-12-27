@@ -27,5 +27,5 @@ arista3:
     role: AGG
   port: 8443
   groups:
-    - eos
     - sea
+    - eos

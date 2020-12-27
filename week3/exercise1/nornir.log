@@ -1,0 +1,311 @@
+2020-12-26 22:41:54,144 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-26 22:42:39,084 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-26 22:42:58,613 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-26 22:43:48,340 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-27 08:21:10,704 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-27 08:22:04,607 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-27 08:22:04,608 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 8, in print_timezone
+    print(task.host.data.timezone)
+AttributeError: 'dict' object has no attribute 'timezone'
+
+2020-12-27 08:22:04,609 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 8, in print_timezone
+    print(task.host.data.timezone)
+AttributeError: 'dict' object has no attribute 'timezone'
+
+2020-12-27 08:22:04,609 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 8, in print_timezone
+    print(task.host.data.timezone)
+AttributeError: 'dict' object has no attribute 'timezone'
+
+2020-12-27 08:37:59,035 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-27 08:38:35,772 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-27 08:39:21,646 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-27 08:40:59,806 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-27 08:42:12,364 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-27 08:42:12,365 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 8, in print_timezone
+    print(nr.inventory.hosts[task.host])
+KeyError: Host: arista1
+
+2020-12-27 08:42:12,365 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 8, in print_timezone
+    print(nr.inventory.hosts[task.host])
+KeyError: Host: arista2
+
+2020-12-27 08:42:12,366 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 8, in print_timezone
+    print(nr.inventory.hosts[task.host])
+KeyError: Host: arista3
+
+2020-12-27 08:42:52,025 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-27 08:42:52,026 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(nr.inventory.hosts[host])
+KeyError: Host: arista1
+
+2020-12-27 08:42:52,026 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(nr.inventory.hosts[host])
+KeyError: Host: arista2
+
+2020-12-27 08:42:52,026 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(nr.inventory.hosts[host])
+KeyError: Host: arista3
+
+2020-12-27 08:43:15,487 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-27 08:43:15,488 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(nr.inventory.hosts[host]._resolve_data())
+KeyError: Host: arista1
+
+2020-12-27 08:43:15,489 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(nr.inventory.hosts[host]._resolve_data())
+KeyError: Host: arista2
+
+2020-12-27 08:43:15,489 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(nr.inventory.hosts[host]._resolve_data())
+KeyError: Host: arista3
+
+2020-12-27 08:43:31,679 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-27 08:43:46,408 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-27 08:44:02,558 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-27 08:44:02,559 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(nr.inventory.hosts['arista1']._resolve_data().timezone)
+AttributeError: 'dict' object has no attribute 'timezone'
+
+2020-12-27 08:44:02,559 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(nr.inventory.hosts['arista1']._resolve_data().timezone)
+AttributeError: 'dict' object has no attribute 'timezone'
+
+2020-12-27 08:44:02,560 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(nr.inventory.hosts['arista1']._resolve_data().timezone)
+AttributeError: 'dict' object has no attribute 'timezone'
+
+2020-12-27 08:49:07,258 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-27 08:49:07,259 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(f"{nr.inventory.hosts['{host}']._resolve_data().timezone}")
+KeyError: '{host}'
+
+2020-12-27 08:49:07,259 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(f"{nr.inventory.hosts['{host}']._resolve_data().timezone}")
+KeyError: '{host}'
+
+2020-12-27 08:49:07,260 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(f"{nr.inventory.hosts['{host}']._resolve_data().timezone}")
+KeyError: '{host}'
+
+2020-12-27 08:50:52,743 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-27 08:50:52,744 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(nr.inventory.hosts[host]._resolve_data().timezone)
+KeyError: Host: arista1
+
+2020-12-27 08:50:52,744 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(nr.inventory.hosts[host]._resolve_data().timezone)
+KeyError: Host: arista2
+
+2020-12-27 08:50:52,745 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(nr.inventory.hosts[host]._resolve_data().timezone)
+KeyError: Host: arista3
+
+2020-12-27 08:51:46,860 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-27 08:51:46,861 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 8, in print_timezone
+    host = "'" + host + "'"
+TypeError: can only concatenate str (not "Host") to str
+
+2020-12-27 08:51:46,861 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 8, in print_timezone
+    host = "'" + host + "'"
+TypeError: can only concatenate str (not "Host") to str
+
+2020-12-27 08:51:46,861 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 8, in print_timezone
+    host = "'" + host + "'"
+TypeError: can only concatenate str (not "Host") to str
+
+2020-12-27 08:53:34,780 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-27 08:53:34,781 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 8, in print_timezone
+    host = "'" + host + "'"
+TypeError: can only concatenate str (not "Host") to str
+
+2020-12-27 08:53:34,781 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 8, in print_timezone
+    host = "'" + host + "'"
+TypeError: can only concatenate str (not "Host") to str
+
+2020-12-27 08:53:34,782 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 8, in print_timezone
+    host = "'" + host + "'"
+TypeError: can only concatenate str (not "Host") to str
+
+2020-12-27 08:53:46,663 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-27 08:53:46,664 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(nr.inventory.hosts[host]._resolve_data().timezone)
+KeyError: Host: arista1
+
+2020-12-27 08:53:46,664 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(nr.inventory.hosts[host]._resolve_data().timezone)
+KeyError: Host: arista2
+
+2020-12-27 08:53:46,665 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(nr.inventory.hosts[host]._resolve_data().timezone)
+KeyError: Host: arista3
+
+2020-12-27 09:08:35,314 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-27 09:08:35,315 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(nr.inventory.hosts[host]._resolve_data()['timezone'])
+KeyError: Host: arista1
+
+2020-12-27 09:08:35,315 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(nr.inventory.hosts[host]._resolve_data()['timezone'])
+KeyError: Host: arista2
+
+2020-12-27 09:08:35,316 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(nr.inventory.hosts[host]._resolve_data()['timezone'])
+KeyError: Host: arista3
+
+2020-12-27 09:16:59,475 -  nornir.core -     INFO -        run() - Running task 'print_timezone' with args {} on 3 hosts
+2020-12-27 09:16:59,476 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(nr.inventory.hosts[host]['timezone'])
+KeyError: Host: arista1
+
+2020-12-27 09:16:59,477 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(nr.inventory.hosts[host]['timezone'])
+KeyError: Host: arista2
+
+2020-12-27 09:16:59,477 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'print_timezone' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "./exercise1b.py", line 9, in print_timezone
+    print(nr.inventory.hosts[host]['timezone'])
+KeyError: Host: arista3
+

@@ -11,6 +11,7 @@ eos:
 sea:
   data:
     state: WA
+    timezone: PST
 
 sfo:
   data:
