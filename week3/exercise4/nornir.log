@@ -1,0 +1,308 @@
+2020-12-30 21:54:24,279 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-30 22:02:11,076 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-30 22:02:12,243 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/packet.py", line 301, in read_all
+    x = self.__socket.recv(n)
+OSError: [Errno 9] Bad file descriptor
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 951, in establish_connection
+    term="vt100", width=width, height=height
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 547, in invoke_shell
+    chan.invoke_shell()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/channel.py", line 72, in _check
+    return func(self, *args, **kwds)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/channel.py", line 230, in invoke_shell
+    self._wait_for_event()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/channel.py", line 1226, in _wait_for_event
+    raise e
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 2055, in run
+    ptype, m = self.packetizer.read_message()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/packet.py", line 459, in read_message
+    header = self.read_all(self.__block_size_in, check_rekey=True)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/packet.py", line 319, in read_all
+    raise EOFError()
+EOFError
+
+2020-12-30 22:02:12,303 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/packet.py", line 301, in read_all
+    x = self.__socket.recv(n)
+OSError: [Errno 9] Bad file descriptor
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 951, in establish_connection
+    term="vt100", width=width, height=height
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 545, in invoke_shell
+    chan = self._transport.open_session()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 879, in open_session
+    timeout=timeout,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1006, in open_channel
+    raise e
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 2055, in run
+    ptype, m = self.packetizer.read_message()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/packet.py", line 459, in read_message
+    header = self.read_all(self.__block_size_in, check_rekey=True)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/packet.py", line 319, in read_all
+    raise EOFError()
+EOFError
+
+2020-12-30 22:02:12,305 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1528, in auth_password
+    return self.auth_interactive(username, handler)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1633, in auth_interactive
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/auth_handler.py", line 236, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1531, in auth_password
+    raise e
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.BadAuthenticationType: Bad authentication type; allowed types: ['publickey', 'keyboard-interactive']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 944, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication failure: unable to connect arista_eos arista4.lasthop.io:22
+Bad authentication type; allowed types: ['publickey', 'keyboard-interactive']
+
+2020-12-30 22:10:31,732 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-30 22:12:24,683 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-30 22:26:11,707 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-30 22:48:03,585 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-30 22:48:03,927 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 2211, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/packet.py", line 607, in _read_timeout
+    x = self.__socket.recv(128)
+OSError: [Errno 9] Bad file descriptor
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 406, in connect
+    t.start_client(timeout=timeout)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 660, in start_client
+    raise e
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 2039, in run
+    self._check_banner()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 2216, in _check_banner
+    "Error reading SSH protocol banner" + str(e)
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner[Errno 9] Bad file descriptor
+
+2020-12-30 22:48:03,927 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 2211, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/packet.py", line 607, in _read_timeout
+    x = self.__socket.recv(128)
+OSError: [Errno 9] Bad file descriptor
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 406, in connect
+    t.start_client(timeout=timeout)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 660, in start_client
+    raise e
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 2039, in run
+    self._check_banner()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 2216, in _check_banner
+    "Error reading SSH protocol banner" + str(e)
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner[Errno 9] Bad file descriptor
+
+2020-12-30 22:48:03,935 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 2211, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/packet.py", line 607, in _read_timeout
+    x = self.__socket.recv(128)
+OSError: [Errno 9] Bad file descriptor
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 406, in connect
+    t.start_client(timeout=timeout)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 660, in start_client
+    raise e
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 2039, in run
+    self._check_banner()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 2216, in _check_banner
+    "Error reading SSH protocol banner" + str(e)
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner[Errno 9] Bad file descriptor
+
+2020-12-30 22:48:03,936 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 2211, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/packet.py", line 607, in _read_timeout
+    x = self.__socket.recv(128)
+OSError: [Errno 9] Bad file descriptor
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 406, in connect
+    t.start_client(timeout=timeout)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 660, in start_client
+    raise e
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 2039, in run
+    self._check_banner()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 2216, in _check_banner
+    "Error reading SSH protocol banner" + str(e)
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner[Errno 9] Bad file descriptor
+
+2020-12-30 22:48:58,262 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
