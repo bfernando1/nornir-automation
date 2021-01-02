@@ -306,3 +306,191 @@ Traceback (most recent call last):
 paramiko.ssh_exception.SSHException: Error reading SSH protocol banner[Errno 9] Bad file descriptor
 
 2020-12-30 22:48:58,262 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-30 22:53:05,959 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-30 22:54:01,859 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-30 22:54:53,761 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-30 22:56:39,803 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-30 22:56:59,101 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-30 23:11:03,812 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-30 23:13:45,519 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-30 23:15:16,046 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 08:36:19,477 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 09:10:52,881 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 09:13:11,529 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 09:16:38,304 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 09:18:00,956 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 09:20:34,315 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 09:22:14,135 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 09:22:18,440 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 347, in _open
+    self._try_session_preparation()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 772, in _try_session_preparation
+    self.session_preparation()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 10, in session_preparation
+    self.set_base_prompt()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 1106, in set_base_prompt
+    prompt = self.find_prompt(delay_factor=delay_factor)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 1121, in find_prompt
+    self.write_channel(self.RETURN)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 450, in write_channel
+    self._write_channel(out_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 408, in _write_channel
+    self.remote_conn.sendall(write_bytes(out_data, encoding=self.encoding))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/channel.py", line 846, in sendall
+    sent = self.send(s)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/channel.py", line 801, in send
+    return self._send(s, m)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/channel.py", line 1198, in _send
+    raise socket.error("Socket is closed")
+OSError: Socket is closed
+
+2020-12-31 09:22:18,528 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 347, in _open
+    self._try_session_preparation()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 772, in _try_session_preparation
+    self.session_preparation()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 10, in session_preparation
+    self.set_base_prompt()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 1106, in set_base_prompt
+    prompt = self.find_prompt(delay_factor=delay_factor)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 1121, in find_prompt
+    self.write_channel(self.RETURN)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 450, in write_channel
+    self._write_channel(out_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 408, in _write_channel
+    self.remote_conn.sendall(write_bytes(out_data, encoding=self.encoding))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/channel.py", line 846, in sendall
+    sent = self.send(s)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/channel.py", line 801, in send
+    return self._send(s, m)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/channel.py", line 1198, in _send
+    raise socket.error("Socket is closed")
+OSError: Socket is closed
+
+2020-12-31 09:22:18,728 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 347, in _open
+    self._try_session_preparation()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 772, in _try_session_preparation
+    self.session_preparation()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 10, in session_preparation
+    self.set_base_prompt()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 1106, in set_base_prompt
+    prompt = self.find_prompt(delay_factor=delay_factor)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 1121, in find_prompt
+    self.write_channel(self.RETURN)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 450, in write_channel
+    self._write_channel(out_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 408, in _write_channel
+    self.remote_conn.sendall(write_bytes(out_data, encoding=self.encoding))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/channel.py", line 846, in sendall
+    sent = self.send(s)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/channel.py", line 801, in send
+    return self._send(s, m)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/channel.py", line 1198, in _send
+    raise socket.error("Socket is closed")
+OSError: Socket is closed
+
+2020-12-31 09:22:18,817 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 347, in _open
+    self._try_session_preparation()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 772, in _try_session_preparation
+    self.session_preparation()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 10, in session_preparation
+    self.set_base_prompt()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 1106, in set_base_prompt
+    prompt = self.find_prompt(delay_factor=delay_factor)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 1121, in find_prompt
+    self.write_channel(self.RETURN)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 450, in write_channel
+    self._write_channel(out_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 408, in _write_channel
+    self.remote_conn.sendall(write_bytes(out_data, encoding=self.encoding))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/channel.py", line 846, in sendall
+    sent = self.send(s)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/channel.py", line 801, in send
+    return self._send(s, m)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/channel.py", line 1198, in _send
+    raise socket.error("Socket is closed")
+OSError: Socket is closed
+
+2020-12-31 09:23:36,622 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 09:24:22,564 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 09:32:04,565 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 09:35:38,937 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 09:36:34,847 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 09:39:21,107 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 09:39:48,373 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 09:46:54,246 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 09:47:39,229 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 09:52:49,587 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 09:53:30,869 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 09:56:37,646 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 09:59:22,711 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 10:05:39,503 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 10:10:21,499 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 10:10:44,745 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 10:11:12,508 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2020-12-31 10:24:42,496 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2021-01-01 20:19:01,133 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2021-01-01 20:21:17,629 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
+2021-01-01 20:21:42,779 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface status', 'use_textfsm': True} on 4 hosts
