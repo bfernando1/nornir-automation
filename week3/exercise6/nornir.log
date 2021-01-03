@@ -1,0 +1,44 @@
+2021-01-03 06:50:11,838 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2021-01-03 06:54:04,376 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'running'} on 2 hosts
+2021-01-03 07:02:34,195 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 07:04:27,503 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 07:04:52,089 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 07:08:39,614 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 07:09:13,069 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 07:09:45,013 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 07:11:21,351 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 07:12:41,885 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 07:15:44,115 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 07:16:16,517 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise6a.py", line 16, in get_running_config
+    print_result(results)
+  File "exercise6a.py", line 16, in get_running_config
+    print_result(results)
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-03 07:16:21,811 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise6a.py", line 16, in get_running_config
+    print_result(results)
+  File "exercise6a.py", line 16, in get_running_config
+    print_result(results)
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-03 07:18:33,360 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'running'} on 2 hosts
+2021-01-03 07:21:42,939 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 07:23:11,745 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 07:31:14,701 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 07:35:00,020 -  nornir.core -     INFO -        run() - Running task 'get_all_config' with args {} on 2 hosts
