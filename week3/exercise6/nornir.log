@@ -42,3 +42,306 @@ bdb.BdbQuit
 2021-01-03 07:23:11,745 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
 2021-01-03 07:31:14,701 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
 2021-01-03 07:35:00,020 -  nornir.core -     INFO -        run() - Running task 'get_all_config' with args {} on 2 hosts
+2021-01-03 07:40:40,532 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 08:05:04,065 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 08:05:51,323 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 08:06:35,897 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 08:06:44,182 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 08:06:58,902 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 08:09:54,184 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 08:17:37,255 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'running'}}} on 2 hosts
+2021-01-03 18:26:05,454 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': ['running', 'startup']}}} on 2 hosts
+2021-01-03 18:26:05,892 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 533, in get_config
+    if retrieve.lower() in ("running", "all"):
+AttributeError: 'list' object has no attribute 'lower'
+
+2021-01-03 18:26:05,930 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 533, in get_config
+    if retrieve.lower() in ("running", "all"):
+AttributeError: 'list' object has no attribute 'lower'
+
+2021-01-03 18:27:17,962 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': ['running']}}} on 2 hosts
+2021-01-03 18:27:18,287 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 533, in get_config
+    if retrieve.lower() in ("running", "all"):
+AttributeError: 'list' object has no attribute 'lower'
+
+2021-01-03 18:27:18,295 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 533, in get_config
+    if retrieve.lower() in ("running", "all"):
+AttributeError: 'list' object has no attribute 'lower'
+
+2021-01-03 18:28:16,539 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'running'}}} on 2 hosts
+2021-01-03 18:30:08,773 -  nornir.core -     INFO -        run() - Running task 'get_all_config' with args {} on 2 hosts
+2021-01-03 18:32:09,555 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts', 'startup'], 'getters_options': {'config': {'retrieve': 'running'}, 'startup': {'retrieve': 'startup'}}} on 2 hosts
+2021-01-03 18:32:17,898 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 60, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'NXOSDriver' object has no attribute 'get_startup'
+
+2021-01-03 18:32:18,994 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 60, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'NXOSDriver' object has no attribute 'get_startup'
+
+2021-01-03 18:39:59,447 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts', 'startup'], 'getters_options': {'config': {'retrieve': ['running', 'startup']}}} on 2 hosts
+2021-01-03 18:39:59,749 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 533, in get_config
+    if retrieve.lower() in ("running", "all"):
+AttributeError: 'list' object has no attribute 'lower'
+
+2021-01-03 18:39:59,803 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 533, in get_config
+    if retrieve.lower() in ("running", "all"):
+AttributeError: 'list' object has no attribute 'lower'
+
+2021-01-03 18:41:59,528 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': ['running', 'startup']}}} on 2 hosts
+2021-01-03 18:41:59,792 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 533, in get_config
+    if retrieve.lower() in ("running", "all"):
+AttributeError: 'list' object has no attribute 'lower'
+
+2021-01-03 18:41:59,854 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 533, in get_config
+    if retrieve.lower() in ("running", "all"):
+AttributeError: 'list' object has no attribute 'lower'
+
+2021-01-03 18:42:45,772 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'startup'}}} on 2 hosts
+2021-01-03 18:59:42,319 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': ['startup', 'config']} on 2 hosts
+2021-01-03 18:59:42,774 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 533, in get_config
+    if retrieve.lower() in ("running", "all"):
+AttributeError: 'list' object has no attribute 'lower'
+
+2021-01-03 18:59:42,804 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 533, in get_config
+    if retrieve.lower() in ("running", "all"):
+AttributeError: 'list' object has no attribute 'lower'
+
+2021-01-03 19:02:45,678 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'config_retrieve': ['config']} on 2 hosts
+2021-01-03 19:02:45,959 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+TypeError: get_config() got an unexpected keyword argument 'config_retrieve'
+
+2021-01-03 19:02:45,960 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+TypeError: get_config() got an unexpected keyword argument 'config_retrieve'
+
+2021-01-03 19:03:48,177 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'config_retrieve': 'config'} on 2 hosts
+2021-01-03 19:03:48,477 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+TypeError: get_config() got an unexpected keyword argument 'config_retrieve'
+
+2021-01-03 19:03:48,554 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+TypeError: get_config() got an unexpected keyword argument 'config_retrieve'
+
+2021-01-03 19:04:13,471 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'config'} on 2 hosts
+2021-01-03 19:06:27,371 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'running'} on 2 hosts
+2021-01-03 19:06:28,808 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'startup'} on 2 hosts
+2021-01-03 19:14:38,892 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'running'} on 2 hosts
+2021-01-03 19:15:25,573 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'running'} on 2 hosts
+2021-01-03 19:15:27,374 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': ['startup', 'running']} on 2 hosts
+2021-01-03 19:15:27,375 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 533, in get_config
+    if retrieve.lower() in ("running", "all"):
+AttributeError: 'list' object has no attribute 'lower'
+
+2021-01-03 19:15:27,375 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 533, in get_config
+    if retrieve.lower() in ("running", "all"):
+AttributeError: 'list' object has no attribute 'lower'
+
+2021-01-03 19:22:37,620 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 19:23:47,671 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'running'} on 2 hosts
+2021-01-03 19:23:48,971 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': ['startup']} on 2 hosts
+2021-01-03 19:23:48,972 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 533, in get_config
+    if retrieve.lower() in ("running", "all"):
+AttributeError: 'list' object has no attribute 'lower'
+
+2021-01-03 19:23:48,972 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 533, in get_config
+    if retrieve.lower() in ("running", "all"):
+AttributeError: 'list' object has no attribute 'lower'
+
+2021-01-03 19:25:28,171 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 19:25:45,817 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'running'} on 2 hosts
+2021-01-03 19:25:47,267 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': ['startup']} on 2 hosts
+2021-01-03 19:25:47,268 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 533, in get_config
+    if retrieve.lower() in ("running", "all"):
+AttributeError: 'list' object has no attribute 'lower'
+
+2021-01-03 19:25:47,268 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 533, in get_config
+    if retrieve.lower() in ("running", "all"):
+AttributeError: 'list' object has no attribute 'lower'
+
+2021-01-03 19:27:26,371 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'running'} on 2 hosts
+2021-01-03 19:28:00,029 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'startup'} on 2 hosts
+2021-01-03 19:32:18,812 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': ['startup']} on 2 hosts
+2021-01-03 19:32:19,139 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 533, in get_config
+    if retrieve.lower() in ("running", "all"):
+AttributeError: 'list' object has no attribute 'lower'
+
+2021-01-03 19:32:19,207 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 533, in get_config
+    if retrieve.lower() in ("running", "all"):
+AttributeError: 'list' object has no attribute 'lower'
+
+2021-01-03 19:33:32,121 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'startup'} on 2 hosts
+2021-01-03 19:33:47,595 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'startup'} on 2 hosts
+2021-01-03 19:34:22,716 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'startup'} on 2 hosts
+2021-01-03 19:34:25,422 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'startup'} on 2 hosts
+2021-01-03 19:34:38,297 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'startup'} on 2 hosts
+2021-01-03 19:34:40,764 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'startup'} on 2 hosts
+2021-01-03 19:53:48,322 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'startup'} on 2 hosts
+2021-01-03 19:53:50,945 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'startup'} on 2 hosts
+2021-01-03 19:55:59,885 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'running'} on 1 hosts
+2021-01-03 19:56:01,002 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'startup'} on 1 hosts
+2021-01-03 19:56:21,381 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'running'} on 1 hosts
+2021-01-03 19:56:22,513 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'startup'} on 1 hosts
+2021-01-03 19:58:56,925 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'running'}}} on 1 hosts
+2021-01-03 19:59:05,310 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'startup'} on 1 hosts
+2021-01-03 19:59:51,285 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'running'}}} on 1 hosts
+2021-01-03 20:00:00,824 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'startup'} on 1 hosts
+2021-01-03 20:03:53,789 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'running'}}} on 1 hosts
+2021-01-03 20:04:02,712 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'startup'} on 1 hosts
+2021-01-03 20:07:38,494 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'running'}}} on 1 hosts
+2021-01-03 20:07:48,285 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'startup'} on 1 hosts
+2021-01-03 20:18:32,320 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': ''}}} on 1 hosts
+2021-01-03 20:18:40,963 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'startup'} on 1 hosts
+2021-01-03 20:29:36,311 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 1 hosts
+2021-01-03 21:22:03,259 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 1 hosts
+2021-01-03 21:22:40,129 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 1 hosts
+2021-01-03 21:25:12,639 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 1 hosts
+2021-01-03 21:26:01,042 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 1 hosts
+2021-01-03 21:27:25,234 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 1 hosts
+2021-01-03 21:33:30,965 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 1 hosts
+2021-01-03 21:46:54,632 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 1 hosts
+2021-01-03 21:48:04,621 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 1 hosts
+2021-01-03 21:48:50,465 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 1 hosts
+2021-01-03 21:49:51,294 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 1 hosts
+2021-01-03 21:51:58,914 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts
+2021-01-03 22:06:36,790 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts
+2021-01-03 22:07:05,372 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts
+2021-01-03 22:08:19,347 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts
+2021-01-03 22:10:43,770 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 22:15:16,413 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 2 hosts
+2021-01-03 22:19:07,344 -  nornir.core -     INFO -        run() - Running task 'get_all_config' with args {} on 2 hosts
+2021-01-03 22:19:21,112 -  nornir.core -     INFO -        run() - Running task 'get_all_config' with args {} on 2 hosts
