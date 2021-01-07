@@ -2414,3 +2414,12 @@ bdb.BdbQuit
 2021-01-06 17:06:53,901 -  nornir.core -     INFO -        run() - Running task 'get_uptime' with args {} on 2 hosts
 2021-01-06 17:13:29,869 -  nornir.core -     INFO -        run() - Running task 'get_uptime' with args {} on 2 hosts
 2021-01-06 17:15:51,331 -  nornir.core -     INFO -        run() - Running task 'get_uptime' with args {} on 2 hosts
+2021-01-06 20:51:39,565 -  nornir.core -     INFO -        run() - Running task 'get_uptime' with args {} on 2 hosts
+2021-01-06 21:05:40,441 -  nornir.core -     INFO -        run() - Running task 'get_uptime' with args {} on 4 hosts
+2021-01-06 21:12:12,837 -  nornir.core -     INFO -        run() - Running task 'get_uptime' with args {} on 1 hosts
+2021-01-06 21:13:28,878 -  nornir.core -     INFO -        run() - Running task 'get_uptime' with args {} on 9 hosts
+2021-01-06 21:18:15,363 -  nornir.core -     INFO -        run() - Running task 'get_uptime' with args {} on 9 hosts
+2021-01-06 21:20:44,470 -  nornir.core -     INFO -        run() - Running task 'get_uptime' with args {} on 9 hosts
+2021-01-06 21:21:31,970 -  nornir.core -     INFO -        run() - Running task 'get_uptime' with args {} on 9 hosts
+2021-01-06 21:23:10,673 -  nornir.core -     INFO -        run() - Running task 'get_uptime' with args {} on 9 hosts
+2021-01-06 21:26:34,280 -  nornir.core -     INFO -        run() - Running task 'get_uptime' with args {} on 9 hosts
