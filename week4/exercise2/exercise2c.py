@@ -1,47 +1,45 @@
 """
 Author: Bradley Fernando
-Purpose: Transfer a local file to a remote device
+Purpose: Retrieve a file from a remote device and save it locally.
 
 Usage:
-    python exercise2a.py
+    python exercise2c.py
 
 Output:
-    arista1: BF_arista_test.txt
-      transferring - Success
-    arista2: BF_arista_test.txt
-      transferring - Success
-    arista4: BF_arista_test.txt
-      transferring - Success
-    arista3: BF_arista_test.txt
-      transferring - Success
+    arista4: arista_test.txt
+      retrieved - Success
+    arista1: arista_test.txt
+      retrieved - Success
+    arista2: arista_test.txt
+      retrieved - Success
+    arista3: arista_test.txt
+      retrieved - Success
 """
-
-from nornir import InitNornir
 from nornir.plugins.tasks.networking import netmiko_file_transfer
 from nornir.core.filter import F
 import colorama
 
 def file_transfer(task):
     group_name = task.host.platform
-    base_file = task.host['file_name']
-    source_file = f"{group_name}/{base_file}"
-    dest_file = base_file
+    source_file = "arista_test.txt"
+    dest_file = f"{group_name}/{task.host}-saved.txt"
  
-    # Use Netmiko to transfer file
+    # Use Netmiko to retrieve file
     results = task.run(task=netmiko_file_transfer,
                     source_file=source_file,
                     dest_file=dest_file,
                     overwrite_file=True,
-                    direction="put"
+                    direction="get"
     )
     
     if results[0].result is False:
-        print(f"File transfer failed")
+        print(f"File retriival failed")
     else:
         colorama.init()
         print(task.host, end='')
-        print(": " + base_file)
-        print("  transferring - ", end='')
+        print(": ", end='')
+        print(source_file)
+        print("  retrieved - ", end='')
         print(colorama.Fore.GREEN + "Success" + 
               colorama.Style.RESET_ALL)
 

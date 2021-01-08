@@ -1479,3 +1479,14 @@ TypeError: unsupported operand type(s) for +: 'Host' and 'str'
 2021-01-07 23:32:04,524 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
 2021-01-07 23:33:46,423 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
 2021-01-07 23:36:31,342 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-08 08:54:50,076 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-08 08:55:58,293 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-08 08:59:59,184 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-08 09:02:57,688 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-08 09:09:38,872 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-08 09:11:43,304 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-08 09:12:28,857 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-08 09:25:58,004 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-08 10:15:50,843 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-08 10:22:28,506 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-08 10:29:25,038 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
