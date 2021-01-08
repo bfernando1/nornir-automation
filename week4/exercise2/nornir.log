@@ -1,0 +1,1481 @@
+2021-01-07 22:02:57,328 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 22:04:19,791 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 22:04:50,559 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:04:52,799 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:04:53,503 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:04:53,958 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:07:15,579 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 22:09:57,307 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:09:58,926 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:10:00,713 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:10:01,450 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:10:39,521 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 22:12:19,876 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:12:20,668 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:12:21,100 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:12:21,584 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:12:40,967 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 22:23:15,390 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:23:16,797 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:23:17,174 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:23:17,501 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:24:13,032 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 22:25:11,962 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:25:12,428 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:25:12,634 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:25:12,838 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:25:39,718 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 22:28:18,065 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:28:18,592 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:28:18,794 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:28:19,232 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 6, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:33:31,604 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 22:33:58,603 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 11, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:33:59,117 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 11, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:33:59,464 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 11, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:33:59,646 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 11, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:39:15,283 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 22:40:02,460 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 17, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:40:20,549 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 17, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:40:38,596 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 17, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:41:18,757 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 17, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:41:22,837 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 22:43:18,282 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 17, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:43:40,870 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 17, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:43:53,331 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 17, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:44:08,194 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 17, in file_transfer
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:48:55,104 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 22:48:55,105 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:48:55,105 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:48:55,105 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:48:55,106 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:49:17,999 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 22:49:18,000 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:49:18,000 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:49:18,000 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:49:18,001 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:50:52,022 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 22:50:52,023 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:50:52,023 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:50:52,023 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:50:52,024 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:52:21,468 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 22:52:21,469 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:52:21,469 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:52:21,469 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:52:21,469 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:52:54,586 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 22:52:54,586 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:52:54,587 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:52:54,587 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:52:54,587 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:55:15,765 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 22:55:15,766 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:55:15,766 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:55:15,766 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:55:15,767 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 22:55:54,661 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 22:56:00,577 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_file_transfer.py", line 28, in netmiko_file_transfer
+    net_connect, source_file=source_file, dest_file=dest_file, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_functions.py", line 108, in file_transfer
+    with TransferClass(**scp_args) as scp_transfer:
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 330, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 74, in __init__
+    **kwargs,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 98, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 301, in file_md5
+    with open(file_name, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'eos/arista_test.txt'
+
+2021-01-07 22:56:00,578 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 16, in file_transfer
+    overwrite_file=True
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_file_transfer at 0x7f304e88fb90> (failed)
+
+
+2021-01-07 22:56:06,279 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_file_transfer.py", line 28, in netmiko_file_transfer
+    net_connect, source_file=source_file, dest_file=dest_file, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_functions.py", line 108, in file_transfer
+    with TransferClass(**scp_args) as scp_transfer:
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 330, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 74, in __init__
+    **kwargs,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 98, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 301, in file_md5
+    with open(file_name, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'eos/arista_test.txt'
+
+2021-01-07 22:56:06,279 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 16, in file_transfer
+    overwrite_file=True
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_file_transfer at 0x7f304e88fb90> (failed)
+
+
+2021-01-07 22:56:12,054 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_file_transfer.py", line 28, in netmiko_file_transfer
+    net_connect, source_file=source_file, dest_file=dest_file, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_functions.py", line 108, in file_transfer
+    with TransferClass(**scp_args) as scp_transfer:
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 330, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 74, in __init__
+    **kwargs,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 98, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 301, in file_md5
+    with open(file_name, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'eos/arista_test.txt'
+
+2021-01-07 22:56:12,054 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 16, in file_transfer
+    overwrite_file=True
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_file_transfer at 0x7f304e88fb90> (failed)
+
+
+2021-01-07 22:56:17,721 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_file_transfer.py", line 28, in netmiko_file_transfer
+    net_connect, source_file=source_file, dest_file=dest_file, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_functions.py", line 108, in file_transfer
+    with TransferClass(**scp_args) as scp_transfer:
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 330, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 74, in __init__
+    **kwargs,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 98, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 301, in file_md5
+    with open(file_name, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'eos/arista_test.txt'
+
+2021-01-07 22:56:17,721 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 16, in file_transfer
+    overwrite_file=True
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_file_transfer at 0x7f304e88fb90> (failed)
+
+
+2021-01-07 22:57:00,276 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 22:57:06,133 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_file_transfer.py", line 28, in netmiko_file_transfer
+    net_connect, source_file=source_file, dest_file=dest_file, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_functions.py", line 108, in file_transfer
+    with TransferClass(**scp_args) as scp_transfer:
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 330, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 74, in __init__
+    **kwargs,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 98, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 301, in file_md5
+    with open(file_name, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'eos/arista_test.txt'
+
+2021-01-07 22:57:06,134 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 16, in file_transfer
+    overwrite_file=True
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_file_transfer at 0x7f2f7a4e6440> (failed)
+
+
+2021-01-07 22:57:12,037 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_file_transfer.py", line 28, in netmiko_file_transfer
+    net_connect, source_file=source_file, dest_file=dest_file, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_functions.py", line 108, in file_transfer
+    with TransferClass(**scp_args) as scp_transfer:
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 330, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 74, in __init__
+    **kwargs,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 98, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 301, in file_md5
+    with open(file_name, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'eos/arista_test.txt'
+
+2021-01-07 22:57:12,038 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 16, in file_transfer
+    overwrite_file=True
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_file_transfer at 0x7f2f7a4e6440> (failed)
+
+
+2021-01-07 22:57:17,660 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_file_transfer.py", line 28, in netmiko_file_transfer
+    net_connect, source_file=source_file, dest_file=dest_file, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_functions.py", line 108, in file_transfer
+    with TransferClass(**scp_args) as scp_transfer:
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 330, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 74, in __init__
+    **kwargs,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 98, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 301, in file_md5
+    with open(file_name, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'eos/arista_test.txt'
+
+2021-01-07 22:57:17,660 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 16, in file_transfer
+    overwrite_file=True
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_file_transfer at 0x7f2f7a4e6440> (failed)
+
+
+2021-01-07 22:57:23,227 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_file_transfer.py", line 28, in netmiko_file_transfer
+    net_connect, source_file=source_file, dest_file=dest_file, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_functions.py", line 108, in file_transfer
+    with TransferClass(**scp_args) as scp_transfer:
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 330, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 74, in __init__
+    **kwargs,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 98, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 301, in file_md5
+    with open(file_name, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'eos/arista_test.txt'
+
+2021-01-07 22:57:23,227 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 16, in file_transfer
+    overwrite_file=True
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_file_transfer at 0x7f2f7a4e6440> (failed)
+
+
+2021-01-07 22:58:18,714 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 22:58:24,078 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_file_transfer.py", line 28, in netmiko_file_transfer
+    net_connect, source_file=source_file, dest_file=dest_file, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_functions.py", line 108, in file_transfer
+    with TransferClass(**scp_args) as scp_transfer:
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 330, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 74, in __init__
+    **kwargs,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 98, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 301, in file_md5
+    with open(file_name, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'eos/arista_test.txt'
+
+2021-01-07 22:58:24,079 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 16, in file_transfer
+    overwrite_file=True
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_file_transfer at 0x7f866458db90> (failed)
+
+
+2021-01-07 22:58:29,622 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_file_transfer.py", line 28, in netmiko_file_transfer
+    net_connect, source_file=source_file, dest_file=dest_file, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_functions.py", line 108, in file_transfer
+    with TransferClass(**scp_args) as scp_transfer:
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 330, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 74, in __init__
+    **kwargs,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 98, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 301, in file_md5
+    with open(file_name, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'eos/arista_test.txt'
+
+2021-01-07 22:58:29,622 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 16, in file_transfer
+    overwrite_file=True
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_file_transfer at 0x7f866458db90> (failed)
+
+
+2021-01-07 22:58:35,223 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_file_transfer.py", line 28, in netmiko_file_transfer
+    net_connect, source_file=source_file, dest_file=dest_file, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_functions.py", line 108, in file_transfer
+    with TransferClass(**scp_args) as scp_transfer:
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 330, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 74, in __init__
+    **kwargs,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 98, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 301, in file_md5
+    with open(file_name, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'eos/arista_test.txt'
+
+2021-01-07 22:58:35,223 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 16, in file_transfer
+    overwrite_file=True
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_file_transfer at 0x7f866458db90> (failed)
+
+
+2021-01-07 22:58:40,968 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_file_transfer.py", line 28, in netmiko_file_transfer
+    net_connect, source_file=source_file, dest_file=dest_file, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_functions.py", line 108, in file_transfer
+    with TransferClass(**scp_args) as scp_transfer:
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 330, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 74, in __init__
+    **kwargs,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 98, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 301, in file_md5
+    with open(file_name, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'eos/arista_test.txt'
+
+2021-01-07 22:58:40,968 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 16, in file_transfer
+    overwrite_file=True
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_file_transfer at 0x7f866458db90> (failed)
+
+
+2021-01-07 22:59:34,335 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 22:59:42,171 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 13, in file_transfer
+    results = task.run(task=netmiko_file_transfer,
+  File "exercise2a.py", line 13, in file_transfer
+    results = task.run(task=netmiko_file_transfer,
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:59:43,068 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 13, in file_transfer
+    results = task.run(task=netmiko_file_transfer,
+  File "exercise2a.py", line 13, in file_transfer
+    results = task.run(task=netmiko_file_transfer,
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:59:43,435 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 13, in file_transfer
+    results = task.run(task=netmiko_file_transfer,
+  File "exercise2a.py", line 13, in file_transfer
+    results = task.run(task=netmiko_file_transfer,
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 22:59:43,944 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 13, in file_transfer
+    results = task.run(task=netmiko_file_transfer,
+  File "exercise2a.py", line 13, in file_transfer
+    results = task.run(task=netmiko_file_transfer,
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 23:00:51,864 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 23:01:18,001 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_file_transfer.py", line 28, in netmiko_file_transfer
+    net_connect, source_file=source_file, dest_file=dest_file, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_functions.py", line 108, in file_transfer
+    with TransferClass(**scp_args) as scp_transfer:
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 330, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 74, in __init__
+    **kwargs,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 98, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 301, in file_md5
+    with open(file_name, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'eos/arista_test.txt'
+
+2021-01-07 23:01:34,863 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 17, in file_transfer
+    direction="put"
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_file_transfer at 0x7f1ec8ff9560> (failed)
+
+
+2021-01-07 23:01:43,827 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_file_transfer.py", line 28, in netmiko_file_transfer
+    net_connect, source_file=source_file, dest_file=dest_file, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_functions.py", line 108, in file_transfer
+    with TransferClass(**scp_args) as scp_transfer:
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 330, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 74, in __init__
+    **kwargs,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 98, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 301, in file_md5
+    with open(file_name, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'eos/arista_test.txt'
+
+2021-01-07 23:01:43,827 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 13, in file_transfer
+    results = task.run(task=netmiko_file_transfer,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_file_transfer at 0x7f1ec8ff9560> (failed)
+
+
+2021-01-07 23:01:47,645 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 13, in file_transfer
+    results = task.run(task=netmiko_file_transfer,
+  File "exercise2a.py", line 13, in file_transfer
+    results = task.run(task=netmiko_file_transfer,
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 23:01:48,407 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 13, in file_transfer
+    results = task.run(task=netmiko_file_transfer,
+  File "exercise2a.py", line 13, in file_transfer
+    results = task.run(task=netmiko_file_transfer,
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-07 23:02:02,451 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 23:02:08,285 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_file_transfer.py", line 28, in netmiko_file_transfer
+    net_connect, source_file=source_file, dest_file=dest_file, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_functions.py", line 108, in file_transfer
+    with TransferClass(**scp_args) as scp_transfer:
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 330, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 74, in __init__
+    **kwargs,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 98, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 301, in file_md5
+    with open(file_name, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'eos/arista_test.txt'
+
+2021-01-07 23:02:08,286 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 16, in file_transfer
+    direction="put"
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_file_transfer at 0x7fa484f0bb90> (failed)
+
+
+2021-01-07 23:02:13,839 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_file_transfer.py", line 28, in netmiko_file_transfer
+    net_connect, source_file=source_file, dest_file=dest_file, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_functions.py", line 108, in file_transfer
+    with TransferClass(**scp_args) as scp_transfer:
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 330, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 74, in __init__
+    **kwargs,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 98, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 301, in file_md5
+    with open(file_name, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'eos/arista_test.txt'
+
+2021-01-07 23:02:13,839 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 16, in file_transfer
+    direction="put"
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_file_transfer at 0x7fa484f0bb90> (failed)
+
+
+2021-01-07 23:02:19,771 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_file_transfer.py", line 28, in netmiko_file_transfer
+    net_connect, source_file=source_file, dest_file=dest_file, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_functions.py", line 108, in file_transfer
+    with TransferClass(**scp_args) as scp_transfer:
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 330, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 74, in __init__
+    **kwargs,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 98, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 301, in file_md5
+    with open(file_name, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'eos/arista_test.txt'
+
+2021-01-07 23:02:19,772 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 16, in file_transfer
+    direction="put"
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_file_transfer at 0x7fa484f0bb90> (failed)
+
+
+2021-01-07 23:02:25,523 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_file_transfer.py", line 28, in netmiko_file_transfer
+    net_connect, source_file=source_file, dest_file=dest_file, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_functions.py", line 108, in file_transfer
+    with TransferClass(**scp_args) as scp_transfer:
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 330, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 74, in __init__
+    **kwargs,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 98, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 301, in file_md5
+    with open(file_name, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'eos/arista_test.txt'
+
+2021-01-07 23:02:25,523 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 16, in file_transfer
+    direction="put"
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_file_transfer at 0x7fa484f0bb90> (failed)
+
+
+2021-01-07 23:03:57,149 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 23:04:02,595 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_file_transfer.py", line 28, in netmiko_file_transfer
+    net_connect, source_file=source_file, dest_file=dest_file, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_functions.py", line 108, in file_transfer
+    with TransferClass(**scp_args) as scp_transfer:
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 330, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 74, in __init__
+    **kwargs,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 98, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 301, in file_md5
+    with open(file_name, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'eos/arista_test.txt'
+
+2021-01-07 23:04:02,596 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 16, in file_transfer
+    direction="put"
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_file_transfer at 0x7f27fd07db90> (failed)
+
+
+2021-01-07 23:04:08,269 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_file_transfer.py", line 28, in netmiko_file_transfer
+    net_connect, source_file=source_file, dest_file=dest_file, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_functions.py", line 108, in file_transfer
+    with TransferClass(**scp_args) as scp_transfer:
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 330, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 74, in __init__
+    **kwargs,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 98, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 301, in file_md5
+    with open(file_name, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'eos/arista_test.txt'
+
+2021-01-07 23:04:08,270 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 16, in file_transfer
+    direction="put"
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_file_transfer at 0x7f27fd07db90> (failed)
+
+
+2021-01-07 23:04:13,750 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_file_transfer.py", line 28, in netmiko_file_transfer
+    net_connect, source_file=source_file, dest_file=dest_file, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_functions.py", line 108, in file_transfer
+    with TransferClass(**scp_args) as scp_transfer:
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 330, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 74, in __init__
+    **kwargs,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 98, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 301, in file_md5
+    with open(file_name, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'eos/arista_test.txt'
+
+2021-01-07 23:04:13,751 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 16, in file_transfer
+    direction="put"
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_file_transfer at 0x7f27fd07db90> (failed)
+
+
+2021-01-07 23:04:19,418 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_file_transfer.py", line 28, in netmiko_file_transfer
+    net_connect, source_file=source_file, dest_file=dest_file, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_functions.py", line 108, in file_transfer
+    with TransferClass(**scp_args) as scp_transfer:
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 330, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/arista/arista.py", line 74, in __init__
+    **kwargs,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 98, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/scp_handler.py", line 301, in file_md5
+    with open(file_name, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'eos/arista_test.txt'
+
+2021-01-07 23:04:19,418 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 16, in file_transfer
+    direction="put"
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_file_transfer at 0x7f27fd07db90> (failed)
+
+
+2021-01-07 23:07:48,491 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 23:07:48,492 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 11, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 23:07:48,492 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 11, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 23:07:48,493 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 11, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 23:07:48,493 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 11, in file_transfer
+    print(f"Copying {source_file} to {host.name}")
+NameError: name 'host' is not defined
+
+2021-01-07 23:08:02,277 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 23:11:24,826 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 23:11:24,827 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 11, in file_transfer
+    print("Transferring " + base_file + " to " + task.host)
+TypeError: can only concatenate str (not "Host") to str
+
+2021-01-07 23:11:24,827 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 11, in file_transfer
+    print("Transferring " + base_file + " to " + task.host)
+TypeError: can only concatenate str (not "Host") to str
+
+2021-01-07 23:11:24,828 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 11, in file_transfer
+    print("Transferring " + base_file + " to " + task.host)
+TypeError: can only concatenate str (not "Host") to str
+
+2021-01-07 23:11:24,828 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 11, in file_transfer
+    print("Transferring " + base_file + " to " + task.host)
+TypeError: can only concatenate str (not "Host") to str
+
+2021-01-07 23:12:03,052 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 23:15:03,209 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 23:15:15,832 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 23:16:27,911 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 23:17:55,273 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 23:19:09,727 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 23:21:16,391 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 23:26:15,277 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 23:30:18,950 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 23:30:18,950 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(task.host + ': Transferring ', end='')
+TypeError: unsupported operand type(s) for +: 'Host' and 'str'
+
+2021-01-07 23:30:18,950 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(task.host + ': Transferring ', end='')
+TypeError: unsupported operand type(s) for +: 'Host' and 'str'
+
+2021-01-07 23:30:18,951 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(task.host + ': Transferring ', end='')
+TypeError: unsupported operand type(s) for +: 'Host' and 'str'
+
+2021-01-07 23:30:18,951 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 12, in file_transfer
+    print(task.host + ': Transferring ', end='')
+TypeError: unsupported operand type(s) for +: 'Host' and 'str'
+
+2021-01-07 23:31:03,629 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 23:32:04,524 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 23:33:46,423 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
+2021-01-07 23:36:31,342 -  nornir.core -     INFO -        run() - Running task 'file_transfer' with args {} on 4 hosts
