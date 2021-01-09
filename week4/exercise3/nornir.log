@@ -1,0 +1,79 @@
+2021-01-08 22:18:16,846 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {} on 2 hosts
+2021-01-08 22:18:29,352 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3a.py", line 9, in vlan_config
+    import ipdb; ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-08 22:18:31,007 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3a.py", line 9, in vlan_config
+    import ipdb; ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-08 22:23:48,828 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {} on 2 hosts
+2021-01-08 22:24:02,479 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3a.py", line 10, in vlan_config
+    import ipdb; ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-08 22:24:03,407 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3a.py", line 10, in vlan_config
+    import ipdb; ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-08 22:25:44,438 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {} on 2 hosts
+2021-01-08 22:26:31,721 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3a.py", line 14, in vlan_config
+    import ipdb; ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-08 22:26:45,406 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3a.py", line 14, in vlan_config
+    import ipdb; ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-08 22:35:17,507 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {} on 2 hosts
+2021-01-08 22:36:33,085 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {} on 4 hosts
+2021-01-08 22:39:17,296 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {} on 6 hosts
+2021-01-08 22:49:04,018 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 6 hosts
