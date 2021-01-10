@@ -77,3 +77,266 @@ bdb.BdbQuit
 2021-01-08 22:36:33,085 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {} on 4 hosts
 2021-01-08 22:39:17,296 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {} on 6 hosts
 2021-01-08 22:49:04,018 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 6 hosts
+2021-01-09 08:32:55,811 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 6 hosts
+2021-01-09 08:35:50,315 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 6 hosts
+2021-01-09 08:35:56,480 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 21, in vlan_config
+    return Result(result=msg)
+NameError: name 'Result' is not defined
+
+2021-01-09 08:35:57,024 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 21, in vlan_config
+    return Result(result=msg)
+NameError: name 'Result' is not defined
+
+2021-01-09 08:35:57,045 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 21, in vlan_config
+    return Result(result=msg)
+NameError: name 'Result' is not defined
+
+2021-01-09 08:35:57,105 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 21, in vlan_config
+    return Result(result=msg)
+NameError: name 'Result' is not defined
+
+2021-01-09 08:35:57,125 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 21, in vlan_config
+    return Result(result=msg)
+NameError: name 'Result' is not defined
+
+2021-01-09 08:35:58,525 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 21, in vlan_config
+    return Result(result=msg)
+NameError: name 'Result' is not defined
+
+2021-01-09 08:36:52,076 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 6 hosts
+2021-01-09 08:36:58,098 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 22, in vlan_config
+    return Result(result=msg)
+TypeError: __init__() missing 1 required positional argument: 'host'
+
+2021-01-09 08:36:58,377 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 22, in vlan_config
+    return Result(result=msg)
+TypeError: __init__() missing 1 required positional argument: 'host'
+
+2021-01-09 08:36:58,760 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 22, in vlan_config
+    return Result(result=msg)
+TypeError: __init__() missing 1 required positional argument: 'host'
+
+2021-01-09 08:36:58,892 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 22, in vlan_config
+    return Result(result=msg)
+TypeError: __init__() missing 1 required positional argument: 'host'
+
+2021-01-09 08:36:59,305 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 22, in vlan_config
+    return Result(result=msg)
+TypeError: __init__() missing 1 required positional argument: 'host'
+
+2021-01-09 08:36:59,848 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 22, in vlan_config
+    return Result(result=msg)
+TypeError: __init__() missing 1 required positional argument: 'host'
+
+2021-01-09 08:37:39,265 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 6 hosts
+2021-01-09 08:42:20,414 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '20', 'vlan_name': 'WLAN_CORP'} on 6 hosts
+2021-01-09 08:43:48,004 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '20', 'vlan_name': 'WLAN_CORP'} on 4 hosts
+2021-01-09 09:14:41,938 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 17, in vlan_config
+    if results:
+  File "exercise3b.py", line 17, in vlan_config
+    if results:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-09 09:14:51,553 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 17, in vlan_config
+    if results:
+  File "exercise3b.py", line 17, in vlan_config
+    if results:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-09 09:15:00,117 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 17, in vlan_config
+    if results:
+  File "exercise3b.py", line 17, in vlan_config
+    if results:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-09 09:15:09,327 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 17, in vlan_config
+    if results:
+  File "exercise3b.py", line 17, in vlan_config
+    if results:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-09 09:16:58,590 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '20', 'vlan_name': 'WLAN_CORP'} on 2 hosts
+2021-01-09 09:17:20,186 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 17, in vlan_config
+    if vlan_id in results[0].result[0]:
+IndexError: string index out of range
+
+2021-01-09 09:17:32,703 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 17, in vlan_config
+    if vlan_id in results[0].result[0]:
+IndexError: string index out of range
+
+2021-01-09 09:18:28,675 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '20', 'vlan_name': 'WLAN_CORP'} on 2 hosts
+2021-01-09 09:19:11,422 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 17, in vlan_config
+    if vlan_id in results[0].result[0]:
+  File "exercise3b.py", line 17, in vlan_config
+    if vlan_id in results[0].result[0]:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-09 09:19:19,034 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 17, in vlan_config
+    if vlan_id in results[0].result[0]:
+  File "exercise3b.py", line 17, in vlan_config
+    if vlan_id in results[0].result[0]:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-09 09:19:46,568 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '20', 'vlan_name': 'WLAN_CORP'} on 2 hosts
+2021-01-09 09:19:55,919 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 17, in vlan_config
+    if vlan_id in results[0].result.split():
+  File "exercise3b.py", line 17, in vlan_config
+    if vlan_id in results[0].result.split():
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-09 09:20:02,759 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 17, in vlan_config
+    if vlan_id in results[0].result.split():
+  File "exercise3b.py", line 17, in vlan_config
+    if vlan_id in results[0].result.split():
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-09 09:20:17,443 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '20', 'vlan_name': 'WLAN_CORP'} on 2 hosts
+2021-01-09 09:20:24,609 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 22, in vlan_config
+    return Result(host=task.host, result=msg)
+UnboundLocalError: local variable 'msg' referenced before assignment
+
+2021-01-09 09:20:31,951 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'vlan_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 22, in vlan_config
+    return Result(host=task.host, result=msg)
+UnboundLocalError: local variable 'msg' referenced before assignment
+
+2021-01-09 09:21:54,563 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '20', 'vlan_name': 'WLAN_CORP'} on 2 hosts
+2021-01-09 09:22:20,179 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 2 hosts
+2021-01-09 09:22:51,353 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 2 hosts
+2021-01-09 09:31:37,897 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 2 hosts
+2021-01-09 09:32:22,721 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 2 hosts
+2021-01-09 09:32:57,149 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 6 hosts
+2021-01-09 09:34:40,243 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 6 hosts
+2021-01-09 21:23:32,118 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 6 hosts
+2021-01-09 21:31:17,209 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 6 hosts
+2021-01-09 21:34:36,296 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 6 hosts
+2021-01-09 21:59:35,518 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 6 hosts
+2021-01-09 22:00:27,372 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 6 hosts
+2021-01-09 22:01:25,578 -  nornir.core -     INFO -        run() - Running task 'vlan_config' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 6 hosts
