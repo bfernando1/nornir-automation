@@ -1,0 +1,58 @@
+2021-01-11 07:02:08,810 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getter': ['config'], 'retrieve': 'running'} on 9 hosts
+2021-01-11 07:02:08,811 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+TypeError: napalm_get() missing 1 required positional argument: 'getters'
+
+2021-01-11 07:02:08,811 - nornir.core.task -    ERROR -      start() - Host 'cisco4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+TypeError: napalm_get() missing 1 required positional argument: 'getters'
+
+2021-01-11 07:02:08,811 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+TypeError: napalm_get() missing 1 required positional argument: 'getters'
+
+2021-01-11 07:02:08,812 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+TypeError: napalm_get() missing 1 required positional argument: 'getters'
+
+2021-01-11 07:02:08,812 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+TypeError: napalm_get() missing 1 required positional argument: 'getters'
+
+2021-01-11 07:02:08,812 - nornir.core.task -    ERROR -      start() - Host 'arista2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+TypeError: napalm_get() missing 1 required positional argument: 'getters'
+
+2021-01-11 07:02:08,813 - nornir.core.task -    ERROR -      start() - Host 'arista3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+TypeError: napalm_get() missing 1 required positional argument: 'getters'
+
+2021-01-11 07:02:08,813 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+TypeError: napalm_get() missing 1 required positional argument: 'getters'
+
+2021-01-11 07:02:08,813 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+TypeError: napalm_get() missing 1 required positional argument: 'getters'
+
+2021-01-11 07:03:08,461 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'running'} on 9 hosts
+2021-01-11 07:08:51,871 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'running'} on 9 hosts
+2021-01-11 07:11:12,024 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'running'} on 1 hosts
