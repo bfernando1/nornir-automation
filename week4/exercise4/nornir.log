@@ -1,0 +1,124 @@
+2021-01-10 22:12:44,547 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filelame': 'vlan_interface'} on 2 hosts
+2021-01-10 22:12:44,548 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+TypeError: napalm_configure() got an unexpected keyword argument 'filelame'
+
+2021-01-10 22:12:44,548 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+TypeError: napalm_configure() got an unexpected keyword argument 'filelame'
+
+2021-01-10 22:12:58,797 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'vlan_interface'} on 2 hosts
+2021-01-10 22:26:18,071 -  nornir.core -     INFO -        run() - Running task 'config_vlan' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 2 hosts
+2021-01-10 22:26:18,072 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'config_vlan' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 10, in config_vlan
+    task.run(task=naplam_configure, configuration=vlan_config)
+NameError: name 'naplam_configure' is not defined
+
+2021-01-10 22:26:18,072 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'config_vlan' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 10, in config_vlan
+    task.run(task=naplam_configure, configuration=vlan_config)
+NameError: name 'naplam_configure' is not defined
+
+2021-01-10 22:26:41,821 -  nornir.core -     INFO -        run() - Running task 'config_vlan' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 2 hosts
+2021-01-10 22:26:58,746 -  nornir.core -     INFO -        run() - Running task 'config_vlan' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 2 hosts
+2021-01-10 22:27:21,875 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 150, in _commit_merge
+    output = self._send_config(self.merge_candidate)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 721, in _send_config
+    return self.device.config_list(commands)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/device.py", line 132, in config_list
+    return self.api._nxapi_command_conf(commands)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 117, in _nxapi_command_conf
+    return self._nxapi_command(commands=commands, method=method)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 110, in _nxapi_command
+    response = self._send_request(commands, method=method)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 87, in _send_request
+    raise NXAPIPostError(msg)
+napalm.nxapi_plumbing.errors.NXAPIPostError: Invalid status code returned on NX-API POST
+commands: ['vlan {vlan_id}', '        name {vlan_name}']
+status_code: 500
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 37, in napalm_configure
+    device.commit_config()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 229, in commit_config
+    self._commit_merge()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 158, in _commit_merge
+    raise MergeConfigException(merge_error)
+napalm.base.exceptions.MergeConfigException: Configuration merge failed; automatic rollback attempted:
+"Invalid status code returned on NX-API POST\ncommands: ['vlan {vlan_id}', '        name {vlan_name}']\nstatus_code: 500"
+
+2021-01-10 22:27:21,876 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'config_vlan' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 10, in config_vlan
+    task.run(task=napalm_configure, configuration=vlan_config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function napalm_configure at 0x7fdad80dd8c0> (failed)
+
+
+2021-01-10 22:27:23,805 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 150, in _commit_merge
+    output = self._send_config(self.merge_candidate)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 721, in _send_config
+    return self.device.config_list(commands)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/device.py", line 132, in config_list
+    return self.api._nxapi_command_conf(commands)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 117, in _nxapi_command_conf
+    return self._nxapi_command(commands=commands, method=method)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 110, in _nxapi_command
+    response = self._send_request(commands, method=method)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 87, in _send_request
+    raise NXAPIPostError(msg)
+napalm.nxapi_plumbing.errors.NXAPIPostError: Invalid status code returned on NX-API POST
+commands: ['vlan {vlan_id}', '        name {vlan_name}']
+status_code: 500
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 37, in napalm_configure
+    device.commit_config()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 229, in commit_config
+    self._commit_merge()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 158, in _commit_merge
+    raise MergeConfigException(merge_error)
+napalm.base.exceptions.MergeConfigException: Configuration merge failed; automatic rollback attempted:
+"Invalid status code returned on NX-API POST\ncommands: ['vlan {vlan_id}', '        name {vlan_name}']\nstatus_code: 500"
+
+2021-01-10 22:27:23,805 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'config_vlan' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 10, in config_vlan
+    task.run(task=napalm_configure, configuration=vlan_config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function napalm_configure at 0x7fdad80dd8c0> (failed)
+
+
+2021-01-10 22:28:52,126 -  nornir.core -     INFO -        run() - Running task 'config_vlan' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 2 hosts
+2021-01-10 22:31:59,882 -  nornir.core -     INFO -        run() - Running task 'config_vlan' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 6 hosts
+2021-01-11 06:33:52,649 -  nornir.core -     INFO -        run() - Running task 'config_vlan' with args {'vlan_id': '5', 'vlan_name': 'mgmt'} on 6 hosts
+2021-01-11 06:35:45,774 -  nornir.core -     INFO -        run() - Running task 'config_vlan' with args {'vlan_id': '6', 'vlan_name': 'WLAN_CORP'} on 6 hosts
+2021-01-11 06:37:57,526 -  nornir.core -     INFO -        run() - Running task 'config_vlan' with args {'vlan_id': '6', 'vlan_name': 'WLAN_CORP'} on 6 hosts
