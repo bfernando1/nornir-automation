@@ -56,3 +56,4 @@ TypeError: napalm_get() missing 1 required positional argument: 'getters'
 2021-01-11 07:03:08,461 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'running'} on 9 hosts
 2021-01-11 07:08:51,871 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'running'} on 9 hosts
 2021-01-11 07:11:12,024 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'running'} on 1 hosts
+2021-01-11 21:37:21,419 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {} on 1 hosts
