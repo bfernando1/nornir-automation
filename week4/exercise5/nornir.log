@@ -57,3 +57,246 @@ TypeError: napalm_get() missing 1 required positional argument: 'getters'
 2021-01-11 07:08:51,871 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'running'} on 9 hosts
 2021-01-11 07:11:12,024 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config'], 'retrieve': 'running'} on 1 hosts
 2021-01-11 21:37:21,419 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {} on 1 hosts
+2021-01-11 21:48:30,690 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 21:48:30,691 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5c.py", line 7, in get_config
+    retrieve="running"))
+TypeError: napalm_get() missing 1 required positional argument: 'task'
+
+2021-01-11 21:53:13,386 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 21:53:13,387 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5c.py", line 7, in get_config
+    retrieve="running"))
+TypeError: napalm_get() missing 1 required positional argument: 'task'
+
+2021-01-11 21:55:40,018 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 21:57:11,953 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:00:26,182 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:01:00,662 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:01:01,943 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'int_config': 'interface Loopback123\n        description Hello'} on 1 hosts
+2021-01-11 22:01:33,719 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:01:34,852 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'int_config': 'interface Loopback111\n        description Hello'} on 1 hosts
+2021-01-11 22:07:45,427 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:07:46,605 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'int_config': 'interface Loopback111\n        description Hello'} on 1 hosts
+2021-01-11 22:07:49,001 -  nornir.core -     INFO -        run() - Running task 'restore_config' with args {'saved_config': AggregatedResult (get_config): {'arista4': MultiResult: [Result: "get_config", Result: "napalm_get"]}} on 1 hosts
+2021-01-11 22:07:49,002 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+TypeError: napalm_configure() got an unexpected keyword argument 'configuraiton'
+
+2021-01-11 22:07:49,002 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'restore_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5c.py", line 19, in restore_config
+    replace=True
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function napalm_configure at 0x7fedae8c2950> (failed)
+
+
+2021-01-11 22:08:40,422 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:08:41,540 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'int_config': 'interface Loopback111\n        description Hello'} on 1 hosts
+2021-01-11 22:08:43,847 -  nornir.core -     INFO -        run() - Running task 'restore_config' with args {'saved_config': AggregatedResult (get_config): {'arista4': MultiResult: [Result: "get_config", Result: "napalm_get"]}} on 1 hosts
+2021-01-11 22:08:43,850 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 30, in napalm_configure
+    device.load_replace_candidate(filename=filename, config=configuration)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/eos/eos.py", line 306, in load_replace_candidate
+    self._load_config(filename, config, True)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/eos/eos.py", line 270, in _load_config
+    lines = config.splitlines()
+AttributeError: 'AggregatedResult' object has no attribute 'splitlines'
+
+2021-01-11 22:08:43,850 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'restore_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5c.py", line 19, in restore_config
+    replace=True
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function napalm_configure at 0x7fcd1d061950> (failed)
+
+
+2021-01-11 22:14:33,992 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:14:35,128 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'int_config': 'interface Loopback111\n        description Hello'} on 1 hosts
+2021-01-11 22:14:37,444 -  nornir.core -     INFO -        run() - Running task 'restore_config' with args {'saved_config': AggregatedResult (get_config): {'arista4': MultiResult: [Result: "get_config", Result: "napalm_get"]}} on 1 hosts
+2021-01-11 22:14:37,445 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 30, in napalm_configure
+    device.load_replace_candidate(filename=filename, config=configuration)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/eos/eos.py", line 306, in load_replace_candidate
+    self._load_config(filename, config, True)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/eos/eos.py", line 270, in _load_config
+    lines = config.splitlines()
+AttributeError: 'AggregatedResult' object has no attribute 'splitlines'
+
+2021-01-11 22:14:37,445 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'restore_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5c.py", line 19, in restore_config
+    replace=True
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function napalm_configure at 0x7f139a1ba950> (failed)
+
+
+2021-01-11 22:15:37,171 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:15:38,302 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'int_config': 'interface Loopback111\n        description Hello'} on 1 hosts
+2021-01-11 22:15:40,610 -  nornir.core -     INFO -        run() - Running task 'restore_config' with args {'saved_config': AggregatedResult (get_config): {'arista4': MultiResult: [Result: "get_config", Result: "napalm_get"]}} on 1 hosts
+2021-01-11 22:15:40,611 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 30, in napalm_configure
+    device.load_replace_candidate(filename=filename, config=configuration)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/eos/eos.py", line 306, in load_replace_candidate
+    self._load_config(filename, config, True)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/eos/eos.py", line 270, in _load_config
+    lines = config.splitlines()
+AttributeError: 'AggregatedResult' object has no attribute 'splitlines'
+
+2021-01-11 22:15:40,612 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'restore_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5c.py", line 19, in restore_config
+    replace=True
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function napalm_configure at 0x7fd619fbe9e0> (failed)
+
+
+2021-01-11 22:17:46,524 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:17:47,643 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'int_config': 'interface Loopback111\n        description Hello'} on 1 hosts
+2021-01-11 22:17:49,980 -  nornir.core -     INFO -        run() - Running task 'restore_config' with args {'saved_config': AggregatedResult (get_config): {'arista4': MultiResult: [Result: "get_config", Result: "napalm_get"]}} on 1 hosts
+2021-01-11 22:17:49,982 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 30, in napalm_configure
+    device.load_replace_candidate(filename=filename, config=configuration)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/eos/eos.py", line 306, in load_replace_candidate
+    self._load_config(filename, config, True)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/eos/eos.py", line 270, in _load_config
+    lines = config.splitlines()
+AttributeError: 'AggregatedResult' object has no attribute 'splitlines'
+
+2021-01-11 22:17:49,982 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'restore_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5c.py", line 19, in restore_config
+    replace=True
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function napalm_configure at 0x7fef68c469e0> (failed)
+
+
+2021-01-11 22:19:49,821 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:19:51,051 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'int_config': 'interface Loopback111\n        description Hello'} on 1 hosts
+2021-01-11 22:20:11,420 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:20:12,536 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'int_config': 'interface Loopback111\n        description Hello'} on 1 hosts
+2021-01-11 22:20:28,651 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:20:29,830 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'int_config': 'interface Loopback111\n        description Hello'} on 1 hosts
+2021-01-11 22:20:32,139 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': AggregatedResult (get_config): {'arista4': MultiResult: [Result: "get_config", Result: "napalm_get"]}, 'replace': True} on 1 hosts
+2021-01-11 22:20:32,140 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 30, in napalm_configure
+    device.load_replace_candidate(filename=filename, config=configuration)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/eos/eos.py", line 306, in load_replace_candidate
+    self._load_config(filename, config, True)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/eos/eos.py", line 270, in _load_config
+    lines = config.splitlines()
+AttributeError: 'AggregatedResult' object has no attribute 'splitlines'
+
+2021-01-11 22:24:59,057 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:25:32,542 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5c.py", line 11, in get_config
+    return config[task.host][0].result
+  File "exercise5c.py", line 11, in get_config
+    return config[task.host][0].result
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-11 22:25:32,543 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'int_config': 'interface Loopback111\n        description Hello'} on 1 hosts
+2021-01-11 22:25:32,543 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': AggregatedResult (get_config): {'arista4': MultiResult: [Result: "get_config", Result: "napalm_get"]}, 'replace': True} on 1 hosts
+2021-01-11 22:25:59,476 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:26:00,534 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'int_config': 'interface Loopback111\n        description Hello'} on 1 hosts
+2021-01-11 22:26:02,880 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': AggregatedResult (get_config): {'arista4': MultiResult: [Result: "get_config", Result: "napalm_get"]}, 'replace': True} on 1 hosts
+2021-01-11 22:26:02,881 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 30, in napalm_configure
+    device.load_replace_candidate(filename=filename, config=configuration)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/eos/eos.py", line 306, in load_replace_candidate
+    self._load_config(filename, config, True)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/eos/eos.py", line 270, in _load_config
+    lines = config.splitlines()
+AttributeError: 'AggregatedResult' object has no attribute 'splitlines'
+
+2021-01-11 22:26:29,603 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:29:04,799 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:32:26,949 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:33:45,388 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:34:11,675 - nornir.core.task -    ERROR -      start() - Host 'arista4': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5c.py", line 13, in get_config
+    return config[0].result
+  File "exercise5c.py", line 13, in get_config
+    return config[0].result
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-11 22:34:11,676 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'int_config': 'interface Loopback111\n        description Hello'} on 1 hosts
+2021-01-11 22:34:11,676 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'Traceback (most recent call last):\n  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start\n    r = self.task(self, **self.params)\n  File "exercise5c.py", line 13, in get_config\n    return config[0].result\n  File "exercise5c.py", line 13, in get_config\n    return config[0].result\n  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch\n    return self.dispatch_line(frame)\n  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line\n    if self.quitting: raise BdbQuit\nbdb.BdbQuit\n', 'replace': True} on 1 hosts
+2021-01-11 22:35:27,276 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:35:28,390 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'int_config': 'interface Loopback111\n        description Hello'} on 1 hosts
+2021-01-11 22:35:30,780 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': '! Command: show running-config\n! device: arista4 (vEOS, EOS-4.20.10M)\n!\n! boot system flash:/vEOS-lab.swi\n!\ntransceiver qsfp default-mode 4x10G\n!\nhostname arista4\n!\nntp server 130.126.24.24\n!\nspanning-tree mode rapid-pvst\n!\naaa authorization exec default local\n!\nno aaa root\n!\nusername admin privilege 15 role network-admin secret 5 $1$aM6w809x$tgkc6ZGhcScvELVKVHq3n0\nusername admin1 privilege 15 secret 5 $1$7kD0oS/t$wXhtTFwnWwnlPFKWwXoJ70\nusername eapi secret 5 $1$kGsls/wg$brwRo1OGS0OaTdnKuWHQG/\nusername pyclass privilege 15 secret 5 $1$C3VfUfcO$86t4iqCX60yW.NIR8d2Lh0\n!\nclock timezone America/Los_Angeles\n!\nvlan 2-4,6-7\n!\nvlan 5\n   name mgmt\n!\ninterface Ethernet1\n   spanning-tree portfast\n   spanning-tree cost 1\n!\ninterface Ethernet2\n   switchport access vlan 2\n!\ninterface Ethernet3\n   switchport access vlan 3\n!\ninterface Ethernet4\n   switchport access vlan 4\n!\ninterface Ethernet5\n   switchport access vlan 5\n!\ninterface Ethernet6\n   switchport access vlan 6\n!\ninterface Ethernet7\n   switchport access vlan 7\n!\ninterface Loopback99\n   ip address 172.31.1.13/30\n!\ninterface Loopback111\n   description Hello\n!\ninterface Loopback123\n   description Hello\n!\ninterface Management1\n   shutdown\n!\ninterface Vlan1\n   ip address 10.220.88.31/24\n!\nip route 0.0.0.0/0 10.220.88.1\n!\nip routing\n!\nmanagement api http-commands\n   no shutdown\n!\nend\n', 'replace': True} on 1 hosts
+2021-01-11 22:36:06,196 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:36:07,234 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'int_config': 'interface Loopback111\n        description Hello'} on 1 hosts
+2021-01-11 22:36:09,460 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': '! Command: show running-config\n! device: arista4 (vEOS, EOS-4.20.10M)\n!\n! boot system flash:/vEOS-lab.swi\n!\ntransceiver qsfp default-mode 4x10G\n!\nhostname arista4\n!\nntp server 130.126.24.24\n!\nspanning-tree mode rapid-pvst\n!\naaa authorization exec default local\n!\nno aaa root\n!\nusername admin privilege 15 role network-admin secret 5 $1$aM6w809x$tgkc6ZGhcScvELVKVHq3n0\nusername admin1 privilege 15 secret 5 $1$7kD0oS/t$wXhtTFwnWwnlPFKWwXoJ70\nusername eapi secret 5 $1$kGsls/wg$brwRo1OGS0OaTdnKuWHQG/\nusername pyclass privilege 15 secret 5 $1$C3VfUfcO$86t4iqCX60yW.NIR8d2Lh0\n!\nclock timezone America/Los_Angeles\n!\nvlan 2-4,6-7\n!\nvlan 5\n   name mgmt\n!\ninterface Ethernet1\n   spanning-tree portfast\n   spanning-tree cost 1\n!\ninterface Ethernet2\n   switchport access vlan 2\n!\ninterface Ethernet3\n   switchport access vlan 3\n!\ninterface Ethernet4\n   switchport access vlan 4\n!\ninterface Ethernet5\n   switchport access vlan 5\n!\ninterface Ethernet6\n   switchport access vlan 6\n!\ninterface Ethernet7\n   switchport access vlan 7\n!\ninterface Loopback99\n   ip address 172.31.1.13/30\n!\ninterface Loopback111\n   description Hello\n!\ninterface Loopback123\n   description Hello\n!\ninterface Management1\n   shutdown\n!\ninterface Vlan1\n   ip address 10.220.88.31/24\n!\nip route 0.0.0.0/0 10.220.88.1\n!\nip routing\n!\nmanagement api http-commands\n   no shutdown\n!\nend\n', 'replace': True} on 1 hosts
+2021-01-11 22:36:48,060 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:39:06,430 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:39:07,504 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'int_config': 'interface Loopback111\n        description Hello'} on 1 hosts
+2021-01-11 22:39:09,863 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': '! Command: show running-config\n! device: arista4 (vEOS, EOS-4.20.10M)\n!\n! boot system flash:/vEOS-lab.swi\n!\ntransceiver qsfp default-mode 4x10G\n!\nhostname arista4\n!\nntp server 130.126.24.24\n!\nspanning-tree mode rapid-pvst\n!\naaa authorization exec default local\n!\nno aaa root\n!\nusername admin privilege 15 role network-admin secret 5 $1$aM6w809x$tgkc6ZGhcScvELVKVHq3n0\nusername admin1 privilege 15 secret 5 $1$7kD0oS/t$wXhtTFwnWwnlPFKWwXoJ70\nusername eapi secret 5 $1$kGsls/wg$brwRo1OGS0OaTdnKuWHQG/\nusername pyclass privilege 15 secret 5 $1$C3VfUfcO$86t4iqCX60yW.NIR8d2Lh0\n!\nclock timezone America/Los_Angeles\n!\nvlan 2-4,6-7\n!\nvlan 5\n   name mgmt\n!\ninterface Ethernet1\n   spanning-tree portfast\n   spanning-tree cost 1\n!\ninterface Ethernet2\n   switchport access vlan 2\n!\ninterface Ethernet3\n   switchport access vlan 3\n!\ninterface Ethernet4\n   switchport access vlan 4\n!\ninterface Ethernet5\n   switchport access vlan 5\n!\ninterface Ethernet6\n   switchport access vlan 6\n!\ninterface Ethernet7\n   switchport access vlan 7\n!\ninterface Loopback99\n   ip address 172.31.1.13/30\n!\ninterface Loopback111\n   description Hello\n!\ninterface Loopback123\n   description Hello\n!\ninterface Management1\n   shutdown\n!\ninterface Vlan1\n   ip address 10.220.88.31/24\n!\nip route 0.0.0.0/0 10.220.88.1\n!\nip routing\n!\nmanagement api http-commands\n   no shutdown\n!\nend\n', 'replace': True} on 1 hosts
+2021-01-11 22:39:39,306 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:39:40,426 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'int_config': 'interface Loopback112\n        description Hello'} on 1 hosts
+2021-01-11 22:39:44,320 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': '! Command: show running-config\n! device: arista4 (vEOS, EOS-4.20.10M)\n!\n! boot system flash:/vEOS-lab.swi\n!\ntransceiver qsfp default-mode 4x10G\n!\nhostname arista4\n!\nntp server 130.126.24.24\n!\nspanning-tree mode rapid-pvst\n!\naaa authorization exec default local\n!\nno aaa root\n!\nusername admin privilege 15 role network-admin secret 5 $1$aM6w809x$tgkc6ZGhcScvELVKVHq3n0\nusername admin1 privilege 15 secret 5 $1$7kD0oS/t$wXhtTFwnWwnlPFKWwXoJ70\nusername eapi secret 5 $1$kGsls/wg$brwRo1OGS0OaTdnKuWHQG/\nusername pyclass privilege 15 secret 5 $1$C3VfUfcO$86t4iqCX60yW.NIR8d2Lh0\n!\nclock timezone America/Los_Angeles\n!\nvlan 2-4,6-7\n!\nvlan 5\n   name mgmt\n!\ninterface Ethernet1\n   spanning-tree portfast\n   spanning-tree cost 1\n!\ninterface Ethernet2\n   switchport access vlan 2\n!\ninterface Ethernet3\n   switchport access vlan 3\n!\ninterface Ethernet4\n   switchport access vlan 4\n!\ninterface Ethernet5\n   switchport access vlan 5\n!\ninterface Ethernet6\n   switchport access vlan 6\n!\ninterface Ethernet7\n   switchport access vlan 7\n!\ninterface Loopback99\n   ip address 172.31.1.13/30\n!\ninterface Loopback111\n   description Hello\n!\ninterface Loopback123\n   description Hello\n!\ninterface Management1\n   shutdown\n!\ninterface Vlan1\n   ip address 10.220.88.31/24\n!\nip route 0.0.0.0/0 10.220.88.1\n!\nip routing\n!\nmanagement api http-commands\n   no shutdown\n!\nend\n', 'replace': True} on 1 hosts
+2021-01-11 22:40:31,245 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:40:32,353 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'int_config': 'interface Loopback112\n        description Hello'} on 1 hosts
+2021-01-11 22:40:36,526 -  nornir.core -     INFO -        run() - Running task 'restore_config' with args {'saved_config': '! Command: show running-config\n! device: arista4 (vEOS, EOS-4.20.10M)\n!\n! boot system flash:/vEOS-lab.swi\n!\ntransceiver qsfp default-mode 4x10G\n!\nhostname arista4\n!\nntp server 130.126.24.24\n!\nspanning-tree mode rapid-pvst\n!\naaa authorization exec default local\n!\nno aaa root\n!\nusername admin privilege 15 role network-admin secret 5 $1$aM6w809x$tgkc6ZGhcScvELVKVHq3n0\nusername admin1 privilege 15 secret 5 $1$7kD0oS/t$wXhtTFwnWwnlPFKWwXoJ70\nusername eapi secret 5 $1$kGsls/wg$brwRo1OGS0OaTdnKuWHQG/\nusername pyclass privilege 15 secret 5 $1$C3VfUfcO$86t4iqCX60yW.NIR8d2Lh0\n!\nclock timezone America/Los_Angeles\n!\nvlan 2-4,6-7\n!\nvlan 5\n   name mgmt\n!\ninterface Ethernet1\n   spanning-tree portfast\n   spanning-tree cost 1\n!\ninterface Ethernet2\n   switchport access vlan 2\n!\ninterface Ethernet3\n   switchport access vlan 3\n!\ninterface Ethernet4\n   switchport access vlan 4\n!\ninterface Ethernet5\n   switchport access vlan 5\n!\ninterface Ethernet6\n   switchport access vlan 6\n!\ninterface Ethernet7\n   switchport access vlan 7\n!\ninterface Loopback99\n   ip address 172.31.1.13/30\n!\ninterface Loopback111\n   description Hello\n!\ninterface Loopback123\n   description Hello\n!\ninterface Management1\n   shutdown\n!\ninterface Vlan1\n   ip address 10.220.88.31/24\n!\nip route 0.0.0.0/0 10.220.88.1\n!\nip routing\n!\nmanagement api http-commands\n   no shutdown\n!\nend\n'} on 1 hosts
+2021-01-11 22:45:56,872 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:49:37,841 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:49:38,950 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'int_config': 'interface Loopback112\n        description Hello'} on 1 hosts
+2021-01-11 22:49:42,855 -  nornir.core -     INFO -        run() - Running task 'restore_config' with args {'saved_config': '! Command: show running-config\n! device: arista4 (vEOS, EOS-4.20.10M)\n!\n! boot system flash:/vEOS-lab.swi\n!\ntransceiver qsfp default-mode 4x10G\n!\nhostname arista4\n!\nntp server 130.126.24.24\n!\nspanning-tree mode rapid-pvst\n!\naaa authorization exec default local\n!\nno aaa root\n!\nusername admin privilege 15 role network-admin secret 5 $1$aM6w809x$tgkc6ZGhcScvELVKVHq3n0\nusername admin1 privilege 15 secret 5 $1$7kD0oS/t$wXhtTFwnWwnlPFKWwXoJ70\nusername eapi secret 5 $1$kGsls/wg$brwRo1OGS0OaTdnKuWHQG/\nusername pyclass privilege 15 secret 5 $1$C3VfUfcO$86t4iqCX60yW.NIR8d2Lh0\n!\nclock timezone America/Los_Angeles\n!\nvlan 2-4,6-7\n!\nvlan 5\n   name mgmt\n!\ninterface Ethernet1\n   spanning-tree portfast\n   spanning-tree cost 1\n!\ninterface Ethernet2\n   switchport access vlan 2\n!\ninterface Ethernet3\n   switchport access vlan 3\n!\ninterface Ethernet4\n   switchport access vlan 4\n!\ninterface Ethernet5\n   switchport access vlan 5\n!\ninterface Ethernet6\n   switchport access vlan 6\n!\ninterface Ethernet7\n   switchport access vlan 7\n!\ninterface Loopback99\n   ip address 172.31.1.13/30\n!\ninterface Loopback111\n   description Hello\n!\ninterface Loopback123\n   description Hello\n!\ninterface Management1\n   shutdown\n!\ninterface Vlan1\n   ip address 10.220.88.31/24\n!\nip route 0.0.0.0/0 10.220.88.1\n!\nip routing\n!\nmanagement api http-commands\n   no shutdown\n!\nend\n'} on 1 hosts
+2021-01-11 22:51:25,482 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 1 hosts
+2021-01-11 22:51:26,594 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'int_config': 'interface Loopback112\n        description Hello'} on 1 hosts
+2021-01-11 22:51:30,588 -  nornir.core -     INFO -        run() - Running task 'restore_config' with args {'saved_config': '! Command: show running-config\n! device: arista4 (vEOS, EOS-4.20.10M)\n!\n! boot system flash:/vEOS-lab.swi\n!\ntransceiver qsfp default-mode 4x10G\n!\nhostname arista4\n!\nntp server 130.126.24.24\n!\nspanning-tree mode rapid-pvst\n!\naaa authorization exec default local\n!\nno aaa root\n!\nusername admin privilege 15 role network-admin secret 5 $1$aM6w809x$tgkc6ZGhcScvELVKVHq3n0\nusername admin1 privilege 15 secret 5 $1$7kD0oS/t$wXhtTFwnWwnlPFKWwXoJ70\nusername eapi secret 5 $1$kGsls/wg$brwRo1OGS0OaTdnKuWHQG/\nusername pyclass privilege 15 secret 5 $1$C3VfUfcO$86t4iqCX60yW.NIR8d2Lh0\n!\nclock timezone America/Los_Angeles\n!\nvlan 2-4,6-7\n!\nvlan 5\n   name mgmt\n!\ninterface Ethernet1\n   spanning-tree portfast\n   spanning-tree cost 1\n!\ninterface Ethernet2\n   switchport access vlan 2\n!\ninterface Ethernet3\n   switchport access vlan 3\n!\ninterface Ethernet4\n   switchport access vlan 4\n!\ninterface Ethernet5\n   switchport access vlan 5\n!\ninterface Ethernet6\n   switchport access vlan 6\n!\ninterface Ethernet7\n   switchport access vlan 7\n!\ninterface Loopback99\n   ip address 172.31.1.13/30\n!\ninterface Loopback111\n   description Hello\n!\ninterface Loopback123\n   description Hello\n!\ninterface Management1\n   shutdown\n!\ninterface Vlan1\n   ip address 10.220.88.31/24\n!\nip route 0.0.0.0/0 10.220.88.1\n!\nip routing\n!\nmanagement api http-commands\n   no shutdown\n!\nend\n'} on 1 hosts
