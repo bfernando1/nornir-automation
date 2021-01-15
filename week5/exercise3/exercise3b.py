@@ -6,6 +6,7 @@ Usage:
     python exercise3b.py
 
 Output:
+    --------------------------------------------------------------------------------
     set firewall family inet filter my_acl term rule1 from protocol tcp
     set firewall family inet filter my_acl term rule1 from destination-port 22
     set firewall family inet filter my_acl term rule1 from destination-address 1.2.3.4/32
@@ -18,6 +19,7 @@ Output:
     set firewall family inet filter my_acl term rule3 from destination-port 80
     set firewall family inet filter my_acl term rule3 from destination-address 1.2.3.4/32
     set firewall family inet filter my_acl term rule3 then discard
+    --------------------------------------------------------------------------------
 """
 from nornir import InitNornir
 from nornir.plugins.functions.text import print_result
@@ -25,18 +27,24 @@ from nornir.plugins.tasks import data
 import ipdb
 
 def build_acl(task, elements):
-    for key in elements[0].result:
-        rule_name = key
+    acl_config = []
 
-    for index, rule_val in enumerate(elements[0].result[rule_name]):
-        data = f"set firewall family inet filter {rule_name} term {rule_val['term_name']}"
-        print(f"{data} from protocol {rule_val['protocol']}")
-        print(f"{data} from destination-port {rule_val['destination_port']}")
-        print(f"{data} from destination-address {rule_val['destination_address']}")
-        print(f"{data} then {rule_val['state']}")
-
+    for acl_name, acl_rule in elements.items():
+        for rule in acl_rule:
+            data = f"set firewall family inet filter {acl_name} term {rule['term_name']}"
+            acl_config.append(f"{data} from protocol {rule['protocol']}")
+            acl_config.append(f"{data} from destination-port {rule['destination_port']}")
+            acl_config.append(f"{data} from destination-address {rule['destination_address']}")
+            acl_config.append(f"{data} then {rule['state']}")
+   
+    print('-' * 80) 
+    for line in acl_config:
+        print(line)
+    print('-' * 80) 
+    
 def load_config(task):
     in_yaml = task.run(task=data.load_yaml, file="my_acl.yaml")
+    in_yaml = in_yaml[0].result
     task.run(task=build_acl, elements=in_yaml) 
 
 def main():
