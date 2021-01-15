@@ -1,0 +1,424 @@
+2021-01-14 22:11:12,186 -  nornir.core -     INFO -        run() - Running task 'load_yaml' with args {'file': 'my_acl.yaml'} on 1 hosts
+2021-01-14 22:16:34,107 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 22:17:55,457 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 22:19:34,913 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 22:20:58,432 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 9, in load_config
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-14 22:23:39,832 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 22:23:39,833 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 7, in build_acl
+    for key, value in elements:
+TypeError: cannot unpack non-iterable Result object
+
+2021-01-14 22:23:39,834 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 12, in load_config
+    task.run(task=build_acl, elements=in_yaml)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f6b91ef6a70> (failed)
+
+
+2021-01-14 22:24:02,133 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 22:37:18,735 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 8, in build_acl
+    for key, value in elements:
+  File "exercise3b.py", line 8, in build_acl
+    for key, value in elements:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-14 22:37:18,735 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 13, in load_config
+    task.run(task=build_acl, elements=in_yaml)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7fc054028a70> (failed)
+
+
+2021-01-14 22:39:58,279 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 22:40:40,800 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 8, in build_acl
+    for rule in elements[0].result:
+  File "exercise3b.py", line 8, in build_acl
+    for rule in elements[0].result:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-14 22:40:40,800 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 13, in load_config
+    task.run(task=build_acl, elements=in_yaml)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f146e5bca70> (failed)
+
+
+2021-01-14 22:41:22,062 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 22:48:22,992 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 8, in build_acl
+    for rule in elements[0].result:
+  File "exercise3b.py", line 8, in build_acl
+    for rule in elements[0].result:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-14 22:48:22,992 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 13, in load_config
+    task.run(task=build_acl, elements=in_yaml)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f5e44c19a70> (failed)
+
+
+2021-01-14 22:56:03,500 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 22:56:03,502 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 10, in build_acl
+    print(f"{rule_condition}")
+NameError: name 'rule_condition' is not defined
+
+2021-01-14 22:56:03,502 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 14, in load_config
+    task.run(task=build_acl, elements=in_yaml)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7fd734e0aa70> (failed)
+
+
+2021-01-14 22:56:44,289 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 22:57:19,191 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 22:57:45,590 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 22:58:32,042 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 22:58:32,044 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 8, in build_acl
+    rule_condition = f"set firewall family inet filter {rule_name} term " \
+TypeError: list indices must be integers or slices, not str
+
+2021-01-14 22:58:32,044 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 14, in load_config
+    task.run(task=build_acl, elements=in_yaml)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f0dba785a70> (failed)
+
+
+2021-01-14 22:58:50,625 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 22:58:50,627 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 8, in build_acl
+    rule_condition = f"set firewall family inet filter {rule_name} term " \
+TypeError: list indices must be integers or slices, not str
+
+2021-01-14 22:58:50,627 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 14, in load_config
+    task.run(task=build_acl, elements=in_yaml)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f7508506a70> (failed)
+
+
+2021-01-14 22:59:59,259 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 22:59:59,261 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 9, in build_acl
+    {elements[0].result[rule_name]['term_name']} from "
+TypeError: list indices must be integers or slices, not str
+
+2021-01-14 22:59:59,261 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 14, in load_config
+    task.run(task=build_acl, elements=in_yaml)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7ff1228d3a70> (failed)
+
+
+2021-01-14 23:00:47,833 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 23:00:47,834 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 8, in build_acl
+    rule_condition = f"set firewall family inet filter {rule_name} term {elements[0].result[rule_name]['term_name']} from "
+TypeError: list indices must be integers or slices, not str
+
+2021-01-14 23:00:47,835 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 13, in load_config
+    task.run(task=build_acl, elements=in_yaml)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7fb874a2da70> (failed)
+
+
+2021-01-14 23:01:02,610 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 23:01:02,612 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 8, in build_acl
+    rule_condition = f"set firewall family inet filter {rule_name} term {elements[0].result[rule_name]['term_name']} from "
+TypeError: list indices must be integers or slices, not str
+
+2021-01-14 23:01:02,612 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 14, in load_config
+    task.run(task=build_acl, elements=in_yaml)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f37c24cba70> (failed)
+
+
+2021-01-14 23:01:45,002 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 23:01:47,017 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 10, in build_acl
+    print(rule_condition)
+  File "exercise3b.py", line 10, in build_acl
+    print(rule_condition)
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-14 23:01:47,018 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 14, in load_config
+    task.run(task=build_acl, elements=in_yaml)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f817c1d3a70> (failed)
+
+
+2021-01-14 23:01:54,206 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 23:03:56,076 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 10, in build_acl
+    print(rule_condition)
+  File "exercise3b.py", line 10, in build_acl
+    print(rule_condition)
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-14 23:03:56,076 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 14, in load_config
+    task.run(task=build_acl, elements=in_yaml)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f61a469ca70> (failed)
+
+
+2021-01-14 23:04:36,599 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 23:13:11,771 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 10, in build_acl
+    print(rule_condition)
+  File "exercise3b.py", line 10, in build_acl
+    print(rule_condition)
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-14 23:13:11,771 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 14, in load_config
+    task.run(task=build_acl, elements=in_yaml)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7fa25198aa70> (failed)
+
+
+2021-01-14 23:15:20,843 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 23:18:05,934 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 23:18:29,012 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 23:18:59,257 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 23:20:15,558 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 23:21:46,334 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 23:21:46,336 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 15, in build_acl
+    print(f"{data} from destination-port {rule_val['port']}")
+KeyError: 'port'
+
+2021-01-14 23:21:46,336 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 22, in load_config
+    task.run(task=build_acl, elements=in_yaml)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f4c779dfa70> (failed)
+
+
+2021-01-14 23:22:10,213 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 23:22:10,215 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 15, in build_acl
+    print(f"{data} from destination-port {rule_val['port']}")
+KeyError: 'port'
+
+2021-01-14 23:22:10,216 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 22, in load_config
+    task.run(task=build_acl, elements=in_yaml)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f5ac7e17a70> (failed)
+
+
+2021-01-14 23:22:58,228 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 23:22:58,230 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 15, in build_acl
+    print(f"{data} from destination-port {rule_val['port']}")
+KeyError: 'port'
+
+2021-01-14 23:22:58,230 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 22, in load_config
+    task.run(task=build_acl, elements=in_yaml)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f54baad6a70> (failed)
+
+
+2021-01-14 23:23:19,770 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 23:23:19,772 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 15, in build_acl
+    print(f"{data} from destination-port {rule_val['port']}")
+KeyError: 'port'
+
+2021-01-14 23:23:19,772 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 22, in load_config
+    task.run(task=build_acl, elements=in_yaml)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f96e4b1def0> (failed)
+
+
+2021-01-14 23:24:06,256 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 23:24:15,134 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 23:24:15,136 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 16, in build_acl
+    print(f"{data} from destination-address {rule_val['destination-address']}")
+KeyError: 'destination-address'
+
+2021-01-14 23:24:15,136 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 22, in load_config
+    task.run(task=build_acl, elements=in_yaml)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7fee7be56ef0> (failed)
+
+
+2021-01-14 23:26:28,740 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 23:26:37,956 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-14 23:26:46,632 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
