@@ -343,3 +343,878 @@ nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f2
 
 2021-01-16 00:18:52,968 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
 2021-01-16 00:20:14,864 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 06:53:36,223 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 06:53:36,231 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'template_string' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_string.py", line 26, in template_string
+    template=template, host=task.host, jinja_filters=jinja_filters, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 27, in render_from_string
+    t = env.from_string(template)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 941, in from_string
+    return cls.from_code(self, self.compile(source), globals, None)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "<unknown>", line 3, in template
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got 'firewall'
+
+2021-01-16 06:53:36,231 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 18, in build_acl
+    rendered = task.run(task=text.template_string, template=acl_template)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_string at 0x7f18486da5f0> (failed)
+
+
+2021-01-16 06:53:36,231 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 24, in load_file
+    acl_config = task.run(task=build_acl, file_data=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f1868fbea70> (failed)
+
+
+2021-01-16 06:55:10,212 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 06:55:10,217 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'template_string' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_string.py", line 26, in template_string
+    template=template, host=task.host, jinja_filters=jinja_filters, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 27, in render_from_string
+    t = env.from_string(template)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 941, in from_string
+    return cls.from_code(self, self.compile(source), globals, None)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "<unknown>", line 3, in template
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got 'firewall'
+
+2021-01-16 06:55:10,217 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 18, in build_acl
+    rendered = task.run(task=text.template_string, template=acl_template, acl_rules=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_string at 0x7f7d5863b5f0> (failed)
+
+
+2021-01-16 06:55:10,217 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 24, in load_file
+    acl_config = task.run(task=build_acl, file_data=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f7d78f22a70> (failed)
+
+
+2021-01-16 06:57:40,271 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 06:57:40,276 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'template_string' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_string.py", line 26, in template_string
+    template=template, host=task.host, jinja_filters=jinja_filters, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 27, in render_from_string
+    t = env.from_string(template)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 941, in from_string
+    return cls.from_code(self, self.compile(source), globals, None)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "<unknown>", line 3, in template
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got 'firewall'
+
+2021-01-16 06:57:40,277 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 18, in build_acl
+    rendered = task.run(task=text.template_string, template=acl_template, acl_rules=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_string at 0x7f24a3e475f0> (failed)
+
+
+2021-01-16 06:57:40,277 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 25, in load_file
+    acl_config = task.run(task=build_acl, file_data=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f24c472ea70> (failed)
+
+
+2021-01-16 06:59:59,577 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 06:59:59,583 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'template_string' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_string.py", line 26, in template_string
+    template=template, host=task.host, jinja_filters=jinja_filters, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 27, in render_from_string
+    t = env.from_string(template)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 941, in from_string
+    return cls.from_code(self, self.compile(source), globals, None)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "<unknown>", line 3, in template
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got 'firewall'
+
+2021-01-16 06:59:59,583 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 18, in build_acl
+    rendered = task.run(task=text.template_string, template=acl_template, acl_rules=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_string at 0x7fe622ea65f0> (failed)
+
+
+2021-01-16 06:59:59,583 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 25, in load_file
+    acl_config = task.run(task=build_acl, file_data=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7fe64378aa70> (failed)
+
+
+2021-01-16 07:03:03,966 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:03:03,972 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'template_string' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_string.py", line 26, in template_string
+    template=template, host=task.host, jinja_filters=jinja_filters, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 27, in render_from_string
+    t = env.from_string(template)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 941, in from_string
+    return cls.from_code(self, self.compile(source), globals, None)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "<unknown>", line 3, in template
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got 'firewall'
+
+2021-01-16 07:03:03,972 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 19, in build_acl
+    rendered = task.run(task=text.template_string, template=acl_template, acl_rules=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_string at 0x7f397d6d8680> (failed)
+
+
+2021-01-16 07:03:03,972 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 26, in load_file
+    acl_config = task.run(task=build_acl, file_data=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f399dfbfa70> (failed)
+
+
+2021-01-16 07:09:42,502 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:09:42,507 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'template_string' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_string.py", line 26, in template_string
+    template=template, host=task.host, jinja_filters=jinja_filters, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 27, in render_from_string
+    t = env.from_string(template)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 941, in from_string
+    return cls.from_code(self, self.compile(source), globals, None)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "<unknown>", line 3, in template
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got 'firewall'
+
+2021-01-16 07:09:42,508 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 21, in build_acl
+    rendered = task.run(task=text.template_string, template=acl_template, acl_rules=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_string at 0x7fcfc9152b00> (failed)
+
+
+2021-01-16 07:09:42,508 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 28, in load_file
+    acl_config = task.run(task=build_acl, file_data=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7fcfe9a41a70> (failed)
+
+
+2021-01-16 07:13:01,004 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:13:03,003 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 21, in build_acl
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-16 07:13:03,004 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 26, in load_file
+    acl_config = task.run(task=build_acl, file_data=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f7925760a70> (failed)
+
+
+2021-01-16 07:13:19,043 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:14:01,662 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 21, in build_acl
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-16 07:14:01,662 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 26, in load_file
+    acl_config = task.run(task=build_acl, file_data=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f5b807c1a70> (failed)
+
+
+2021-01-16 07:14:43,664 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:14:43,669 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'template_string' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_string.py", line 26, in template_string
+    template=template, host=task.host, jinja_filters=jinja_filters, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 27, in render_from_string
+    t = env.from_string(template)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 941, in from_string
+    return cls.from_code(self, self.compile(source), globals, None)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "<unknown>", line 3, in template
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got 'firewall'
+
+2021-01-16 07:14:43,670 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 19, in build_acl
+    rendered = task.run(task=text.template_string, template=acl_template, acl_rules=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_string at 0x7f4370696b00> (failed)
+
+
+2021-01-16 07:14:43,670 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 26, in load_file
+    acl_config = task.run(task=build_acl, file_data=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f4390f86a70> (failed)
+
+
+2021-01-16 07:15:24,155 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:15:24,160 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'template_string' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_string.py", line 26, in template_string
+    template=template, host=task.host, jinja_filters=jinja_filters, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 27, in render_from_string
+    t = env.from_string(template)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 941, in from_string
+    return cls.from_code(self, self.compile(source), globals, None)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "<unknown>", line 3, in template
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got 'firewall'
+
+2021-01-16 07:15:24,161 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 19, in build_acl
+    rendered = task.run(task=text.template_string, template=acl_template, acl_rules=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_string at 0x7fa7372f4b00> (failed)
+
+
+2021-01-16 07:15:24,161 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 26, in load_file
+    acl_config = task.run(task=build_acl, file_data=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7fa757be4a70> (failed)
+
+
+2021-01-16 07:16:35,667 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:17:08,562 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 21, in build_acl
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-16 07:17:08,563 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 26, in load_file
+    acl_config = task.run(task=build_acl, file_data=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f9f42951a70> (failed)
+
+
+2021-01-16 07:18:54,442 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:18:54,449 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'template_string' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_string.py", line 26, in template_string
+    template=template, host=task.host, jinja_filters=jinja_filters, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 27, in render_from_string
+    t = env.from_string(template)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 941, in from_string
+    return cls.from_code(self, self.compile(source), globals, None)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "<unknown>", line 5, in template
+jinja2.exceptions.TemplateSyntaxError: unexpected '}'
+
+2021-01-16 07:18:54,449 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 18, in build_acl
+    rendered = task.run(task=text.template_string, template=acl_template, acl_rules=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_string at 0x7fbe86387b00> (failed)
+
+
+2021-01-16 07:18:54,449 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 24, in load_file
+    acl_config = task.run(task=build_acl, file_data=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7fbea6c77a70> (failed)
+
+
+2021-01-16 07:19:34,049 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:19:34,055 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'template_string' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_string.py", line 26, in template_string
+    template=template, host=task.host, jinja_filters=jinja_filters, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 27, in render_from_string
+    t = env.from_string(template)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 941, in from_string
+    return cls.from_code(self, self.compile(source), globals, None)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "<unknown>", line 5, in template
+jinja2.exceptions.TemplateSyntaxError: unexpected '}'
+
+2021-01-16 07:19:34,056 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 18, in build_acl
+    rendered = task.run(task=text.template_string, template=acl_template, acl_rules=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_string at 0x7f333686a5f0> (failed)
+
+
+2021-01-16 07:19:34,056 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 24, in load_file
+    acl_config = task.run(task=build_acl, file_data=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f335714ea70> (failed)
+
+
+2021-01-16 07:20:54,906 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:20:54,912 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'template_string' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_string.py", line 26, in template_string
+    template=template, host=task.host, jinja_filters=jinja_filters, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 27, in render_from_string
+    t = env.from_string(template)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 941, in from_string
+    return cls.from_code(self, self.compile(source), globals, None)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "<unknown>", line 5, in template
+jinja2.exceptions.TemplateSyntaxError: unexpected '}'
+
+2021-01-16 07:20:54,912 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 18, in build_acl
+    rendered = task.run(task=text.template_string, template=acl_template, acl_rules=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_string at 0x7f3fd59fbb00> (failed)
+
+
+2021-01-16 07:20:54,912 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 24, in load_file
+    acl_config = task.run(task=build_acl, file_data=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f3ff62eba70> (failed)
+
+
+2021-01-16 07:21:23,320 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:22:02,734 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 21, in build_acl
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-16 07:22:02,734 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 25, in load_file
+    acl_config = task.run(task=build_acl, file_data=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7ff599f6da70> (failed)
+
+
+2021-01-16 07:22:14,878 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:22:33,068 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:22:41,956 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:22:52,210 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:23:04,928 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:23:26,532 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:23:45,874 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:23:45,881 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'template_string' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_string.py", line 26, in template_string
+    template=template, host=task.host, jinja_filters=jinja_filters, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 27, in render_from_string
+    t = env.from_string(template)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 941, in from_string
+    return cls.from_code(self, self.compile(source), globals, None)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "<unknown>", line 5, in template
+jinja2.exceptions.TemplateSyntaxError: unexpected '}'
+
+2021-01-16 07:23:45,881 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 19, in build_acl
+    rendered = task.run(task=text.template_string, template=acl_template, acl_rules=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_string at 0x7f4e34cccb00> (failed)
+
+
+2021-01-16 07:23:45,881 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 25, in load_file
+    acl_config = task.run(task=build_acl, file_data=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f4e555bca70> (failed)
+
+
+2021-01-16 07:24:49,435 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:26:11,046 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:26:11,051 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'template_string' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_string.py", line 26, in template_string
+    template=template, host=task.host, jinja_filters=jinja_filters, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 27, in render_from_string
+    t = env.from_string(template)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 941, in from_string
+    return cls.from_code(self, self.compile(source), globals, None)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "<unknown>", line 3, in template
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got 'firewall'
+
+2021-01-16 07:26:11,052 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 21, in build_acl
+    rendered = task.run(task=text.template_string, template=acl_template, acl_rules=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_string at 0x7f93554d05f0> (failed)
+
+
+2021-01-16 07:26:11,052 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 27, in load_file
+    acl_config = task.run(task=build_acl, file_data=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f9375db4a70> (failed)
+
+
+2021-01-16 07:28:39,319 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:28:39,324 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'template_string' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_string.py", line 26, in template_string
+    template=template, host=task.host, jinja_filters=jinja_filters, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 27, in render_from_string
+    t = env.from_string(template)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 941, in from_string
+    return cls.from_code(self, self.compile(source), globals, None)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "<unknown>", line 3, in template
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got 'firewall'
+
+2021-01-16 07:28:39,324 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 21, in build_acl
+    rendered = task.run(task=text.template_string, template=acl_template, acl_rules=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_string at 0x7efe85fabb00> (failed)
+
+
+2021-01-16 07:28:39,324 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 27, in load_file
+    acl_config = task.run(task=build_acl, file_data=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7efea689ba70> (failed)
+
+
+2021-01-16 07:28:51,088 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:28:51,094 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'template_string' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_string.py", line 26, in template_string
+    template=template, host=task.host, jinja_filters=jinja_filters, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 27, in render_from_string
+    t = env.from_string(template)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 941, in from_string
+    return cls.from_code(self, self.compile(source), globals, None)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "<unknown>", line 3, in template
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got 'firewall'
+
+2021-01-16 07:28:51,094 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 21, in build_acl
+    rendered = task.run(task=text.template_string, template=acl_template, acl_rules=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_string at 0x7f08ee1815f0> (failed)
+
+
+2021-01-16 07:28:51,094 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 27, in load_file
+    acl_config = task.run(task=build_acl, file_data=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f090ea65a70> (failed)
+
+
+2021-01-16 07:29:38,367 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:30:08,085 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:30:08,090 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'template_string' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_string.py", line 26, in template_string
+    template=template, host=task.host, jinja_filters=jinja_filters, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 27, in render_from_string
+    t = env.from_string(template)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 941, in from_string
+    return cls.from_code(self, self.compile(source), globals, None)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "<unknown>", line 3, in template
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got '{'
+
+2021-01-16 07:30:08,091 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 21, in build_acl
+    rendered = task.run(task=text.template_string, template=acl_template, acl_rules=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_string at 0x7f1427aee5f0> (failed)
+
+
+2021-01-16 07:30:08,091 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 27, in load_file
+    acl_config = task.run(task=build_acl, file_data=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7f14483eaa70> (failed)
+
+
+2021-01-16 07:30:19,592 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:31:14,199 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:32:11,954 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:32:11,961 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'template_string' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_string.py", line 26, in template_string
+    template=template, host=task.host, jinja_filters=jinja_filters, **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 28, in render_from_string
+    return t.render(**kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "<template>", line 3, in top-level template code
+jinja2.exceptions.UndefinedError: 'term_name' is undefined
+
+2021-01-16 07:32:11,962 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'build_acl' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 21, in build_acl
+    rendered = task.run(task=text.template_string, template=acl_template, acl_rules=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_string at 0x7fa387e8b5f0> (failed)
+
+
+2021-01-16 07:32:11,962 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 27, in load_file
+    acl_config = task.run(task=build_acl, file_data=file_data)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7fa3a876fa70> (failed)
+
+
+2021-01-16 07:32:41,529 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:33:24,926 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:34:19,806 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:36:46,399 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:37:07,680 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:37:15,424 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:37:40,938 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:37:56,379 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:38:04,618 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:38:20,810 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:38:31,223 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:38:44,199 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:39:22,518 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:39:36,656 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:40:12,473 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:40:41,233 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:40:50,050 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:41:06,396 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:41:18,165 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:41:31,725 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:41:42,722 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:41:57,474 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:42:06,758 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:42:15,444 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:42:22,791 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:42:30,743 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:42:42,320 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:43:02,989 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:43:19,878 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:43:30,798 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:49:02,781 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:49:19,373 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:49:36,840 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:50:02,851 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:50:31,536 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:50:38,994 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:50:51,942 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:51:13,139 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:52:03,459 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:52:23,884 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:52:46,745 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:53:07,192 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:53:24,332 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:53:41,609 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:54:25,883 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:54:48,303 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:55:01,771 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:55:15,142 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:55:58,492 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:57:09,819 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:57:19,812 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:59:06,300 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:59:35,076 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 07:59:55,049 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 08:01:50,179 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 08:02:05,787 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 08:02:18,753 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
