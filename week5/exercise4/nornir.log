@@ -1488,3 +1488,79 @@ nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_config at 0
 
 2021-01-16 21:41:28,156 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
 2021-01-16 21:41:42,512 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-16 21:58:31,771 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-16 22:00:12,635 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'render_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4c.py", line 10, in render_config
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-16 22:00:12,635 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4c.py", line 15, in load_config
+    task.run(task=render_config, acl_rules=acl_struct)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_config at 0x7f347f74aa70> (failed)
+
+
+2021-01-16 22:00:22,558 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-16 22:00:52,253 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'render_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4c.py", line 10, in render_config
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-16 22:00:52,254 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4c.py", line 15, in load_config
+    task.run(task=render_config, acl_rules=acl_struct)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_config at 0x7f21647bca70> (failed)
+
+
+2021-01-16 22:02:42,907 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-16 22:03:36,421 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-16 22:04:11,580 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'render_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4c.py", line 11, in render_config
+    task.host.data['acl'] = rendered[0].result
+  File "exercise4c.py", line 11, in render_config
+    task.host.data['acl'] = rendered[0].result
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-16 22:04:11,580 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4c.py", line 18, in load_config
+    task.run(task=render_config, acl_rules=acl_struct)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_config at 0x7f3fd3403a70> (failed)
+
+
+2021-01-16 22:04:36,911 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
