@@ -1,0 +1,11 @@
+{% for acl_name, rules in acl_rules.items() %}
+    {%- for rule in rules %}
+
+{% set data = 'set firewall family inet filter ' + acl_name  + ' term ' + rule['term_name'] %}
+{{ data }} from protocol {{ rule['protocol'] }}
+{{ data }} from destination-port {{ rule['destination_port'] }}
+{{ data }} from destination-address {{ rule['destination_address'] }}
+{{ data }} then {{ rule['state'] }}
+    {% endfor %}
+{% endfor %}
+

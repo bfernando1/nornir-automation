@@ -1218,3 +1218,273 @@ nornir.core.exceptions.NornirSubTaskError: Subtask: <function build_acl at 0x7fa
 2021-01-16 08:01:50,179 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
 2021-01-16 08:02:05,787 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
 2021-01-16 08:02:18,753 -  nornir.core -     INFO -        run() - Running task 'load_file' with args {} on 1 hosts
+2021-01-16 21:15:09,360 -  nornir.core -     INFO -        run() - Running task 'load_yaml' with args {'file': 'acl.yaml'} on 1 hosts
+2021-01-16 21:21:11,028 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-16 21:21:19,441 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 8, in load_config
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-16 21:26:36,602 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-16 21:26:36,604 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'render_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 6, in render_config
+    rendered = task.run(task=text.template_file, template="acl.j2", path=".", **kwargs)
+NameError: name 'kwargs' is not defined
+
+2021-01-16 21:26:36,604 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 12, in load_config
+    task.run(task=render_config, elements=acl_struct)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_config at 0x7f80c2882a70> (failed)
+
+
+2021-01-16 21:29:47,170 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-16 21:29:47,172 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'render_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 6, in render_config
+    rendered = task.run(task=text.template_file, template="acl.j2", path=".", **kwargs)
+NameError: name 'kwargs' is not defined
+
+2021-01-16 21:29:47,173 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 12, in load_config
+    task.run(task=render_config, acl_rules=acl_struct)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_config at 0x7f9ffd1b8a70> (failed)
+
+
+2021-01-16 21:32:57,994 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-16 21:32:57,996 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'render_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 6, in render_config
+    rendered = task.run(task=text.template_file, template="acl.j2", path=".", **task.hosts)
+AttributeError: 'Task' object has no attribute 'hosts'
+
+2021-01-16 21:32:57,996 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 12, in load_config
+    task.run(task=render_config, acl_rules=acl_struct)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_config at 0x7f3fba13da70> (failed)
+
+
+2021-01-16 21:33:12,529 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-16 21:33:12,531 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'render_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 6, in render_config
+    rendered = task.run(task=text.template_file, template="acl.j2", path=".", **task.hosts)
+AttributeError: 'Task' object has no attribute 'hosts'
+
+2021-01-16 21:33:12,531 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 11, in load_config
+    task.run(task=render_config, acl_rules=acl_struct)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_config at 0x7f7c7db35a70> (failed)
+
+
+2021-01-16 21:33:33,209 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-16 21:33:41,969 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 13, in load_config
+    task.run(task=render_config, acl_rules=acl_struct)
+  File "exercise4b.py", line 13, in load_config
+    task.run(task=render_config, acl_rules=acl_struct)
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-16 21:35:25,492 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-16 21:35:35,980 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'render_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 7, in render_config
+    rendered = task.run(task=text.template_file, template="acl.j2", path=".", **task.hosts)
+  File "exercise4b.py", line 7, in render_config
+    rendered = task.run(task=text.template_file, template="acl.j2", path=".", **task.hosts)
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-16 21:35:35,980 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 12, in load_config
+    task.run(task=render_config, acl_rules=acl_struct)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_config at 0x7f7b622d0a70> (failed)
+
+
+2021-01-16 21:36:02,779 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-16 21:36:04,674 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'render_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 7, in render_config
+    rendered = task.run(task=text.template_file, template="acl.j2", path=".", acl_rules=acl_rules)
+  File "exercise4b.py", line 7, in render_config
+    rendered = task.run(task=text.template_file, template="acl.j2", path=".", acl_rules=acl_rules)
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-16 21:36:04,674 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 12, in load_config
+    task.run(task=render_config, acl_rules=acl_struct)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_config at 0x7f6e0f262a70> (failed)
+
+
+2021-01-16 21:36:17,010 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-16 21:39:46,843 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-16 21:39:54,045 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.7/cmd.py", line 214, in onecmd
+    func = getattr(self, 'do_' + cmd)
+AttributeError: 'TerminalPdb' object has no attribute 'do_rendered'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_file.py", line 35, in template_file
+    **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "./acl.j2", line 1, in top-level template code
+    {% for acl_name, rules in acl_rules.items() %}
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'acl_rules' is undefined
+
+2021-01-16 21:40:16,271 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.7/cmd.py", line 214, in onecmd
+    func = getattr(self, 'do_' + cmd)
+AttributeError: 'TerminalPdb' object has no attribute 'do_rendered'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_file.py", line 35, in template_file
+    **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "./acl.j2", line 1, in top-level template code
+    {% for acl_name, rules in acl_rules.items() %}
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'acl_rules' is undefined
+
+2021-01-16 21:40:51,232 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'render_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 7, in render_config
+    rendered = task.run(task=text.template_file, template="acl.j2", path=".", acl_rules=acl_rules)
+  File "exercise4b.py", line 7, in render_config
+    rendered = task.run(task=text.template_file, template="acl.j2", path=".", acl_rules=acl_rules)
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-16 21:40:51,233 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 12, in load_config
+    task.run(task=render_config, acl_rules=acl_struct)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_config at 0x7f9688d21a70> (failed)
+
+
+2021-01-16 21:41:19,939 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-16 21:41:21,494 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'render_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 7, in render_config
+    rendered = task.run(task=text.template_file, template="acl.j2", path=".", acl_rules=acl_rules)
+  File "exercise4b.py", line 7, in render_config
+    rendered = task.run(task=text.template_file, template="acl.j2", path=".", acl_rules=acl_rules)
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-16 21:41:21,494 - nornir.core.task -    ERROR -      start() - Host 'srx2': task 'load_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 13, in load_config
+    task.run(task=render_config, acl_rules=acl_struct)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_config at 0x7f7380a9ba70> (failed)
+
+
+2021-01-16 21:41:28,156 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
+2021-01-16 21:41:42,512 -  nornir.core -     INFO -        run() - Running task 'load_config' with args {} on 1 hosts
