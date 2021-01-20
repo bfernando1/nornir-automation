@@ -15,12 +15,15 @@ nxos1:
       - nxos
     data:
       interfaces:
-        int_name: Ethernet1/1 
-          ip_address: 172.16.20.101
-          subnet_mask: 255.255.255.0
-      bgp:
+        int_name: Ethernet0/1 
+        ip_address: 172.16.20.101
+        subnet_mask: 255.255.255.0
+      bgp_local: 
         bgp_asn: 22
         bgp_router_id: 1.1.1.1 
+      bgp_remote:
+        bgp_peer_ip: 172.16.20.102
+        bgp_remote_asn: 22
 
 nxos2:
     hostname: nxos2.lasthop.io
@@ -29,11 +32,15 @@ nxos2:
     data:
       interfaces:
         int_name: Ethernet1/1 
-          ip_address: 172.16.20.101
-          subnet_mask: 255.255.255.0
-      bgp:
+        ip_address: 172.16.20.102
+        subnet_mask: 255.255.255.0
+      bgp_local: 
         bgp_asn: 22
-        bgp_router_id: 1.1.1.1 
+        bgp_router_id: 2.2.2.2
+      bgp_remote:
+        bgp_peer_ip: 172.16.20.101
+        bgp_remote_asn: 22
+    
 
 arista1:
     hostname: arista1.lasthop.io

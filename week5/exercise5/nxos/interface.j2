@@ -1,5 +1,4 @@
-interface {{ int_name }}
-  ip address {{ ip_address }} {{ subnet_mask }}
+interface {{ interfaces.int_name }}
+  ip address {{ interfaces.ip_address }} {{ interfaces.subnet_mask }}
   no switchport
   no shut
-  

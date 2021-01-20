@@ -1,4 +1,4 @@
-router bgp {{ bgp_asn }}
-  router-id {{ bgp_router_id }}
-  neighbor {{ bgp_peer_ip }} remote_as {{ bgp_remote_asn }}
+router bgp {{ bgp_local.bgp_asn }}
+  router-id {{ bgp_local.bgp_router_id }}
+  neighbor {{ bgp_remote.bgp_peer_ip }} remote_as {{ bgp_remote.bgp_remote_asn }}
   address-family ipv4 unicast
