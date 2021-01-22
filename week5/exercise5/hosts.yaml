@@ -15,7 +15,7 @@ nxos1:
       - nxos
     data:
       interfaces:
-        int_name: Ethernet0/1 
+        int_name: Ethernet1/1 
         ip_address: 172.16.20.101
         subnet_mask: 255.255.255.0
       bgp_local: 
