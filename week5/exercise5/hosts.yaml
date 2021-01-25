@@ -40,7 +40,6 @@ nxos2:
       bgp_remote:
         bgp_peer_ip: 172.16.20.101
         bgp_remote_asn: 22
-    
 
 arista1:
     hostname: arista1.lasthop.io

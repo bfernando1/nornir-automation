@@ -1,3 +1,31 @@
+"""
+Author: Bradley Fernando
+Purpose: Creates a iBGP neighborship using 2 NX-OS devices using data from hosts 
+group in inventory. Configurations are saved to disk before being deployed. 
+
+Usage:
+    python exerice5c.py
+
+Output:
+    </--snipped to end result-->
+
+napalm_get**********************************************************************
+* nxos1 ** changed : False *****************************************************
+vvvv napalm_get ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
+{ 'bgp_neighbors': { 'global': { 'peers': { '172.16.20.102': { 'address_family': { 'ipv4': { 'accepted_prefixes': -1,
+                                                                                             'received_prefixes': 0,
+                                                                                             'sent_prefixes': -1}},
+                                                               'description': '',
+                                                               'is_enabled': True,
+                                                               'is_up': True,
+                                                               'local_as': 22,
+                                                               'remote_as': 22,
+                                                               'remote_id': '172.16.20.102',
+                                                               'uptime': -1}},
+                                 'router_id': '1.1.1.1'}}}
+^^^^ END napalm_get ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+"""
 from nornir import InitNornir
 from nornir.plugins.tasks import data, text, files, networking
 from nornir.core.filter import F
