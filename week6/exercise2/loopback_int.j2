@@ -1,0 +1,5 @@
+{%- for data in loopbacks %}
+loopback {{ data.id }}
+  description {{ data.description }}
+  ip address {{ data.ip }} {{ data.mask }}
+{%- endfor %}

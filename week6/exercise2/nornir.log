@@ -1,0 +1,100 @@
+2021-01-26 22:36:52,645 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 1 hosts
+2021-01-26 22:36:52,646 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 9, in render_config
+    rendered_data = task.run(task=template_file,
+NameError: name 'template_file' is not defined
+
+2021-01-26 22:37:44,209 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 1 hosts
+2021-01-26 22:37:44,210 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 9, in render_config
+    rendered_data = task.run(task=template_file,
+NameError: name 'template_file' is not defined
+
+2021-01-26 22:39:04,769 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 1 hosts
+2021-01-26 22:39:04,770 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 9, in render_config
+    rendered_data = task.run(task=template_file,
+NameError: name 'template_file' is not defined
+
+2021-01-26 22:40:09,176 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 1 hosts
+2021-01-26 22:40:09,177 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 9, in render_config
+    rendered_data = task.run(task=template_file,
+NameError: name 'template_file' is not defined
+
+2021-01-26 22:41:14,230 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 1 hosts
+2021-01-26 22:43:25,992 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 13, in render_config
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-26 22:44:44,121 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 1 hosts
+2021-01-26 22:48:34,787 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 13, in render_config
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-26 22:50:03,874 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 1 hosts
+2021-01-26 23:17:39,224 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 13, in render_config
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-26 23:29:17,087 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 1 hosts
+2021-01-26 23:29:46,034 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 1 hosts
+2021-01-26 23:34:36,342 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 2 hosts
+2021-01-26 23:36:54,608 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 2 hosts
+2021-01-26 23:37:09,375 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 2 hosts
+2021-01-26 23:38:51,945 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 1 hosts
+2021-01-26 23:39:17,715 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2a.py", line 15, in render_config
+    print_result(rendered_data[0].result)
+  File "exercise2a.py", line 15, in render_config
+    print_result(rendered_data[0].result)
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-26 23:39:36,150 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 1 hosts
+2021-01-26 23:40:35,826 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 1 hosts
+2021-01-26 23:41:00,786 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 1 hosts
+2021-01-26 23:42:38,174 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 1 hosts
+2021-01-26 23:43:05,718 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 2 hosts
