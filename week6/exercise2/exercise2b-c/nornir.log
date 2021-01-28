@@ -17,3 +17,153 @@ Traceback (most recent call last):
     {%- for data in loopbacks %}
 jinja2.exceptions.UndefinedError: 'loopbacks' is undefined
 
+2021-01-27 22:12:21,262 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 2 hosts
+2021-01-27 22:12:21,270 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_file.py", line 35, in template_file
+    **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "./loopback_int.j2", line 1, in top-level template code
+    {%- for data in loopbacks %}
+jinja2.exceptions.UndefinedError: 'loopbacks' is undefined
+
+2021-01-27 22:24:52,380 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 2 hosts
+2021-01-27 22:24:52,388 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_file.py", line 35, in template_file
+    **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "./loopback_int.j2", line 1, in top-level template code
+    {%- for data in loopbacks %}
+jinja2.exceptions.UndefinedError: 'loopbacks' is undefined
+
+2021-01-27 22:24:52,389 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'render_config' failed with traceback:
+Traceback (most recent call last):
+  File "exercise2c.py", line 12, in render_config
+    task=text.template_file, path=".", template=template, **task.host)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_file at 0x7f92d076e9e0> (failed)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2c.py", line 15, in render_config
+    return Result(
+NameError: name 'Result' is not defined
+
+2021-01-27 22:26:14,992 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 2 hosts
+2021-01-27 22:26:15,000 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_file.py", line 35, in template_file
+    **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "./loopback_int.j2", line 1, in top-level template code
+    {%- for data in loopbacks %}
+jinja2.exceptions.UndefinedError: 'loopbacks' is undefined
+
+2021-01-27 22:26:15,000 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'render_config' failed with traceback:
+Traceback (most recent call last):
+  File "exercise2c.py", line 12, in render_config
+    task=text.template_file, path=".", template=template, **task.host)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_file at 0x7f98b460a9e0> (failed)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise2c.py", line 16, in render_config
+    return Result(
+NameError: name 'Result' is not defined
+
+2021-01-27 22:29:44,159 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 2 hosts
+2021-01-27 22:29:44,168 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_file.py", line 35, in template_file
+    **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "./loopback_int.j2", line 1, in top-level template code
+    {%- for data in loopbacks %}
+jinja2.exceptions.UndefinedError: 'loopbacks' is undefined
+
+2021-01-27 22:56:43,223 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 1 hosts
+2021-01-27 22:56:43,228 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_file.py", line 35, in template_file
+    **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "./loopback_int.j2", line 1, in top-level template code
+    {%- for data in loopbacks %}
+jinja2.exceptions.UndefinedError: 'loopbacks' is undefined
+
+2021-01-27 23:00:48,608 -  nornir.core -     INFO -        run() - Running task 'render_config' with args {} on 2 hosts
+2021-01-27 23:00:48,616 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_file.py", line 35, in template_file
+    **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "./loopback_int.j2", line 1, in top-level template code
+    {%- for data in loopbacks %}
+jinja2.exceptions.UndefinedError: 'loopbacks' is undefined
+
