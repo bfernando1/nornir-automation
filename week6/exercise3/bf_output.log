@@ -1,0 +1,480 @@
+2021-01-28 20:59:29,121 -  nornir.core -     INFO -        run() - Running task 'send_to_device' with args {} on 1 hosts
+2021-01-28 20:59:29,122 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'send_to_device'
+2021-01-28 20:59:29,122 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'netmiko_send_command'
+2021-01-28 20:59:49,592 -  nornir.core -     INFO -        run() - Running task 'send_to_device' with args {} on 1 hosts
+2021-01-28 20:59:49,592 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'send_to_device'
+2021-01-28 20:59:49,593 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'netmiko_send_command'
+2021-01-28 21:17:29,573 -  nornir.core -     INFO -        run() - Running task 'send_to_device' with args {} on 1 hosts
+2021-01-28 21:17:29,573 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'send_to_device'
+2021-01-28 21:18:53,116 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'send_to_device' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3a.py", line 12, in send_to_device
+    task.run(task=netmiko_send_command, command_string=cmd)
+  File "exercise3a.py", line 12, in send_to_device
+    task.run(task=netmiko_send_command, command_string=cmd)
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-28 21:20:35,671 -  nornir.core -     INFO -        run() - Running task 'send_to_device' with args {} on 1 hosts
+2021-01-28 21:20:35,671 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'send_to_device'
+2021-01-28 21:20:35,672 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'netmiko_send_command'
+2021-01-28 21:23:16,120 -  nornir.core -     INFO -        run() - Running task 'send_to_device' with args {} on 1 hosts
+2021-01-28 21:23:16,120 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'send_to_device'
+2021-01-28 21:23:16,121 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'netmiko_send_command'
+2021-01-28 21:23:22,016 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/utilities.py", line 347, in wrapper_decorator
+    return func(self, *args, **kwargs)
+TypeError: send_command() got an unexpected keyword argument 'password'
+
+2021-01-28 21:23:22,016 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'send_to_device' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3a.py", line 13, in send_to_device
+    task.run(task=netmiko_send_command, command_string=cmd, password=PASSWORD)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x7f55b685bdd0> (failed)
+
+
+2021-01-28 21:28:25,215 -  nornir.core -     INFO -        run() - Running task 'send_to_device' with args {} on 1 hosts
+2021-01-28 21:28:25,216 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'send_to_device'
+2021-01-28 21:28:25,217 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'send_to_device' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3a.py", line 11, in send_to_device
+    task.host.data.password = PASSWORD
+AttributeError: 'dict' object has no attribute 'password'
+
+2021-01-28 21:28:40,335 -  nornir.core -     INFO -        run() - Running task 'send_to_device' with args {} on 1 hosts
+2021-01-28 21:28:40,336 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'send_to_device'
+2021-01-28 21:28:40,336 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'netmiko_send_command'
+2021-01-28 21:28:41,150 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1528, in auth_password
+    return self.auth_interactive(username, handler)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1633, in auth_interactive
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1531, in auth_password
+    raise e
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.BadAuthenticationType: Bad authentication type; allowed types: ['publickey', 'keyboard-interactive']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 944, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication failure: unable to connect arista_eos arista1.lasthop.io:22
+Bad authentication type; allowed types: ['publickey', 'keyboard-interactive']
+
+2021-01-28 21:28:41,151 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'send_to_device' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3a.py", line 13, in send_to_device
+    task.run(task=netmiko_send_command, command_string=cmd)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x7fcfbc70b200> (failed)
+
+
+2021-01-28 21:29:24,204 -  nornir.core -     INFO -        run() - Running task 'send_to_device' with args {} on 1 hosts
+2021-01-28 21:29:24,205 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'send_to_device'
+2021-01-28 21:29:24,205 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'netmiko_send_command'
+2021-01-28 21:29:25,022 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1528, in auth_password
+    return self.auth_interactive(username, handler)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1633, in auth_interactive
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1531, in auth_password
+    raise e
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.BadAuthenticationType: Bad authentication type; allowed types: ['publickey', 'keyboard-interactive']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 944, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication failure: unable to connect arista_eos arista1.lasthop.io:22
+Bad authentication type; allowed types: ['publickey', 'keyboard-interactive']
+
+2021-01-28 21:29:25,023 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'send_to_device' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3a.py", line 13, in send_to_device
+    task.run(task=netmiko_send_command, command_string=cmd)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x7f3cd3784dd0> (failed)
+
+
+2021-01-28 21:29:37,747 -  nornir.core -     INFO -        run() - Running task 'send_to_device' with args {} on 1 hosts
+2021-01-28 21:29:37,748 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'send_to_device'
+2021-01-28 21:29:37,748 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'netmiko_send_command'
+2021-01-28 21:29:38,584 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1528, in auth_password
+    return self.auth_interactive(username, handler)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1633, in auth_interactive
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1531, in auth_password
+    raise e
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.BadAuthenticationType: Bad authentication type; allowed types: ['publickey', 'keyboard-interactive']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 944, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication failure: unable to connect arista_eos arista1.lasthop.io:22
+Bad authentication type; allowed types: ['publickey', 'keyboard-interactive']
+
+2021-01-28 21:29:38,584 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'send_to_device' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3a.py", line 13, in send_to_device
+    task.run(task=netmiko_send_command, command_string=cmd)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x7fb5ecce9dd0> (failed)
+
+
+2021-01-28 21:30:28,666 -  nornir.core -     INFO -        run() - Running task 'send_to_device' with args {} on 1 hosts
+2021-01-28 21:30:28,666 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'send_to_device'
+2021-01-28 21:30:28,666 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'netmiko_send_command'
+2021-01-28 21:30:29,493 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1528, in auth_password
+    return self.auth_interactive(username, handler)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1633, in auth_interactive
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1531, in auth_password
+    raise e
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.BadAuthenticationType: Bad authentication type; allowed types: ['publickey', 'keyboard-interactive']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 944, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication failure: unable to connect arista_eos arista1.lasthop.io:22
+Bad authentication type; allowed types: ['publickey', 'keyboard-interactive']
+
+2021-01-28 21:30:29,494 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'send_to_device' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3a.py", line 13, in send_to_device
+    task.run(task=netmiko_send_command, command_string=cmd)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x7f3cf01ce200> (failed)
+
+
+2021-01-28 21:42:53,771 -  nornir.core -     INFO -        run() - Running task 'send_to_device' with args {} on 1 hosts
+2021-01-28 21:42:53,772 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'send_to_device'
+2021-01-28 21:42:53,772 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'netmiko_send_command'
+2021-01-28 21:42:54,569 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1528, in auth_password
+    return self.auth_interactive(username, handler)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1633, in auth_interactive
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1531, in auth_password
+    raise e
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.BadAuthenticationType: Bad authentication type; allowed types: ['publickey', 'keyboard-interactive']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 944, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication failure: unable to connect arista_eos arista1.lasthop.io:22
+Bad authentication type; allowed types: ['publickey', 'keyboard-interactive']
+
+2021-01-28 21:42:54,569 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'send_to_device' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 14, in send_to_device
+    task.run(task=netmiko_send_command, command_string=cmd)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x7f1595626290> (failed)
+
+
+2021-01-28 21:43:30,784 -  nornir.core -     INFO -        run() - Running task 'send_to_device' with args {} on 1 hosts
+2021-01-28 21:43:30,785 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'send_to_device'
+2021-01-28 21:43:30,785 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'netmiko_send_command'
+2021-01-28 21:44:42,647 -  nornir.core -     INFO -        run() - Running task 'send_to_device' with args {} on 1 hosts
+2021-01-28 21:44:42,648 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'send_to_device'
+2021-01-28 21:44:42,648 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'netmiko_send_command'
+2021-01-28 21:51:57,354 -  nornir.core -     INFO -        run() - Running task 'send_to_device' with args {} on 1 hosts
+2021-01-28 21:51:57,355 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'send_to_device'
+2021-01-28 21:51:57,355 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'netmiko_send_command'
+2021-01-28 21:51:58,140 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1528, in auth_password
+    return self.auth_interactive(username, handler)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1633, in auth_interactive
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1531, in auth_password
+    raise e
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.BadAuthenticationType: Bad authentication type; allowed types: ['publickey', 'keyboard-interactive']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 944, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication failure: unable to connect arista_eos arista1.lasthop.io:22
+Bad authentication type; allowed types: ['publickey', 'keyboard-interactive']
+
+2021-01-28 21:51:58,141 - nornir.core.task -    ERROR -      start() - Host 'arista1': task 'send_to_device' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3b.py", line 14, in send_to_device
+    task.run(task=netmiko_send_command, command_string=cmd)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x7fa96efb7200> (failed)
+
+
+2021-01-28 21:54:16,102 -  nornir.core -     INFO -        run() - Running task 'send_to_device' with args {} on 1 hosts
+2021-01-28 21:54:16,102 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'send_to_device'
+2021-01-28 21:54:16,103 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'netmiko_send_command'
+2021-01-28 21:54:35,560 -  nornir.core -     INFO -        run() - Running task 'send_to_device' with args {} on 1 hosts
+2021-01-28 21:54:35,560 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'send_to_device'
+2021-01-28 21:54:35,560 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'netmiko_send_command'
+2021-01-28 21:56:56,748 -  nornir.core -     INFO -        run() - Running task 'send_to_device' with args {} on 1 hosts
+2021-01-28 21:56:56,748 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'send_to_device'
+2021-01-28 21:56:56,749 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'netmiko_send_command'
+2021-01-28 21:59:02,075 -       nornir -    DEBUG -       main() - Flat is better than nested
+2021-01-28 21:59:02,075 -  nornir.core -     INFO -        run() - Running task 'send_to_device' with args {} on 1 hosts
+2021-01-28 21:59:02,076 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'send_to_device'
+2021-01-28 21:59:02,076 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'netmiko_send_command'
