@@ -478,3 +478,18 @@ nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_comma
 2021-01-28 21:59:02,075 -  nornir.core -     INFO -        run() - Running task 'send_to_device' with args {} on 1 hosts
 2021-01-28 21:59:02,076 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'send_to_device'
 2021-01-28 21:59:02,076 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'netmiko_send_command'
+2021-01-29 08:34:43,949 -       nornir -    DEBUG -       main() - Flat is better than nested
+2021-01-29 08:34:43,950 -       nornir - CRITICAL -       main() - Sparse is better than dense
+2021-01-29 08:34:43,950 -       nornir -    ERROR -       main() - Unless explicitly silenced
+2021-01-29 08:34:43,951 -  nornir.core -     INFO -        run() - Running task 'send_to_device' with args {} on 1 hosts
+2021-01-29 08:34:43,951 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'send_to_device'
+2021-01-29 08:34:43,951 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'netmiko_send_command'
+2021-01-29 08:42:22,314 -  nornir.core -     INFO -        run() - Running task 'send_to_device' with args {} on 1 hosts
+2021-01-29 08:42:22,315 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'send_to_device'
+2021-01-29 08:42:22,315 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'netmiko_send_command'
+2021-01-29 08:43:48,298 -       nornir -    DEBUG -       main() - Flat is better than nested
+2021-01-29 08:43:48,298 -       nornir - CRITICAL -       main() - Sparse is better than dense
+2021-01-29 08:43:48,298 -       nornir -    ERROR -       main() - Unless explicitly silenced
+2021-01-29 08:43:48,299 -  nornir.core -     INFO -        run() - Running task 'send_to_device' with args {} on 1 hosts
+2021-01-29 08:43:48,299 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'send_to_device'
+2021-01-29 08:43:48,300 - nornir.core.task -    DEBUG -      start() - Host 'arista1': running task 'netmiko_send_command'
