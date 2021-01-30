@@ -1,0 +1,140 @@
+2021-01-30 09:17:28,295 -  nornir.core -  WARNING -        run() - Task 'send_command' has not been run – 0 hosts selected
+2021-01-30 09:18:17,128 -  nornir.core -  WARNING -        run() - Task 'send_command' has not been run – 0 hosts selected
+2021-01-30 09:29:30,965 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 2 hosts
+2021-01-30 09:34:08,375 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 2 hosts
+2021-01-30 09:46:34,009 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 2 hosts
+2021-01-30 09:46:34,010 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 9, in send_command
+    PASSWORD = os.environ("BF_PASSWORD")
+TypeError: '_Environ' object is not callable
+
+2021-01-30 09:46:34,010 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 9, in send_command
+    PASSWORD = os.environ("BF_PASSWORD")
+TypeError: '_Environ' object is not callable
+
+2021-01-30 09:51:02,334 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 2 hosts
+2021-01-30 09:51:07,525 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/utilities.py", line 347, in wrapper_decorator
+    return func(self, *args, **kwargs)
+TypeError: send_command() got an unexpected keyword argument 'password'
+
+2021-01-30 09:51:07,525 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 10, in send_command
+    task.run(task=netmiko_send_command, command_string=cmd, password=PASSWORD)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x7f7f53dbad40> (failed)
+
+
+2021-01-30 09:51:12,686 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/utilities.py", line 347, in wrapper_decorator
+    return func(self, *args, **kwargs)
+TypeError: send_command() got an unexpected keyword argument 'password'
+
+2021-01-30 09:51:12,686 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 10, in send_command
+    task.run(task=netmiko_send_command, command_string=cmd, password=PASSWORD)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x7f7f53dbad40> (failed)
+
+
+2021-01-30 09:57:22,421 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 2 hosts
+2021-01-30 09:57:22,827 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2021-01-30 09:57:22,827 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 10, in send_command
+    task.run(task=netmiko_send_command, command_string=cmd, password=PASSWORD)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x7f2b6ac51d40> (failed)
+
+
+2021-01-30 09:57:23,330 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 765, in _auth
+    raise SSHException("No authentication methods available")
+paramiko.ssh_exception.SSHException: No authentication methods available
+
+2021-01-30 09:57:23,331 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4a.py", line 10, in send_command
+    task.run(task=netmiko_send_command, command_string=cmd, password=PASSWORD)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x7f2b6ac51d40> (failed)
+
+
+2021-01-30 10:06:52,977 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 2 hosts
