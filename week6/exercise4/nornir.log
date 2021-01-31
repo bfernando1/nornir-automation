@@ -138,3 +138,77 @@ nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_comma
 
 
 2021-01-30 10:06:52,977 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 2 hosts
+2021-01-30 18:22:34,011 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 2 hosts
+2021-01-30 18:22:34,013 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 17, in send_command
+    task.host.password = os.environ["BF_PASSWORD"]
+  File "/usr/lib64/python3.7/os.py", line 681, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'BF_PASSWORD'
+
+2021-01-30 18:22:34,014 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 17, in send_command
+    task.host.password = os.environ["BF_PASSWORD"]
+  File "/usr/lib64/python3.7/os.py", line 681, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'BF_PASSWORD'
+
+2021-01-30 18:23:40,028 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 2 hosts
+2021-01-30 18:24:23,675 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 2 hosts
+2021-01-30 18:25:58,296 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'set_session_name' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 12, in set_session_name
+    group_object.connection_options["netmiko"].extras["session_log"] = filename
+  File "exercise4b.py", line 12, in set_session_name
+    group_object.connection_options["netmiko"].extras["session_log"] = filename
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-30 18:25:58,297 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 16, in send_command
+    task.run(task=set_session_name)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function set_session_name at 0x7f19116adf80> (failed)
+
+
+2021-01-30 18:25:59,806 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'set_session_name' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 12, in set_session_name
+    group_object.connection_options["netmiko"].extras["session_log"] = filename
+  File "exercise4b.py", line 12, in set_session_name
+    group_object.connection_options["netmiko"].extras["session_log"] = filename
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-30 18:25:59,806 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4b.py", line 16, in send_command
+    task.run(task=set_session_name)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function set_session_name at 0x7f19116adf80> (failed)
+
+
+2021-01-30 18:27:00,901 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 2 hosts
