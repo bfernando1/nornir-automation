@@ -1,0 +1,61 @@
+2021-01-31 21:35:25,706 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 1 hosts
+2021-01-31 21:36:07,279 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5a.py", line 13, in send_command
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-31 21:37:10,331 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 1 hosts
+2021-01-31 21:37:48,053 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5a.py", line 13, in send_command
+    import ipdb;ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-31 21:39:54,012 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 1 hosts
+2021-01-31 21:40:32,157 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 1 hosts
+2021-01-31 21:42:15,818 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 1 hosts
+2021-01-31 21:43:08,327 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 1 hosts
+2021-01-31 21:46:52,737 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5a.py", line 16, in send_command
+    task.run(task=netmiko_send_command, command_string=cmd)
+  File "exercise5a.py", line 16, in send_command
+    task.run(task=netmiko_send_command, command_string=cmd)
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-31 21:47:30,281 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 1 hosts
+2021-01-31 21:47:33,817 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5a.py", line 16, in send_command
+    task.run(task=netmiko_send_command, command_string=cmd)
+  File "exercise5a.py", line 16, in send_command
+    task.run(task=netmiko_send_command, command_string=cmd)
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-01-31 21:49:32,913 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 1 hosts
+2021-01-31 21:49:56,458 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 9 hosts
