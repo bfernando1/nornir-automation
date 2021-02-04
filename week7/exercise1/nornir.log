@@ -1,0 +1,303 @@
+2021-02-04 11:31:44,079 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 1 hosts
+2021-02-04 11:31:44,080 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise1b.py", line 7, in send_command
+    task.run(task=naplam_get, getters=["ntp servers"])
+NameError: name 'naplam_get' is not defined
+
+2021-02-04 11:32:55,956 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 1 hosts
+2021-02-04 11:32:57,986 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 698, in open
+    self._send_command("show hostname")
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 712, in _send_command
+    return self.device.show(command, raw_text=raw_text)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/device.py", line 67, in show
+    result = self.show_list(commands, raw_text)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/device.py", line 95, in show_list
+    return self.api._nxapi_command(commands, method=cmd_method)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 110, in _nxapi_command
+    response = self._send_request(commands, method=method)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 79, in _send_request
+    raise NXAPIAuthError(msg)
+napalm.nxapi_plumbing.errors.NXAPIAuthError: Authentication to NX-API failed please verify your username, password, and hostname.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 701, in open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to nxos1.lasthop.io
+
+2021-02-04 11:32:57,986 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise1b.py", line 7, in send_command
+    task.run(task=napalm_get, getters=["ntp servers"])
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function napalm_get at 0x7f8139e90290> (failed)
+
+
+2021-02-04 11:34:41,251 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 1 hosts
+2021-02-04 11:34:43,647 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 698, in open
+    self._send_command("show hostname")
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 712, in _send_command
+    return self.device.show(command, raw_text=raw_text)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/device.py", line 67, in show
+    result = self.show_list(commands, raw_text)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/device.py", line 95, in show_list
+    return self.api._nxapi_command(commands, method=cmd_method)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 110, in _nxapi_command
+    response = self._send_request(commands, method=method)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 79, in _send_request
+    raise NXAPIAuthError(msg)
+napalm.nxapi_plumbing.errors.NXAPIAuthError: Authentication to NX-API failed please verify your username, password, and hostname.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 701, in open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to nxos1.lasthop.io
+
+2021-02-04 11:34:43,647 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise1b.py", line 7, in send_command
+    task.run(task=napalm_get, getters=["ntp_servers"])
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function napalm_get at 0x7f06ec1cae60> (failed)
+
+
+2021-02-04 11:35:20,359 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 1 hosts
+2021-02-04 11:35:21,824 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 698, in open
+    self._send_command("show hostname")
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 712, in _send_command
+    return self.device.show(command, raw_text=raw_text)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/device.py", line 67, in show
+    result = self.show_list(commands, raw_text)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/device.py", line 95, in show_list
+    return self.api._nxapi_command(commands, method=cmd_method)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 110, in _nxapi_command
+    response = self._send_request(commands, method=method)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 79, in _send_request
+    raise NXAPIAuthError(msg)
+napalm.nxapi_plumbing.errors.NXAPIAuthError: Authentication to NX-API failed please verify your username, password, and hostname.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 701, in open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to nxos1.lasthop.io
+
+2021-02-04 11:35:21,825 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise1b.py", line 7, in send_command
+    task.run(task=napalm_get, getters=["config"])
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function napalm_get at 0x7f2702415290> (failed)
+
+
+2021-02-04 11:35:37,207 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 1 hosts
+2021-02-04 11:35:39,289 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 698, in open
+    self._send_command("show hostname")
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 712, in _send_command
+    return self.device.show(command, raw_text=raw_text)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/device.py", line 67, in show
+    result = self.show_list(commands, raw_text)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/device.py", line 95, in show_list
+    return self.api._nxapi_command(commands, method=cmd_method)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 110, in _nxapi_command
+    response = self._send_request(commands, method=method)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 79, in _send_request
+    raise NXAPIAuthError(msg)
+napalm.nxapi_plumbing.errors.NXAPIAuthError: Authentication to NX-API failed please verify your username, password, and hostname.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 701, in open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to nxos1.lasthop.io
+
+2021-02-04 11:35:39,289 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise1b.py", line 7, in send_command
+    task.run(task=napalm_get, getters=['config'])
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function napalm_get at 0x7fb72012c290> (failed)
+
+
+2021-02-04 11:48:29,169 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 1 hosts
+2021-02-04 11:48:31,596 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 698, in open
+    self._send_command("show hostname")
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 712, in _send_command
+    return self.device.show(command, raw_text=raw_text)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/device.py", line 67, in show
+    result = self.show_list(commands, raw_text)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/device.py", line 95, in show_list
+    return self.api._nxapi_command(commands, method=cmd_method)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 110, in _nxapi_command
+    response = self._send_request(commands, method=method)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 79, in _send_request
+    raise NXAPIAuthError(msg)
+napalm.nxapi_plumbing.errors.NXAPIAuthError: Authentication to NX-API failed please verify your username, password, and hostname.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 701, in open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to nxos1.lasthop.io
+
+2021-02-04 11:48:31,597 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise1b.py", line 7, in send_command
+    task.run(task=napalm_get, getters=['config'])
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function napalm_get at 0x7fa115b23e60> (failed)
+
+
+2021-02-04 11:50:07,329 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 1 hosts
+2021-02-04 11:50:08,864 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 698, in open
+    self._send_command("show hostname")
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 712, in _send_command
+    return self.device.show(command, raw_text=raw_text)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/device.py", line 67, in show
+    result = self.show_list(commands, raw_text)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/device.py", line 95, in show_list
+    return self.api._nxapi_command(commands, method=cmd_method)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 110, in _nxapi_command
+    response = self._send_request(commands, method=method)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 79, in _send_request
+    raise NXAPIAuthError(msg)
+napalm.nxapi_plumbing.errors.NXAPIAuthError: Authentication to NX-API failed please verify your username, password, and hostname.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 701, in open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to nxos1.lasthop.io
+
+2021-02-04 11:50:08,864 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise1b.py", line 7, in send_command
+    task.run(task=napalm_get, getters=['config'], retrieve='running')
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function napalm_get at 0x7fb041a28290> (failed)
+
+
+2021-02-04 11:50:58,372 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 1 hosts
+2021-02-04 11:51:33,680 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 1 hosts
+2021-02-04 11:51:34,920 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 60, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'NXOSDriver' object has no attribute 'get_net_servers'
+
+2021-02-04 11:51:34,921 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise1b.py", line 7, in send_command
+    task.run(task=napalm_get, getters=['net_servers'])
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function napalm_get at 0x7fdcb1844e60> (failed)
+
+
+2021-02-04 11:51:53,648 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 1 hosts
+2021-02-04 11:55:18,562 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 1 hosts
+2021-02-04 11:55:40,833 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 1 hosts
