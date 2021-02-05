@@ -1,0 +1,7 @@
+---
+inventory:
+  plugin: nornir.plugins.inventory.ansible.AnsibleInventory
+  options:
+    hostsfile: "ansible-hosts.ini"
+  transform_function: exercise2a.transform_nornir
+    
