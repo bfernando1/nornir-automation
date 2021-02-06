@@ -542,3 +542,4 @@ bdb.BdbQuit
 2021-02-06 09:19:56,199 -  nornir.core -     INFO -        run() - Running task 'netmiko_direct' with args {} on 2 hosts
 2021-02-06 09:20:45,558 -  nornir.core -     INFO -        run() - Running task 'netmiko_direct' with args {} on 2 hosts
 2021-02-06 09:21:24,780 -  nornir.core -     INFO -        run() - Running task 'netmiko_direct' with args {} on 9 hosts
+2021-02-06 10:24:01,352 -  nornir.core -     INFO -        run() - Running task 'netmiko_direct' with args {} on 9 hosts
