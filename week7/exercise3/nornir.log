@@ -1,0 +1,544 @@
+2021-02-06 08:53:07,052 -  nornir.core -     INFO -        run() - Running task 'direct_connect' with args {} on 2 hosts
+2021-02-06 08:53:09,755 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'direct_connect' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/auth_handler.py", line 236, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3.py", line 9, in direct_connect
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 944, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication failure: unable to connect cisco_ios cisco3.lasthop.io:22
+Authentication failed.
+
+2021-02-06 08:53:09,756 - nornir.core.task -    ERROR -      start() - Host 'cisco4': task 'direct_connect' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/auth_handler.py", line 236, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3.py", line 9, in direct_connect
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 944, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication failure: unable to connect cisco_ios cisco4.lasthop.io:22
+Authentication failed.
+
+2021-02-06 08:54:27,192 -  nornir.core -     INFO -        run() - Running task 'direct_connect' with args {} on 2 hosts
+2021-02-06 08:54:29,881 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'direct_connect' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/auth_handler.py", line 236, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3.py", line 10, in direct_connect
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 944, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication failure: unable to connect cisco_ios cisco3.lasthop.io:22
+Authentication failed.
+
+2021-02-06 08:54:29,882 - nornir.core.task -    ERROR -      start() - Host 'cisco4': task 'direct_connect' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/auth_handler.py", line 236, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3.py", line 10, in direct_connect
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 944, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication failure: unable to connect cisco_ios cisco4.lasthop.io:22
+Authentication failed.
+
+2021-02-06 09:06:39,467 -  nornir.core -     INFO -        run() - Running task 'direct_connect' with args {} on 2 hosts
+2021-02-06 09:06:41,946 - nornir.core.task -    ERROR -      start() - Host 'cisco4': task 'direct_connect' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3.py", line 10, in direct_connect
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 677, in _auth
+    key_filename, pkey_class, passphrase
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 586, in _key_from_filepath
+    key = klass.from_private_key_file(key_path, password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/pkey.py", line 235, in from_private_key_file
+    key = cls(filename=filename, password=password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/ed25519key.py", line 58, in __init__
+    pkformat, data = self._read_private_key("OPENSSH", f)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/pkey.py", line 341, in _read_private_key
+    "encountered {} key, expected {} key".format(keytype, tag)
+paramiko.ssh_exception.SSHException: encountered RSA key, expected OPENSSH key
+
+2021-02-06 09:06:42,093 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'direct_connect' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3.py", line 10, in direct_connect
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 677, in _auth
+    key_filename, pkey_class, passphrase
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 586, in _key_from_filepath
+    key = klass.from_private_key_file(key_path, password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/pkey.py", line 235, in from_private_key_file
+    key = cls(filename=filename, password=password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/ed25519key.py", line 58, in __init__
+    pkformat, data = self._read_private_key("OPENSSH", f)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/pkey.py", line 341, in _read_private_key
+    "encountered {} key, expected {} key".format(keytype, tag)
+paramiko.ssh_exception.SSHException: encountered RSA key, expected OPENSSH key
+
+2021-02-06 09:12:03,809 -  nornir.core -     INFO -        run() - Running task 'netmiko_direct' with args {} on 2 hosts
+2021-02-06 09:12:06,499 - nornir.core.task -    ERROR -      start() - Host 'cisco4': task 'netmiko_direct' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3.py", line 10, in netmiko_direct
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 677, in _auth
+    key_filename, pkey_class, passphrase
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 586, in _key_from_filepath
+    key = klass.from_private_key_file(key_path, password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/pkey.py", line 235, in from_private_key_file
+    key = cls(filename=filename, password=password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/ed25519key.py", line 58, in __init__
+    pkformat, data = self._read_private_key("OPENSSH", f)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/pkey.py", line 341, in _read_private_key
+    "encountered {} key, expected {} key".format(keytype, tag)
+paramiko.ssh_exception.SSHException: encountered RSA key, expected OPENSSH key
+
+2021-02-06 09:12:06,506 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_direct' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3.py", line 10, in netmiko_direct
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 677, in _auth
+    key_filename, pkey_class, passphrase
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 586, in _key_from_filepath
+    key = klass.from_private_key_file(key_path, password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/pkey.py", line 235, in from_private_key_file
+    key = cls(filename=filename, password=password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/ed25519key.py", line 58, in __init__
+    pkformat, data = self._read_private_key("OPENSSH", f)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/pkey.py", line 341, in _read_private_key
+    "encountered {} key, expected {} key".format(keytype, tag)
+paramiko.ssh_exception.SSHException: encountered RSA key, expected OPENSSH key
+
+2021-02-06 09:13:24,625 -  nornir.core -     INFO -        run() - Running task 'netmiko_direct' with args {} on 2 hosts
+2021-02-06 09:13:25,082 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_direct' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3.py", line 10, in netmiko_direct
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 677, in _auth
+    key_filename, pkey_class, passphrase
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 586, in _key_from_filepath
+    key = klass.from_private_key_file(key_path, password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/pkey.py", line 235, in from_private_key_file
+    key = cls(filename=filename, password=password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/ed25519key.py", line 58, in __init__
+    pkformat, data = self._read_private_key("OPENSSH", f)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/pkey.py", line 324, in _read_private_key
+    raise SSHException("not a valid {} private key file".format(tag))
+paramiko.ssh_exception.SSHException: not a valid OPENSSH private key file
+
+2021-02-06 09:13:25,084 - nornir.core.task -    ERROR -      start() - Host 'cisco4': task 'netmiko_direct' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3.py", line 10, in netmiko_direct
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 677, in _auth
+    key_filename, pkey_class, passphrase
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 586, in _key_from_filepath
+    key = klass.from_private_key_file(key_path, password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/pkey.py", line 235, in from_private_key_file
+    key = cls(filename=filename, password=password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/ed25519key.py", line 58, in __init__
+    pkformat, data = self._read_private_key("OPENSSH", f)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/pkey.py", line 324, in _read_private_key
+    raise SSHException("not a valid {} private key file".format(tag))
+paramiko.ssh_exception.SSHException: not a valid OPENSSH private key file
+
+2021-02-06 09:14:00,501 -  nornir.core -     INFO -        run() - Running task 'netmiko_direct' with args {} on 2 hosts
+2021-02-06 09:14:03,185 - nornir.core.task -    ERROR -      start() - Host 'cisco4': task 'netmiko_direct' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3.py", line 10, in netmiko_direct
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 677, in _auth
+    key_filename, pkey_class, passphrase
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 586, in _key_from_filepath
+    key = klass.from_private_key_file(key_path, password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/pkey.py", line 235, in from_private_key_file
+    key = cls(filename=filename, password=password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/ed25519key.py", line 58, in __init__
+    pkformat, data = self._read_private_key("OPENSSH", f)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/pkey.py", line 341, in _read_private_key
+    "encountered {} key, expected {} key".format(keytype, tag)
+paramiko.ssh_exception.SSHException: encountered RSA key, expected OPENSSH key
+
+2021-02-06 09:14:03,186 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_direct' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3.py", line 10, in netmiko_direct
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 677, in _auth
+    key_filename, pkey_class, passphrase
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/client.py", line 586, in _key_from_filepath
+    key = klass.from_private_key_file(key_path, password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/pkey.py", line 235, in from_private_key_file
+    key = cls(filename=filename, password=password)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/ed25519key.py", line 58, in __init__
+    pkformat, data = self._read_private_key("OPENSSH", f)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/pkey.py", line 341, in _read_private_key
+    "encountered {} key, expected {} key".format(keytype, tag)
+paramiko.ssh_exception.SSHException: encountered RSA key, expected OPENSSH key
+
+2021-02-06 09:17:19,716 -  nornir.core -     INFO -        run() - Running task 'netmiko_direct' with args {} on 2 hosts
+2021-02-06 09:18:05,491 - nornir.core.task -    ERROR -      start() - Host 'cisco4': task 'netmiko_direct' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3.py", line 9, in netmiko_direct
+    if "cisco" in task.host:
+  File "exercise3.py", line 9, in netmiko_direct
+    if "cisco" in task.host:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-06 09:18:05,497 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_direct' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3.py", line 9, in netmiko_direct
+    if "cisco" in task.host:
+  File "exercise3.py", line 9, in netmiko_direct
+    if "cisco" in task.host:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-06 09:18:45,170 -  nornir.core -     INFO -        run() - Running task 'netmiko_direct' with args {} on 2 hosts
+2021-02-06 09:19:25,035 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_direct' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3.py", line 9, in netmiko_direct
+    if "cisco" in task.host:
+  File "exercise3.py", line 9, in netmiko_direct
+    if "cisco" in task.host:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-06 09:19:27,132 - nornir.core.task -    ERROR -      start() - Host 'cisco4': task 'netmiko_direct' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3.py", line 9, in netmiko_direct
+    if "cisco" in task.host:
+  File "exercise3.py", line 9, in netmiko_direct
+    if "cisco" in task.host:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-06 09:19:44,459 -  nornir.core -     INFO -        run() - Running task 'netmiko_direct' with args {} on 2 hosts
+2021-02-06 09:19:45,931 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_direct' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3.py", line 9, in netmiko_direct
+    if "ios" in task.host.platform:
+  File "exercise3.py", line 9, in netmiko_direct
+    if "ios" in task.host.platform:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-06 09:19:48,905 - nornir.core.task -    ERROR -      start() - Host 'cisco4': task 'netmiko_direct' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise3.py", line 9, in netmiko_direct
+    if "ios" in task.host.platform:
+  File "exercise3.py", line 9, in netmiko_direct
+    if "ios" in task.host.platform:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-06 09:19:56,199 -  nornir.core -     INFO -        run() - Running task 'netmiko_direct' with args {} on 2 hosts
+2021-02-06 09:20:45,558 -  nornir.core -     INFO -        run() - Running task 'netmiko_direct' with args {} on 2 hosts
+2021-02-06 09:21:24,780 -  nornir.core -     INFO -        run() - Running task 'netmiko_direct' with args {} on 9 hosts
