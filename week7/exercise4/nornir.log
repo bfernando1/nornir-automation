@@ -1,0 +1,179 @@
+2021-02-06 11:58:10,305 -  nornir.core -     INFO -        run() - Running task 'send_file' with args {} on 2 hosts
+2021-02-06 11:58:29,366 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'send_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4.py", line 17, in send_file
+    import ipdb; ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-06 11:58:31,670 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'send_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4.py", line 17, in send_file
+    import ipdb; ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-06 11:59:07,728 -  nornir.core -     INFO -        run() - Running task 'send_file' with args {} on 2 hosts
+2021-02-06 12:00:24,402 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'send_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4.py", line 17, in send_file
+    import ipdb; ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-06 12:00:34,054 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'send_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4.py", line 17, in send_file
+    import ipdb; ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-06 12:03:15,575 -  nornir.core -     INFO -        run() - Running task 'send_file' with args {} on 2 hosts
+2021-02-06 12:19:17,209 -  nornir.core -     INFO -        run() - Running task 'send_file' with args {} on 1 hosts
+2021-02-06 12:19:24,810 -  nornir.core -     INFO -        run() - Running task 'delete_file' with args {} on 1 hosts
+2021-02-06 12:19:55,902 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'delete_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4.py", line 40, in delete_file
+    print(net_connect.find_prompt())
+  File "exercise4.py", line 40, in delete_file
+    print(net_connect.find_prompt())
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-06 12:25:53,924 -  nornir.core -     INFO -        run() - Running task 'send_file' with args {} on 1 hosts
+2021-02-06 12:26:01,429 -  nornir.core -     INFO -        run() - Running task 'delete_file' with args {} on 1 hosts
+2021-02-06 12:26:27,107 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'delete_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4.py", line 50, in delete_file
+    print(net_connect.find_prompt())
+  File "exercise4.py", line 50, in delete_file
+    print(net_connect.find_prompt())
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-06 12:27:35,827 -  nornir.core -     INFO -        run() - Running task 'send_file' with args {} on 1 hosts
+2021-02-06 12:27:43,266 -  nornir.core -     INFO -        run() - Running task 'delete_file' with args {} on 1 hosts
+2021-02-06 12:27:52,010 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'delete_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4.py", line 47, in delete_file
+    print(net_connect.find_prompt())
+  File "exercise4.py", line 47, in delete_file
+    print(net_connect.find_prompt())
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-06 12:30:16,807 -  nornir.core -     INFO -        run() - Running task 'send_file' with args {} on 1 hosts
+2021-02-06 12:30:24,383 -  nornir.core -     INFO -        run() - Running task 'delete_file' with args {} on 1 hosts
+2021-02-06 12:30:24,384 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'delete_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4.py", line 46, in delete_file
+    cmd, stript_prompt=False, strip_command=False
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/utilities.py", line 347, in wrapper_decorator
+    return func(self, *args, **kwargs)
+TypeError: send_command_timing() got an unexpected keyword argument 'stript_prompt'
+
+2021-02-06 12:30:51,330 -  nornir.core -     INFO -        run() - Running task 'send_file' with args {} on 1 hosts
+2021-02-06 12:30:58,671 -  nornir.core -     INFO -        run() - Running task 'delete_file' with args {} on 1 hosts
+2021-02-06 12:30:58,672 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'delete_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4.py", line 46, in delete_file
+    cmd, stript_prompt=False, strip_command=False
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/utilities.py", line 347, in wrapper_decorator
+    return func(self, *args, **kwargs)
+TypeError: send_command_timing() got an unexpected keyword argument 'stript_prompt'
+
+2021-02-06 12:32:43,992 -  nornir.core -     INFO -        run() - Running task 'send_file' with args {} on 1 hosts
+2021-02-06 12:32:51,612 -  nornir.core -     INFO -        run() - Running task 'delete_file' with args {} on 1 hosts
+2021-02-06 12:34:14,690 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'delete_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4.py", line 47, in delete_file
+    cmd, stript_prompt=False, strip_command=False
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/utilities.py", line 347, in wrapper_decorator
+    return func(self, *args, **kwargs)
+TypeError: send_command_timing() got an unexpected keyword argument 'stript_prompt'
+
+2021-02-06 12:36:37,426 -  nornir.core -     INFO -        run() - Running task 'send_file' with args {} on 1 hosts
+2021-02-06 12:36:46,430 -  nornir.core -     INFO -        run() - Running task 'delete_file' with args {} on 1 hosts
+2021-02-06 12:36:46,431 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'delete_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4.py", line 46, in delete_file
+    cmd, stript_prompt=False, strip_command=False
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/utilities.py", line 347, in wrapper_decorator
+    return func(self, *args, **kwargs)
+TypeError: send_command_timing() got an unexpected keyword argument 'stript_prompt'
+
+2021-02-06 12:39:05,722 -  nornir.core -     INFO -        run() - Running task 'send_file' with args {} on 1 hosts
+2021-02-06 12:39:13,145 -  nornir.core -     INFO -        run() - Running task 'delete_file' with args {} on 1 hosts
+2021-02-06 12:46:52,601 -  nornir.core -     INFO -        run() - Running task 'send_file' with args {} on 1 hosts
+2021-02-06 12:47:01,704 -  nornir.core -     INFO -        run() - Running task 'delete_file' with args {} on 1 hosts
+2021-02-06 12:47:06,413 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'delete_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4.py", line 49, in delete_file
+    check_cmd = f"dir bootflash | grep {filename}"
+NameError: name 'filename' is not defined
+
+2021-02-06 12:47:28,721 -  nornir.core -     INFO -        run() - Running task 'send_file' with args {} on 1 hosts
+2021-02-06 12:47:37,901 -  nornir.core -     INFO -        run() - Running task 'delete_file' with args {} on 1 hosts
+2021-02-06 12:50:11,571 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'delete_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise4.py", line 53, in delete_file
+    print(output)
+  File "exercise4.py", line 53, in delete_file
+    print(output)
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-06 12:52:38,968 -  nornir.core -     INFO -        run() - Running task 'send_file' with args {} on 1 hosts
+2021-02-06 12:52:48,277 -  nornir.core -     INFO -        run() - Running task 'delete_file' with args {} on 1 hosts
+2021-02-06 13:09:28,115 -  nornir.core -     INFO -        run() - Running task 'send_file' with args {} on 1 hosts
+2021-02-06 13:09:37,663 -  nornir.core -     INFO -        run() - Running task 'delete_file' with args {} on 1 hosts
