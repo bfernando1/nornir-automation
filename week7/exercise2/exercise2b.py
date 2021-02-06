@@ -1,3 +1,36 @@
+"""
+Author: Bradley Fernando
+Purpose: Use transform function so that both Netmiko and Napalm will work with
+         Ansible inventory. 
+
+Usage:
+    python exercise2b.py
+
+Output:
+napalm_get**********************************************************************
+* nxos1 ** changed : False *****************************************************
+vvvv napalm_get ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
+{ 'facts': { 'fqdn': 'nxos1.lasthop.io',
+             'hostname': 'nxos1',
+             'interface_list': [ 'mgmt0',
+                                 'Ethernet1/1',
+                                 'Ethernet1/2',
+                                 'Ethernet1/3',
+                                 'Ethernet1/4',
+                                 'Ethernet1/5',
+                            <!-- snipped -->
+                                 'Ethernet1/127',
+                                 'Ethernet1/128',
+                                 'Vlan1'],
+             'model': 'Nexus9000 9000v Chassis',
+             'os_version': '9.2(3)',
+             'serial_number': '9B2B28CMF9S',
+             'uptime': 14909576,
+             'vendor': 'Cisco'}}
+^^^^ END napalm_get ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""
+
+
 from nornir import InitNornir
 from nornir.core.filter import F
 from nornir.plugins.functions.text import print_result

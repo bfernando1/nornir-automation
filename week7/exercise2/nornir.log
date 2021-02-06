@@ -743,3 +743,4 @@ Traceback (most recent call last):
 napalm.base.exceptions.ConnectionException: Cannot connect to nxos2.lasthop.io
 
 2021-02-05 21:44:43,107 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts']} on 2 hosts
+2021-02-05 22:07:45,891 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts']} on 2 hosts
