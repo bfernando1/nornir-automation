@@ -7,6 +7,8 @@ from nornir.plugins.tasks import networking
 def transform_nornir(host):
 
     host.password = host['ansible_ssh_pass']
+    netmiko_params = host.get_connection_parameters('netmiko')
+    napalm_params = host.get_connection_parameters('napalm')
 
     # Mapping for Netmiko plugin
     netmiko_group_mapper = {
@@ -15,25 +17,24 @@ def transform_nornir(host):
         "nxos": "cisco_nxos",
         "juniper": "juniper_junos"
     }
-    netmiko_params = host.get_connection_parameters('netmiko')
     netmiko_params.platform = \
         netmiko_group_mapper.get(host.groups[0], "no_platform_id")
     if 'arista' in host.name:
         netmiko_params.extras['global_delay_factor'] = 2
-    host.connection_options['netmiko'] = netmiko_params
     
-    # Mapping for Naplam plugin
+    # Mapping for Napalm plugin
     napalm_group_mapper = {
         "arista": "eos",
         "cisco": "ios",
         "nxos": "nxos", 
         "juniper": "junos"
     }
-    napalm_params = host.get_connection_parameters('napalm')
     napalm_params.platform = \
         napalm_group_mapper.get(host.groups[0], 'no_platform_id')
     if "nxos" in host.name:
         napalm_params.port = 8443
+
+    host.connection_options['netmiko'] = netmiko_params
     host.connection_options['napalm'] = napalm_params  
 
 
