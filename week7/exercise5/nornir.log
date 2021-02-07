@@ -43,3 +43,134 @@ Traceback (most recent call last):
 bdb.BdbQuit
 
 2021-02-07 00:16:12,431 -  nornir.core -     INFO -        run() - Running task 'get_backup' with args {} on 1 hosts
+2021-02-07 05:47:26,298 -  nornir.core -     INFO -        run() - Running task 'retrieve_checkpoint' with args {} on 1 hosts
+2021-02-07 05:48:25,686 -  nornir.core -     INFO -        run() - Running task 'retrieve_checkpoint' with args {} on 1 hosts
+2021-02-07 05:48:27,825 -  nornir.core -     INFO -        run() - Running task 'save_backup' with args {} on 1 hosts
+2021-02-07 05:50:05,177 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'save_backup' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5b.py", line 19, in save_backup
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-07 05:50:26,652 -  nornir.core -     INFO -        run() - Running task 'retrieve_checkpoint' with args {} on 1 hosts
+2021-02-07 05:50:29,144 -  nornir.core -     INFO -        run() - Running task 'save_backup' with args {} on 1 hosts
+2021-02-07 05:52:07,003 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'save_backup' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5b.py", line 19, in save_backup
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-07 05:52:21,427 -  nornir.core -     INFO -        run() - Running task 'retrieve_checkpoint' with args {} on 1 hosts
+2021-02-07 05:52:23,856 -  nornir.core -     INFO -        run() - Running task 'save_backup' with args {} on 1 hosts
+2021-02-07 05:52:28,409 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'save_backup' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5b.py", line 19, in save_backup
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-07 05:53:29,827 -  nornir.core -     INFO -        run() - Running task 'retrieve_checkpoint' with args {} on 1 hosts
+2021-02-07 05:53:32,400 -  nornir.core -     INFO -        run() - Running task 'save_backup' with args {} on 1 hosts
+2021-02-07 05:53:37,471 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'save_backup' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5b.py", line 18, in save_backup
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-07 05:57:49,891 -  nornir.core -     INFO -        run() - Running task 'retrieve_checkpoint' with args {} on 1 hosts
+2021-02-07 05:57:52,294 -  nornir.core -     INFO -        run() - Running task 'save_backup' with args {} on 1 hosts
+2021-02-07 05:58:38,112 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'save_backup' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5b.py", line 22, in save_backup
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-07 06:03:18,934 -  nornir.core -     INFO -        run() - Running task 'retrieve_checkpoint' with args {} on 1 hosts
+2021-02-07 06:03:21,298 -  nornir.core -     INFO -        run() - Running task 'save_backup' with args {} on 1 hosts
+2021-02-07 06:03:21,299 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'save_backup' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5b.py", line 23, in save_backup
+    f.write(backup)
+NameError: name 'backup' is not defined
+
+2021-02-07 06:20:40,691 -  nornir.core -     INFO -        run() - Running task 'retrieve_checkpoint' with args {} on 1 hosts
+2021-02-07 06:20:43,186 -  nornir.core -     INFO -        run() - Running task 'save_backup' with args {} on 1 hosts
+2021-02-07 06:20:43,187 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'save_backup' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5b.py", line 24, in save_backup
+    with open(f"backup/{platform}/{task.host}_checkpoint_{time}", 'w') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'backup/nxos/nxos1_checkpoint_2021-02-07@14:20:40'
+
+2021-02-07 06:23:11,198 -  nornir.core -     INFO -        run() - Running task 'retrieve_checkpoint' with args {} on 1 hosts
+2021-02-07 06:23:13,722 -  nornir.core -     INFO -        run() - Running task 'save_backup' with args {} on 1 hosts
+2021-02-07 06:23:13,723 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'save_backup' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5b.py", line 25, in save_backup
+    with open(f"backup/{platform}/{task.host}_checkpoint_{time}", 'w') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'backup/nxos/nxos1_checkpoint_2021-02-07@14:23:11'
+
+2021-02-07 06:28:24,668 -  nornir.core -     INFO -        run() - Running task 'retrieve_checkpoint' with args {} on 1 hosts
+2021-02-07 06:28:26,989 -  nornir.core -     INFO -        run() - Running task 'save_backup' with args {} on 1 hosts
+2021-02-07 06:28:26,990 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'save_backup' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5b.py", line 26, in save_backup
+    f.write(backup)
+NameError: name 'backup' is not defined
+
+2021-02-07 06:32:52,506 -  nornir.core -     INFO -        run() - Running task 'retrieve_checkpoint' with args {} on 2 hosts
+2021-02-07 06:32:56,181 -  nornir.core -     INFO -        run() - Running task 'save_backup' with args {} on 2 hosts
+2021-02-07 06:32:56,182 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'save_backup' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5b.py", line 25, in save_backup
+    f.write(backup)
+NameError: name 'backup' is not defined
+
+2021-02-07 06:32:56,183 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'save_backup' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5b.py", line 25, in save_backup
+    f.write(backup)
+NameError: name 'backup' is not defined
+
+2021-02-07 06:33:56,621 -  nornir.core -     INFO -        run() - Running task 'retrieve_checkpoint' with args {} on 2 hosts
+2021-02-07 06:45:09,647 -  nornir.core -     INFO -        run() - Running task 'retrieve_checkpoint' with args {} on 2 hosts
