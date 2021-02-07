@@ -1,0 +1,30 @@
+2021-02-06 22:01:18,477 -  nornir.core -     INFO -        run() - Running task 'retrieve_checkpoint' with args {} on 1 hosts
+2021-02-06 22:34:53,161 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'retrieve_checkpoint' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5.py", line 6, in retrieve_checkpoint
+    import ipdb; ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-06 22:37:33,108 -  nornir.core -     INFO -        run() - Running task 'retrieve_checkpoint' with args {} on 1 hosts
+2021-02-06 22:38:39,176 -  nornir.core -     INFO -        run() - Running task 'retrieve_checkpoint' with args {} on 1 hosts
+2021-02-06 22:38:55,845 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'retrieve_checkpoint' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise5.py", line 8, in retrieve_checkpoint
+    import ipdb; ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-06 22:39:23,930 -  nornir.core -     INFO -        run() - Running task 'retrieve_checkpoint' with args {} on 1 hosts
+2021-02-06 22:41:41,550 -  nornir.core -     INFO -        run() - Running task 'retrieve_checkpoint' with args {} on 1 hosts
+2021-02-06 22:43:36,792 -  nornir.core -     INFO -        run() - Running task 'retrieve_checkpoint' with args {} on 1 hosts
