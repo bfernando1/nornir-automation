@@ -1,0 +1,67 @@
+2021-02-07 20:51:41,505 -  nornir.core -     INFO -        run() - Running task 'ssh_conn' with args {} on 1 hosts
+2021-02-07 20:53:14,170 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'ssh_conn' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise6.py", line 7, in ssh_conn
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-07 20:54:37,250 -  nornir.core -     INFO -        run() - Running task 'ssh_conn' with args {} on 1 hosts
+2021-02-07 20:57:16,134 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'ssh_conn' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise6.py", line 12, in ssh_conn
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-07 20:59:41,857 -  nornir.core -     INFO -        run() - Running task 'ssh_conn' with args {} on 1 hosts
+2021-02-07 21:00:41,167 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'ssh_conn' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise6.py", line 18, in ssh_conn
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-07 21:01:30,642 -  nornir.core -     INFO -        run() - Running task 'ssh_conn' with args {} on 1 hosts
+2021-02-07 21:01:56,448 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'ssh_conn' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise6.py", line 17, in ssh_conn
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-07 21:06:10,756 -  nornir.core -     INFO -        run() - Running task 'ssh_conn' with args {} on 1 hosts
+2021-02-07 21:06:27,385 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'ssh_conn' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "exercise6.py", line 17, in ssh_conn
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-07 21:13:46,374 -  nornir.core -     INFO -        run() - Running task 'ssh_conn' with args {} on 1 hosts
+2021-02-07 21:40:55,546 -  nornir.core -     INFO -        run() - Running task 'ssh_conn' with args {} on 1 hosts
