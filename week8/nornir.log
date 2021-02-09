@@ -1,0 +1,78 @@
+2021-02-09 07:48:43,882 -  nornir.core -  WARNING -        run() - Task 'config_interfaces' has not been run – 0 hosts selected
+2021-02-09 07:49:02,625 -  nornir.core -  WARNING -        run() - Task 'config_interfaces' has not been run – 0 hosts selected
+2021-02-09 07:49:36,492 -  nornir.core -  WARNING -        run() - Task 'config_interfaces' has not been run – 0 hosts selected
+2021-02-09 07:56:26,843 -  nornir.core -     INFO -        run() - Running task 'config_interfaces' with args {} on 2 hosts
+2021-02-09 07:57:32,196 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'config_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 9, in config_interfaces
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 07:57:34,098 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'config_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 9, in config_interfaces
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 07:57:59,667 -  nornir.core -     INFO -        run() - Running task 'config_interfaces' with args {} on 2 hosts
+2021-02-09 07:58:57,756 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'config_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 9, in config_interfaces
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 07:59:00,733 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'config_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 9, in config_interfaces
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 08:00:06,644 -  nornir.core -     INFO -        run() - Running task 'config_interfaces' with args {} on 2 hosts
+2021-02-09 08:00:30,185 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'config_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 9, in config_interfaces
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 08:00:31,161 - nornir.core.task -    ERROR -      start() - Host 'nxos2': task 'config_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 9, in config_interfaces
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+

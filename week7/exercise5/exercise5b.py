@@ -30,14 +30,14 @@ time = strftime("%Y-%m-%d@%X", gmtime())
 def retrieve_checkpoint(task):
     napalm_connect = task.host.get_connection("napalm", task.nornir.config)
     backup = napalm_connect._get_checkpoint_file()
-    task.host['backup'] = backup
+    task.host["backup"] = backup
     return backup
 
 
 def save_backup(task):
     platform = task.host.platform
     Path(f"backups/{platform}").mkdir(parents=True, exist_ok=True)
-    with open(f"backups/{platform}/{task.host}_checkpoint_{time}", 'w') as f:
+    with open(f"backups/{platform}/{task.host}_checkpoint_{time}", "w") as f:
         f.write(backup)
 
 
