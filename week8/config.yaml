@@ -1,4 +1,7 @@
 ---
+logging:
+  enabled: True
+  level: DEBUG
 inventory:
   plugin: nornir.plugins.inventory.simple.SimpleInventory
   options:

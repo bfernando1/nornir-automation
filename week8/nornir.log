@@ -1283,3 +1283,405 @@ Traceback (most recent call last):
 nornir.core.exceptions.NornirSubTaskError: Subtask: <function napalm_configure at 0x7f4f2d479200> (failed)
 
 
+2021-02-10 13:30:09,567 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 13:30:09,568 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 8, in render_int_config
+    rendered_interfaces = nr.run(
+NameError: name 'nr' is not defined
+
+2021-02-10 13:30:09,568 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config"]}} on 1 hosts
+2021-02-10 13:32:44,576 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 13:32:44,576 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 9, in render_int_config
+    rendered_interfaces = nr.run(
+NameError: name 'nr' is not defined
+
+2021-02-10 13:32:44,577 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config"]}} on 1 hosts
+2021-02-10 13:34:11,420 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 13:34:37,972 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 10, in render_int_config
+    rendered_interfaces = nr.run(
+  File "/usr/lib64/python3.7/bdb.py", line 94, in trace_dispatch
+    return self.dispatch_exception(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 174, in dispatch_exception
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 13:34:37,972 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config"]}} on 1 hosts
+2021-02-10 13:35:01,175 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 13:35:01,180 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 12, in render_int_config
+    return rendered_interface
+NameError: name 'rendered_interface' is not defined
+
+2021-02-10 13:35:01,180 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config", Result: "template_file"]}} on 1 hosts
+2021-02-10 13:35:19,873 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 13:35:42,527 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 13, in render_int_config
+    return rendered_interface
+  File "simple.py", line 13, in render_int_config
+    return rendered_interface
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 13:35:42,527 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config", Result: "template_file"]}} on 1 hosts
+2021-02-10 13:36:11,763 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 13:36:11,767 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config", Result: "template_file"]}} on 1 hosts
+2021-02-10 13:36:12,180 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 32, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 141, in load_merge_candidate
+    self.merge_candidate += config
+TypeError: can only concatenate str (not "AggregatedResult") to str
+
+2021-02-10 13:36:12,180 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'config_interface' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 16, in config_interface
+    task.run(task=networking.napalm_configure, configuration=config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function napalm_configure at 0x7f5d8624f0e0> (failed)
+
+
+2021-02-10 13:36:27,784 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 13:36:27,788 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config", Result: "template_file"]}} on 1 hosts
+2021-02-10 13:36:59,901 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'config_interface' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 17, in config_interface
+    task.run(task=networking.napalm_configure, configuration=config)
+  File "simple.py", line 17, in config_interface
+    task.run(task=networking.napalm_configure, configuration=config)
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 13:37:18,456 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 13:37:18,461 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config", Result: "template_file"]}} on 1 hosts
+2021-02-10 13:37:40,054 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 150, in _commit_merge
+    output = self._send_config(self.merge_candidate)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 721, in _send_config
+    return self.device.config_list(commands)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/device.py", line 132, in config_list
+    return self.api._nxapi_command_conf(commands)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 117, in _nxapi_command_conf
+    return self._nxapi_command(commands=commands, method=method)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 110, in _nxapi_command
+    response = self._send_request(commands, method=method)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 87, in _send_request
+    raise NXAPIPostError(msg)
+napalm.nxapi_plumbing.errors.NXAPIPostError: Invalid status code returned on NX-API POST
+commands: ['interface Eth1/4', '  no switchport', '  ip address 172.31.254.1 255.255.255.252', '  no shut', 'interface Lo101', '  no switchport', '  ip address 172.31.101.101 255.255.255.255', '  no shut', 'interface Lo102', '  no switchport', '  ip address 172.31.102.101 255.255.255.255', '  no shut']
+status_code: 500
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 37, in napalm_configure
+    device.commit_config()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 229, in commit_config
+    self._commit_merge()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 158, in _commit_merge
+    raise MergeConfigException(merge_error)
+napalm.base.exceptions.MergeConfigException: Configuration merge failed; automatic rollback attempted:
+"Invalid status code returned on NX-API POST\ncommands: ['interface Eth1/4', '  no switchport', '  ip address 172.31.254.1 255.255.255.252', '  no shut', 'interface Lo101', '  no switchport', '  ip address 172.31.101.101 255.255.255.255', '  no shut', 'interface Lo102', '  no switchport', '  ip address 172.31.102.101 255.255.255.255', '  no shut']\nstatus_code: 500"
+
+2021-02-10 13:37:40,054 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'config_interface' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 17, in config_interface
+    task.run(task=networking.napalm_configure, configuration=config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function napalm_configure at 0x7f432ccc80e0> (failed)
+
+
+2021-02-10 13:40:53,370 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 13:40:53,375 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config", Result: "template_file"]}} on 1 hosts
+2021-02-10 13:41:14,676 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 13:41:14,680 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config", Result: "template_file"]}} on 1 hosts
+2021-02-10 13:46:23,041 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 13:46:23,046 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config", Result: "template_file"]}} on 1 hosts
+2021-02-10 13:50:14,772 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 13:50:14,777 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config", Result: "template_file"]}} on 1 hosts
+2021-02-10 13:50:40,982 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 564, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_config.py", line 27, in netmiko_send_config
+    result = net_connect.send_config_set(config_commands=config_commands, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 1782, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 641, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 575, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+2021-02-10 13:50:40,982 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'config_interface' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 17, in config_interface
+    task.run(task=networking.netmiko_send_config, config_commands=config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_config at 0x7fcbbc940e60> (failed)
+
+
+2021-02-10 13:57:26,524 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 13:57:26,529 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config", Result: "template_file"]}} on 1 hosts
+2021-02-10 14:02:35,073 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 14:02:35,077 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config", Result: "template_file"]}} on 1 hosts
+2021-02-10 14:09:03,727 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 14:09:03,727 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-10 14:09:03,728 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-10 14:09:03,732 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config", Result: "template_file"]}} on 1 hosts
+2021-02-10 14:09:03,732 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-10 14:09:03,733 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-10 14:09:54,674 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 14:09:54,674 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-10 14:09:54,675 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-10 14:09:54,679 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config", Result: "template_file"]}} on 1 hosts
+2021-02-10 14:09:54,680 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-10 14:09:54,680 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-10 14:21:34,251 -  nornir.core -     INFO -        run() - Running task 'check_interfaces' with args {} on 1 hosts
+2021-02-10 14:21:34,252 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'check_interfaces'
+2021-02-10 14:21:34,252 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-10 14:29:53,133 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'check_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 14, in check_interfaces
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 14:29:53,133 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 14:29:53,133 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {}} on 1 hosts
+2021-02-10 14:31:50,064 -  nornir.core -     INFO -        run() - Running task 'check_interfaces' with args {} on 1 hosts
+2021-02-10 14:31:50,065 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'check_interfaces'
+2021-02-10 14:31:50,065 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-10 14:34:46,706 -  nornir.core -     INFO -        run() - Running task 'check_interfaces' with args {} on 1 hosts
+2021-02-10 14:34:46,706 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'check_interfaces'
+2021-02-10 14:34:46,706 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-10 14:34:53,195 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 14:34:53,196 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-10 14:34:53,196 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-10 14:35:09,433 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config", Result: "template_file"]}} on 1 hosts
+2021-02-10 14:35:09,434 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-10 14:35:09,434 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-10 14:40:00,355 -  nornir.core -     INFO -        run() - Running task 'check_interfaces' with args {} on 1 hosts
+2021-02-10 14:40:00,355 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'check_interfaces'
+2021-02-10 14:40:00,355 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-10 14:40:06,996 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 14:40:06,996 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-10 14:40:06,996 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-10 14:40:33,346 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config", Result: "template_file"]}} on 1 hosts
+2021-02-10 14:40:33,347 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-10 14:40:33,347 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-10 14:43:17,170 -  nornir.core -     INFO -        run() - Running task 'check_interfaces' with args {} on 1 hosts
+2021-02-10 14:43:17,171 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'check_interfaces'
+2021-02-10 14:43:17,171 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-10 14:43:23,642 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 14:43:23,643 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-10 14:43:23,643 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-10 14:44:14,883 -  nornir.core -     INFO -        run() - Running task 'check_interfaces' with args {} on 1 hosts
+2021-02-10 14:44:14,884 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'check_interfaces'
+2021-02-10 14:44:14,884 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-10 14:44:21,427 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 14:44:21,428 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-10 14:44:21,428 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-10 14:53:49,161 -  nornir.core -     INFO -        run() - Running task 'check_interfaces' with args {} on 1 hosts
+2021-02-10 14:53:49,162 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'check_interfaces'
+2021-02-10 14:53:49,162 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-10 14:54:46,515 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'check_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 18, in check_interfaces
+    return Result(host=task.host, result=int_brief, changed=changed)
+  File "simple.py", line 18, in check_interfaces
+    return Result(host=task.host, result=int_brief, changed=changed)
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 14:54:46,515 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 14:54:46,516 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {}} on 1 hosts
+2021-02-10 15:02:42,785 -  nornir.core -     INFO -        run() - Running task 'check_interfaces' with args {} on 1 hosts
+2021-02-10 15:02:42,786 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'check_interfaces'
+2021-02-10 15:02:42,786 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-10 15:08:45,428 -  nornir.core -     INFO -        run() - Running task 'check_interfaces' with args {} on 1 hosts
+2021-02-10 15:08:45,429 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'check_interfaces'
+2021-02-10 15:08:45,429 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-10 15:08:52,000 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 15:08:52,001 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-10 15:08:52,002 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-10 15:08:52,006 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config", Result: "template_file"]}} on 1 hosts
+2021-02-10 15:08:52,007 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-10 15:08:52,007 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-10 15:11:24,641 -  nornir.core -     INFO -        run() - Running task 'check_interfaces' with args {} on 1 hosts
+2021-02-10 15:11:24,642 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'check_interfaces'
+2021-02-10 15:11:24,642 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-10 15:11:31,220 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'check_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 19, in check_interfaces
+    return Result(host=task.host, result=int_brief, changed=changed)
+UnboundLocalError: local variable 'changed' referenced before assignment
+
+2021-02-10 15:11:31,221 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 15:11:31,221 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {}} on 1 hosts
+2021-02-10 15:12:34,209 -  nornir.core -     INFO -        run() - Running task 'check_interfaces' with args {} on 1 hosts
+2021-02-10 15:12:34,209 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'check_interfaces'
+2021-02-10 15:12:34,209 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-10 15:12:40,742 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'check_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 19, in check_interfaces
+    return Result(host=task.host, result=int_brief, changed=changed)
+UnboundLocalError: local variable 'changed' referenced before assignment
+
+2021-02-10 15:12:40,743 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 15:12:40,743 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {}} on 1 hosts
+2021-02-10 15:16:06,533 -  nornir.core -     INFO -        run() - Running task 'check_interfaces' with args {} on 1 hosts
+2021-02-10 15:16:06,534 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'check_interfaces'
+2021-02-10 15:16:06,534 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-10 15:16:13,028 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 15:16:13,029 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-10 15:16:13,029 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-10 15:16:13,033 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config", Result: "template_file"]}} on 1 hosts
+2021-02-10 15:16:13,034 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-10 15:16:13,034 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-10 15:18:14,778 -  nornir.core -     INFO -        run() - Running task 'check_interfaces' with args {} on 1 hosts
+2021-02-10 15:18:14,779 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'check_interfaces'
+2021-02-10 15:18:14,779 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-10 15:18:21,304 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 15:18:21,305 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-10 15:18:21,305 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-10 15:18:21,310 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config", Result: "template_file"]}} on 1 hosts
+2021-02-10 15:18:21,310 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-10 15:18:21,310 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-10 15:19:36,467 -  nornir.core -     INFO -        run() - Running task 'check_interfaces' with args {} on 1 hosts
+2021-02-10 15:19:36,468 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'check_interfaces'
+2021-02-10 15:19:36,468 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-10 15:21:17,012 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'check_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 22, in check_interfaces
+    return Result(host=task.host, result=int_brief, changed=changed)
+  File "simple.py", line 22, in check_interfaces
+    return Result(host=task.host, result=int_brief, changed=changed)
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 15:21:17,012 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 15:21:17,012 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {}} on 1 hosts
+2021-02-10 15:21:40,776 -  nornir.core -     INFO -        run() - Running task 'check_interfaces' with args {} on 1 hosts
+2021-02-10 15:21:40,777 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'check_interfaces'
+2021-02-10 15:21:40,777 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-10 15:21:49,005 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'check_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 16, in check_interfaces
+    if type(result) == str:
+  File "simple.py", line 16, in check_interfaces
+    if type(result) == str:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 15:22:04,329 -  nornir.core -     INFO -        run() - Running task 'check_interfaces' with args {} on 1 hosts
+2021-02-10 15:22:04,330 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'check_interfaces'
+2021-02-10 15:22:04,330 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-10 15:22:10,851 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 15:22:10,852 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-10 15:22:10,852 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-10 15:22:10,857 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config", Result: "template_file"]}} on 1 hosts
+2021-02-10 15:22:10,857 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-10 15:22:10,857 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-10 15:23:47,161 -  nornir.core -     INFO -        run() - Running task 'check_interfaces' with args {} on 1 hosts
+2021-02-10 15:23:47,162 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'check_interfaces'
+2021-02-10 15:23:47,162 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-10 15:24:20,603 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-10 15:24:20,604 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-10 15:24:20,604 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-10 15:24:20,608 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {'config': AggregatedResult (render_int_config): {'nxos1': MultiResult: [Result: "render_int_config", Result: "template_file"]}} on 1 hosts
+2021-02-10 15:24:20,609 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-10 15:24:20,609 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-10 15:25:10,381 -  nornir.core -     INFO -        run() - Running task 'check_interfaces' with args {} on 1 hosts
+2021-02-10 15:25:10,381 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'check_interfaces'
+2021-02-10 15:25:10,381 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-10 15:26:21,729 -  nornir.core -     INFO -        run() - Running task 'check_interfaces' with args {} on 1 hosts
+2021-02-10 15:26:21,730 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'check_interfaces'
+2021-02-10 15:26:21,730 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-10 15:27:11,087 -  nornir.core -     INFO -        run() - Running task 'check_interfaces' with args {} on 1 hosts
+2021-02-10 15:27:11,088 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'check_interfaces'
+2021-02-10 15:27:11,088 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-10 15:31:16,657 -  nornir.core -     INFO -        run() - Running task 'check_interfaces' with args {} on 1 hosts
+2021-02-10 15:31:16,658 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'check_interfaces'
+2021-02-10 15:31:16,658 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
