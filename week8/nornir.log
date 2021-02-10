@@ -76,3 +76,1210 @@ Traceback (most recent call last):
     if self.quitting: raise BdbQuit
 bdb.BdbQuit
 
+2021-02-09 12:38:06,418 -  nornir.core -     INFO -        run() - Running task 'config_interfaces' with args {} on 1 hosts
+2021-02-09 12:49:07,240 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'config_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 9, in config_interfaces
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 13:59:19,470 -  nornir.core -     INFO -        run() - Running task 'config_interfaces' with args {} on 1 hosts
+2021-02-09 13:59:19,480 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_file.py", line 35, in template_file
+    **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "nxos/int.j2", line 1, in top-level template code
+    interface {{ interfaces.int_name }}
+jinja2.exceptions.UndefinedError: 'list object' has no attribute 'int_name'
+
+2021-02-09 13:59:19,481 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 14, in render_int_config
+    task=text.template_file, template="int.j2", path=config_path, **task.host
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_file at 0x7ff0d73daa70> (failed)
+
+
+2021-02-09 13:59:19,481 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'config_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 9, in config_interfaces
+    task.run(task=render_int_config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_int_config at 0x7ff0d73da9e0> (failed)
+
+
+2021-02-09 14:00:44,901 -  nornir.core -     INFO -        run() - Running task 'config_interfaces' with args {} on 1 hosts
+2021-02-09 14:00:56,514 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_file.py", line 35, in template_file
+    **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "nxos/int.j2", line 1, in top-level template code
+    interface {{ interfaces.int_name }}
+jinja2.exceptions.UndefinedError: 'list object' has no attribute 'int_name'
+
+2021-02-09 14:01:17,186 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 16, in render_int_config
+    task=text.template_file, template="int.j2", path=config_path, **task.host
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_file at 0x7fad18970a70> (failed)
+
+
+2021-02-09 14:01:17,187 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'config_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 9, in config_interfaces
+    task.run(task=render_int_config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_int_config at 0x7fad189709e0> (failed)
+
+
+2021-02-09 14:01:38,636 -  nornir.core -     INFO -        run() - Running task 'config_interfaces' with args {} on 1 hosts
+2021-02-09 14:01:38,641 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_file.py", line 35, in template_file
+    **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "nxos/int.j2", line 1, in top-level template code
+    interface {{ interfaces.int_name }}
+jinja2.exceptions.UndefinedError: 'list object' has no attribute 'int_name'
+
+2021-02-09 14:01:38,642 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 15, in render_int_config
+    task=text.template_file, template="int.j2", path=config_path, **task.host
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_file at 0x7f0ff5afca70> (failed)
+
+
+2021-02-09 14:01:38,642 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'config_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 9, in config_interfaces
+    task.run(task=render_int_config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_int_config at 0x7f0ff5afc9e0> (failed)
+
+
+2021-02-09 14:02:46,878 -  nornir.core -     INFO -        run() - Running task 'config_interfaces' with args {} on 1 hosts
+2021-02-09 14:03:16,230 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_file.py", line 35, in template_file
+    **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "nxos/int.j2", line 1, in top-level template code
+    interface {{ interfaces.int_name }}
+jinja2.exceptions.UndefinedError: 'list object' has no attribute 'int_name'
+
+2021-02-09 14:04:00,135 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 16, in render_int_config
+    task=text.template_file, template="int.j2", path=config_path, **task.host
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_file at 0x7f3d359d5a70> (failed)
+
+
+2021-02-09 14:04:40,953 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'config_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 9, in config_interfaces
+    task.run(task=render_int_config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_int_config at 0x7f3d359d59e0> (failed)
+
+
+2021-02-09 14:06:17,398 -  nornir.core -     INFO -        run() - Running task 'config_interfaces' with args {} on 1 hosts
+2021-02-09 14:06:17,404 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_file.py", line 35, in template_file
+    **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "nxos/int.j2", line 1, in top-level template code
+    interface {{ interfaces.int_name }}
+jinja2.exceptions.UndefinedError: 'list object' has no attribute 'int_name'
+
+2021-02-09 14:06:17,404 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 14, in render_int_config
+    task=text.template_file, template="int.j2", path=config_path, **task.host
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_file at 0x7feb49385a70> (failed)
+
+
+2021-02-09 14:06:17,405 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'config_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 9, in config_interfaces
+    task.run(task=render_int_config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_int_config at 0x7feb493859e0> (failed)
+
+
+2021-02-09 14:07:14,271 -  nornir.core -     INFO -        run() - Running task 'config_interfaces' with args {} on 1 hosts
+2021-02-09 14:07:14,272 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-09 14:07:14,276 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_file.py", line 35, in template_file
+    **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "nxos/int.j2", line 1, in top-level template code
+    interface {{ interfaces.int_name }}
+jinja2.exceptions.UndefinedError: 'list object' has no attribute 'int_name'
+
+2021-02-09 14:07:14,277 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 14, in render_int_config
+    task=text.template_file, template="int.j2", path=config_path, **task.host
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_file at 0x7f7f54e5fa70> (failed)
+
+
+2021-02-09 14:10:05,808 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-09 14:14:07,920 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 15, in render_int_config
+    render_int = task.run(
+  File "bgp_tool.py", line 15, in render_int_config
+    render_int = task.run(
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 14:14:11,795 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-09 14:14:14,349 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 15, in render_int_config
+    render_int = task.run(
+  File "bgp_tool.py", line 15, in render_int_config
+    render_int = task.run(
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 14:14:42,911 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-09 14:16:24,195 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-09 14:17:18,172 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 20, in render_int_config
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 14:22:52,727 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-09 14:26:36,838 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 20, in render_int_config
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 14:28:29,553 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-09 14:28:33,176 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 20, in render_int_config
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 14:28:39,207 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-09 14:45:49,236 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 20, in render_int_config
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 14:50:10,637 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {} on 1 hosts
+2021-02-09 14:50:26,530 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 27, in render_int_config
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 14:51:54,725 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 14:51:54,726 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 8, in verify_interfaces
+    int_brief = task.run(task=netmiko_send_command, command_string=cmd)
+NameError: name 'netmiko_send_command' is not defined
+
+2021-02-09 14:52:24,675 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 14:54:52,669 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 10, in verify_interfaces
+    for intf in task.host.data["interfaces"]:
+  File "bgp_tool.py", line 10, in verify_interfaces
+    for intf in task.host.data["interfaces"]:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 14:56:13,302 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 14:56:35,807 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 14, in verify_interfaces
+    for intf in task.host.data["interfaces"]:
+  File "bgp_tool.py", line 14, in verify_interfaces
+    for intf in task.host.data["interfaces"]:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 14:56:46,684 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 15:03:31,146 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 15:03:44,354 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 16, in verify_interfaces
+    for intf in task.host.data["interfaces"]:
+  File "bgp_tool.py", line 16, in verify_interfaces
+    for intf in task.host.data["interfaces"]:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 15:13:38,554 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 15:13:47,531 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 16, in verify_interfaces
+    for intf in task.host.data["interfaces"]:
+  File "bgp_tool.py", line 16, in verify_interfaces
+    for intf in task.host.data["interfaces"]:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 15:14:02,473 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 15:14:36,615 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 15:17:12,494 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 15:18:27,395 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 16, in verify_interfaces
+    for intf in task.host.data["interfaces"]:
+  File "bgp_tool.py", line 16, in verify_interfaces
+    for intf in task.host.data["interfaces"]:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 15:19:09,428 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 15:58:18,161 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 15:59:44,948 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 14, in verify_interfaces
+  File "bgp_tool.py", line 14, in verify_interfaces
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 16:04:24,065 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 24, in verify_interfaces
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 16:08:09,961 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 16:18:18,046 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 16:20:30,971 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 16:21:09,647 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 16:21:28,828 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 16:21:35,350 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {'int_to_config': ['Eth1/4', 'Lo102']} on 1 hosts
+2021-02-09 16:25:42,091 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 33, in render_int_config
+    config_path = f"{task.host.platform}/"
+  File "bgp_tool.py", line 33, in render_int_config
+    config_path = f"{task.host.platform}/"
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 16:50:17,040 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 16:50:23,570 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {'int_to_config': ['Eth1/4', 'Lo102']} on 1 hosts
+2021-02-09 16:52:00,941 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 34, in render_int_config
+    for intf in task.host.data['interfaces']:
+  File "bgp_tool.py", line 34, in render_int_config
+    for intf in task.host.data['interfaces']:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 16:54:53,120 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 16:54:59,653 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {'int_to_config': ['Eth1/4', 'Lo102']} on 1 hosts
+2021-02-09 16:55:04,182 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 34, in render_int_config
+    for intf in task.host.data['interfaces']:
+  File "bgp_tool.py", line 34, in render_int_config
+    for intf in task.host.data['interfaces']:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 16:56:08,963 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 16:56:15,418 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {'int_to_config': ['Eth1/4', 'Lo102']} on 1 hosts
+2021-02-09 16:56:30,810 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 39, in render_int_config
+    render_int = task.run(
+  File "bgp_tool.py", line 39, in render_int_config
+    render_int = task.run(
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 16:56:50,044 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 16:56:56,447 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {'int_to_config': ['Eth1/4', 'Lo102']} on 1 hosts
+2021-02-09 16:57:13,330 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 40, in render_int_config
+    render_int = task.run(
+  File "bgp_tool.py", line 40, in render_int_config
+    render_int = task.run(
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 16:58:19,692 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 16:58:26,276 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {'int_to_config': ['Eth1/4', 'Lo102']} on 1 hosts
+2021-02-09 16:59:18,303 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 42, in render_int_config
+    render_int = task.run(
+  File "bgp_tool.py", line 42, in render_int_config
+    render_int = task.run(
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-09 17:11:52,329 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 17:11:58,841 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {'int_to_config': ['Eth1/4', 'Lo102']} on 1 hosts
+2021-02-09 17:36:59,467 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-09 17:37:05,898 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command"]}} on 1 hosts
+2021-02-10 08:23:03,267 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 08:23:09,758 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 18, in verify_interfaces
+    if check_int in int_brief['interface'] and \
+TypeError: string indices must be integers
+
+2021-02-10 08:23:09,758 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command"]}} on 1 hosts
+2021-02-10 08:23:09,758 -  nornir.core -     INFO -        run() - Running task 'config_interfaces' with args {'cmd': AggregatedResult (render_int_config): {}} on 1 hosts
+2021-02-10 08:23:57,174 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 08:24:03,709 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 18, in verify_interfaces
+    if check_int in int_brief['interface'] and \
+TypeError: string indices must be integers
+
+2021-02-10 08:24:03,709 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command"]}} on 1 hosts
+2021-02-10 08:24:03,710 -  nornir.core -     INFO -        run() - Running task 'config_interfaces' with args {'cmd': AggregatedResult (render_int_config): {}} on 1 hosts
+2021-02-10 08:25:00,461 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 08:25:06,954 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 18, in verify_interfaces
+    if check_int in int_brief['interface'] and \
+TypeError: string indices must be integers
+
+2021-02-10 08:25:06,954 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command"]}} on 1 hosts
+2021-02-10 08:25:06,954 -  nornir.core -     INFO -        run() - Running task 'config_interfaces' with args {'cmd': AggregatedResult (render_int_config): {}} on 1 hosts
+2021-02-10 08:25:43,752 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 08:25:50,294 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 18, in verify_interfaces
+    if check_int in int_brief['interface'] and \
+TypeError: string indices must be integers
+
+2021-02-10 08:25:50,295 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command"]}} on 1 hosts
+2021-02-10 08:27:31,413 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 08:27:37,930 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 18, in verify_interfaces
+    if check_int in int_brief['interface'] and \
+TypeError: string indices must be integers
+
+2021-02-10 08:27:37,931 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command"]}} on 1 hosts
+2021-02-10 08:33:31,044 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 08:33:37,555 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 18, in verify_interfaces
+    if check_int in int_brief['interface'] and \
+TypeError: string indices must be integers
+
+2021-02-10 08:33:37,555 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command"]}} on 1 hosts
+2021-02-10 08:35:41,055 -  nornir.core -     INFO -        run() - Running task 'config_interfaces' with args {'cmd': AggregatedResult (render_int_config): {}} on 1 hosts
+2021-02-10 08:35:57,023 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 08:36:03,522 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 18, in verify_interfaces
+    if check_int in int_brief['interface'] and \
+TypeError: string indices must be integers
+
+2021-02-10 08:36:03,523 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command"]}} on 1 hosts
+2021-02-10 08:40:52,973 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 08:40:59,480 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 18, in verify_interfaces
+    if check_int in int_brief['interface'] and \
+TypeError: string indices must be integers
+
+2021-02-10 08:40:59,481 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command"]}} on 1 hosts
+2021-02-10 08:40:59,481 -  nornir.core -     INFO -        run() - Running task 'config_interfaces' with args {'cmd': AggregatedResult (render_int_config): {}} on 1 hosts
+2021-02-10 08:43:31,922 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 08:43:38,526 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 18, in verify_interfaces
+    if check_int in int_brief['interface'] and \
+TypeError: string indices must be integers
+
+2021-02-10 08:44:04,536 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 08:44:10,031 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 10, in verify_interfaces
+    int_brief = task.run(task=networking.netmiko_send_command,
+  File "bgp_tool.py", line 10, in verify_interfaces
+    int_brief = task.run(task=networking.netmiko_send_command,
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 08:47:01,711 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 08:47:24,428 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 19, in verify_interfaces
+    for intf in task.host.data["interfaces"]:
+  File "bgp_tool.py", line 19, in verify_interfaces
+    for intf in task.host.data["interfaces"]:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 08:48:09,001 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 08:48:40,510 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 21, in verify_interfaces
+    if check_int in int_brief['interface'] and \
+TypeError: string indices must be integers
+
+2021-02-10 08:55:40,625 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 08:55:47,126 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 20, in verify_interfaces
+    if check_int in int_brief['interface'] and \
+TypeError: string indices must be integers
+
+2021-02-10 08:58:21,511 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 08:58:28,020 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 20, in verify_interfaces
+    if check_int in int_brief['interface'] and \
+TypeError: string indices must be integers
+
+2021-02-10 09:02:38,511 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 09:02:45,072 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 20, in verify_interfaces
+    if check_int in int_brief['interface'] and \
+TypeError: string indices must be integers
+
+2021-02-10 09:03:18,407 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 09:03:24,930 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 20, in verify_interfaces
+    if check_int in int_brief['interface'] and \
+TypeError: string indices must be integers
+
+2021-02-10 09:03:53,503 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 09:04:00,077 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 20, in verify_interfaces
+    if check_int in int_brief['interface'] and \
+TypeError: string indices must be integers
+
+2021-02-10 09:04:00,077 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command"]}} on 1 hosts
+2021-02-10 09:05:24,849 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 09:05:31,113 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 20, in verify_interfaces
+    if check_int in int_brief['interface'] and \
+TypeError: string indices must be integers
+
+2021-02-10 09:05:31,113 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command"]}} on 1 hosts
+2021-02-10 09:06:13,658 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 09:06:20,145 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 20, in verify_interfaces
+    if check_int in int_brief['interface'] and \
+TypeError: string indices must be integers
+
+2021-02-10 09:09:38,743 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 09:11:52,013 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 21, in verify_interfaces
+    if check_int in int_brief['interface'] and \
+  File "bgp_tool.py", line 21, in verify_interfaces
+    if check_int in int_brief['interface'] and \
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 09:11:52,014 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command"]}} on 1 hosts
+2021-02-10 09:12:22,388 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 09:13:31,429 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 16, in verify_interfaces
+    int_brief = int_brief[0].result
+  File "bgp_tool.py", line 16, in verify_interfaces
+    int_brief = int_brief[0].result
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 09:13:31,429 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command"]}} on 1 hosts
+2021-02-10 09:13:34,963 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 09:15:00,499 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 16, in verify_interfaces
+    int_brief = int_brief[0].result
+  File "bgp_tool.py", line 16, in verify_interfaces
+    int_brief = int_brief[0].result
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 09:15:00,500 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command"]}} on 1 hosts
+2021-02-10 09:16:04,569 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 09:18:49,655 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 20, in verify_interfaces
+    for intf in task.host.data["interfaces"]:
+  File "bgp_tool.py", line 20, in verify_interfaces
+    for intf in task.host.data["interfaces"]:
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 09:18:49,655 -  nornir.core -     INFO -        run() - Running task 'render_int_config' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command"]}} on 1 hosts
+2021-02-10 09:37:02,965 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 09:37:09,620 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 50, in render_int_config
+    task.run(task=template_file, template="int.j2", path=config_path, **task.host
+NameError: name 'template_file' is not defined
+
+2021-02-10 09:37:09,620 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 19, in verify_interfaces
+    task.run(task=render_int_config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_int_config at 0x7fcb20cc6950> (failed)
+
+
+2021-02-10 09:37:09,621 -  nornir.core -     INFO -        run() - Running task 'manual_config_int' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command", Result: "render_int_config"]}} on 1 hosts
+2021-02-10 09:38:19,786 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 09:38:54,254 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 49, in render_int_config
+    config_path = f"task.host.platform/"
+  File "bgp_tool.py", line 49, in render_int_config
+    config_path = f"task.host.platform/"
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 09:38:54,254 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 19, in verify_interfaces
+    task.run(task=render_int_config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_int_config at 0x7fbf6c7e2950> (failed)
+
+
+2021-02-10 09:38:54,254 -  nornir.core -     INFO -        run() - Running task 'manual_config_int' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command", Result: "render_int_config"]}} on 1 hosts
+2021-02-10 09:39:27,465 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 09:39:33,952 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/text/template_file.py", line 35, in template_file
+    **kwargs
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/helpers/jinja_helper.py", line 17, in render_from_file
+    t = env.get_template(template)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/jinja2/loaders.py", line 197, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: int.j2
+
+2021-02-10 09:39:33,952 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 50, in render_int_config
+    task.run(task=text.template_file, template="int.j2", path=config_path, **task.host
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_file at 0x7f48f9014e60> (failed)
+
+
+2021-02-10 09:39:33,952 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 19, in verify_interfaces
+    task.run(task=render_int_config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_int_config at 0x7f48f9014680> (failed)
+
+
+2021-02-10 09:39:33,953 -  nornir.core -     INFO -        run() - Running task 'manual_config_int' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command", MultiResult: [Result: "render_int_config", Result: "template_file"]]}} on 1 hosts
+2021-02-10 09:50:38,869 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 09:50:56,691 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 51, in render_int_config
+    rendered_int = task.run(
+  File "bgp_tool.py", line 51, in render_int_config
+    rendered_int = task.run(
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 09:50:56,691 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 19, in verify_interfaces
+    task.run(task=render_int_config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_int_config at 0x7f748e48c950> (failed)
+
+
+2021-02-10 09:50:56,691 -  nornir.core -     INFO -        run() - Running task 'manual_config_int' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command", Result: "render_int_config"]}} on 1 hosts
+2021-02-10 09:51:37,425 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 09:51:50,677 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 51, in render_int_config
+    rendered_int = task.run(
+  File "bgp_tool.py", line 51, in render_int_config
+    rendered_int = task.run(
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 09:51:50,677 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 19, in verify_interfaces
+    task.run(task=render_int_config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_int_config at 0x7f059f985950> (failed)
+
+
+2021-02-10 09:51:50,678 -  nornir.core -     INFO -        run() - Running task 'manual_config_int' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command", Result: "render_int_config"]}} on 1 hosts
+2021-02-10 09:52:42,472 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 11:08:56,228 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'render_int_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 54, in render_int_config
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 11:08:56,228 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 19, in verify_interfaces
+    task.run(task=render_int_config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 142, in run
+    r = run_task.start(self.host, self.nornir)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function render_int_config at 0x7f82ef73ea70> (failed)
+
+
+2021-02-10 11:08:56,229 -  nornir.core -     INFO -        run() - Running task 'manual_config_int' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command", MultiResult: [Result: "render_int_config", Result: "template_file"]]}} on 1 hosts
+2021-02-10 11:11:05,077 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 11:11:35,968 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 34, in verify_interfaces
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 11:11:35,969 -  nornir.core -     INFO -        run() - Running task 'manual_config_int' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command", MultiResult: [Result: "render_int_config", Result: "template_file"]]}} on 1 hosts
+2021-02-10 11:12:14,837 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 11:12:37,111 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 33, in verify_interfaces
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 11:12:37,112 -  nornir.core -     INFO -        run() - Running task 'manual_config_int' with args {'int_to_config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command", MultiResult: [Result: "render_int_config", Result: "template_file"]]}} on 1 hosts
+2021-02-10 11:22:27,407 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 11:22:40,021 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 32, in verify_interfaces
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 11:22:55,504 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 11:23:14,325 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 32, in verify_interfaces
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 11:24:01,827 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 11:25:52,075 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 32, in verify_interfaces
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 11:26:45,200 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 11:27:56,559 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 11:36:38,173 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 33, in verify_interfaces
+    return INT_CONFIG
+  File "bgp_tool.py", line 33, in verify_interfaces
+    return INT_CONFIG
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 11:36:41,286 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 11:40:42,649 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 33, in verify_interfaces
+    return INT_CONFIG
+  File "bgp_tool.py", line 33, in verify_interfaces
+    return INT_CONFIG
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 11:41:51,151 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 11:42:35,202 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'verify_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 33, in verify_interfaces
+    return INT_CONFIG
+  File "bgp_tool.py", line 33, in verify_interfaces
+    return INT_CONFIG
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 11:43:18,792 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 11:46:03,562 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 11:46:10,085 -  nornir.core -     INFO -        run() - Running task 'config_interfaces' with args {'cmd': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command", Result: "manual_config_int"]}} on 1 hosts
+2021-02-10 11:46:57,513 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'config_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 57, in config_interfaces
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 11:48:07,516 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 11:48:14,062 -  nornir.core -     INFO -        run() - Running task 'config_interfaces' with args {'cmd': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command", Result: "manual_config_int"]}} on 1 hosts
+2021-02-10 11:48:27,071 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'config_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 59, in config_interfaces
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-10 11:55:39,622 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 11:55:46,233 -  nornir.core -     INFO -        run() - Running task 'config_interfaces' with args {'cmd': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command", Result: "manual_config_int"]}} on 1 hosts
+2021-02-10 11:56:08,668 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 564, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/paramiko/channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/utilities.py", line 347, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 1415, in send_command
+    new_data = self.read_until_pattern(pattern=re.escape(cmd))
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 641, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 575, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+2021-02-10 11:56:08,669 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'config_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 60, in config_interfaces
+    task.run(task=networking.netmiko_send_command, command_string=cmd)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x7fec0ff6cdd0> (failed)
+
+
+2021-02-10 12:09:33,638 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 12:09:40,211 -  nornir.core -     INFO -        run() - Running task 'config_interfaces' with args {'config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command", Result: "manual_config_int"]}} on 1 hosts
+2021-02-10 12:11:51,031 -  nornir.core -     INFO -        run() - Running task 'verify_interfaces' with args {} on 1 hosts
+2021-02-10 12:11:57,566 -  nornir.core -     INFO -        run() - Running task 'config_interfaces' with args {'config': AggregatedResult (verify_interfaces): {'nxos1': MultiResult: [Result: "verify_interfaces", Result: "netmiko_send_command", Result: "manual_config_int"]}} on 1 hosts
+2021-02-10 12:11:57,800 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 32, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 134, in load_merge_candidate
+    raise MergeConfigException("filename or config param must be provided.")
+napalm.base.exceptions.MergeConfigException: filename or config param must be provided.
+
+2021-02-10 12:11:57,800 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'config_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "bgp_tool.py", line 60, in config_interfaces
+    task.run(task=networking.napalm_configure, configuration=config)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function napalm_configure at 0x7f4f2d479200> (failed)
+
+
