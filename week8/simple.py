@@ -4,6 +4,7 @@ from nornir.plugins.functions.text import print_result
 from nornir.core.task import Result
 import ipdb
 
+
 def show_interfaces(task):
     cmd = "show ip int brief"
     int_brief = task.run(networking.netmiko_send_command,
@@ -27,6 +28,7 @@ def show_interfaces(task):
 
     return Result(host=task.host, result=result, changed=changed)
 
+
 def interface_checker(task, int_config):
     changed = False
     result = "no interface changes"
@@ -42,6 +44,7 @@ def interface_checker(task, int_config):
             result = "correcting 1 or more interface configuration"
     return Result(host=task.host, changed=changed, result=result)
     
+
 def render_int_config(task):
     config_path = f"{task.host.platform}/"
     rendered_interface = task.run(
@@ -70,6 +73,7 @@ def main():
             print_result(config_int_results)
         else:
             print_result(check_int_results)
+
 
 if __name__ == "__main__":
     main()
