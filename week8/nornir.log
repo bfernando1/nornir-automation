@@ -2426,3 +2426,287 @@ bdb.BdbQuit
 2021-02-11 09:57:02,388 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
 2021-02-11 09:57:02,388 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
 2021-02-11 09:57:02,392 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-11 12:13:37,865 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 12:13:37,865 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 12:13:37,865 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 12:13:44,340 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'interface_checker'
+2021-02-11 12:17:19,012 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-11 12:17:19,012 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-11 12:17:19,012 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 12:20:27,068 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-11 12:20:27,069 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-11 12:20:27,069 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 12:21:01,593 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-11 12:21:01,593 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-11 12:21:01,593 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 12:25:12,171 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'set_config_flags' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 69, in set_config_flags
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-11 12:26:04,354 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-11 12:26:04,355 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-11 12:26:04,355 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 12:26:39,253 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'set_config_flags' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 69, in set_config_flags
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-11 12:27:54,887 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-11 12:27:54,888 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-11 12:27:54,888 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 12:29:03,746 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'set_config_flags' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 69, in set_config_flags
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-11 12:29:21,977 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-11 12:29:21,977 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-11 12:29:21,977 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 12:29:51,971 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'set_config_flags' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 68, in set_config_flags
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-11 12:34:07,499 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-11 12:34:07,499 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-11 12:34:07,499 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 12:34:21,678 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'set_config_flags' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 68, in set_config_flags
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-11 12:34:43,366 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-11 12:34:43,366 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-11 12:34:43,367 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 12:37:35,445 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'set_config_flags' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 69, in set_config_flags
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-11 12:39:26,986 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-11 12:39:26,986 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-11 12:39:26,986 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 12:40:18,326 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'set_config_flags' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 68, in set_config_flags
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-11 12:40:27,469 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-11 12:40:27,470 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-11 12:40:27,470 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 12:42:16,060 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'set_config_flags' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 68, in set_config_flags
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-11 12:52:10,769 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-11 12:52:10,769 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-11 12:52:10,770 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'set_config_flags' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 66, in set_config_flags
+    command_string=prefix_cmd,
+NameError: name 'prefix_cmd' is not defined
+
+2021-02-11 12:52:29,347 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-11 12:52:29,347 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-11 12:52:29,347 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 12:52:34,725 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/utilities.py", line 347, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 1404, in send_command
+    command_string = self.normalize_cmd(command_string)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/netmiko/base_connection.py", line 1558, in normalize_cmd
+    command = command.rstrip()
+AttributeError: 'list' object has no attribute 'rstrip'
+
+2021-02-11 12:52:34,726 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'set_config_flags' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 66, in set_config_flags
+    command_string=commands,
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function netmiko_send_command at 0x7f1f31fabcb0> (failed)
+
+
+2021-02-11 12:53:04,450 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-11 12:53:04,450 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-11 12:53:04,450 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 12:53:10,582 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 12:53:28,058 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'set_config_flags' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 69, in set_config_flags
+    config_prefix_cmd = "ip prefix-list PL_BGP_BOGUS seq 5 permit 1.1.1.1/32"
+  File "simple.py", line 69, in set_config_flags
+    config_prefix_cmd = "ip prefix-list PL_BGP_BOGUS seq 5 permit 1.1.1.1/32"
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-11 13:01:54,881 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-11 13:01:54,882 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-11 13:01:54,882 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 13:02:00,966 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'set_config_flags' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 65, in set_config_flags
+    show_map = task.run(task.networking.netmiko_send_command,
+AttributeError: 'Task' object has no attribute 'networking'
+
+2021-02-11 13:02:50,529 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-11 13:02:50,529 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-11 13:02:50,530 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 13:02:56,754 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'set_config_flags' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 65, in set_config_flags
+    show_map = task.run(task.networking.netmiko_send_command,
+AttributeError: 'Task' object has no attribute 'networking'
+
+2021-02-11 13:03:16,262 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-11 13:03:16,262 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-11 13:03:16,262 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 13:03:22,315 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 13:03:23,279 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'set_config_flags' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 73, in set_config_flags
+    task.run(task=networking.netmiko_send_config, config_commands=config_prefix_cmd)
+NameError: name 'config_prefix_cmd' is not defined
+
+2021-02-11 13:04:09,809 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-11 13:04:09,809 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-11 13:04:09,810 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 13:04:15,791 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 13:04:16,747 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 13:05:00,307 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'set_config_flags' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 75, in set_config_flags
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-11 13:06:04,231 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-11 13:06:04,232 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-11 13:06:04,232 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 13:06:10,255 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 13:06:11,214 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 13:07:04,573 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'set_config_flags' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 76, in set_config_flags
+    ipdb.set_trace()
+  File "/usr/lib64/python3.7/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib64/python3.7/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-11 13:12:27,695 -  nornir.core -     INFO -        run() - Running task 'reset_interfaces' with args {} on 1 hosts
+2021-02-11 13:12:27,696 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'reset_interfaces'
+2021-02-11 13:12:27,696 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 13:12:38,247 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 13:12:42,350 -  nornir.core -     INFO -        run() - Running task 'reset_map' with args {} on 1 hosts
+2021-02-11 13:12:42,351 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'reset_map'
+2021-02-11 13:12:42,351 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 13:12:42,972 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 13:12:52,911 -  nornir.core -     INFO -        run() - Running task 'reset_interfaces' with args {} on 1 hosts
+2021-02-11 13:12:52,911 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'reset_interfaces'
+2021-02-11 13:12:52,911 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 13:13:02,501 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 13:13:06,236 -  nornir.core -     INFO -        run() - Running task 'reset_map' with args {} on 1 hosts
+2021-02-11 13:13:06,236 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'reset_map'
+2021-02-11 13:13:06,236 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 13:13:06,650 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 13:13:31,448 -  nornir.core -     INFO -        run() - Running task 'reset_interfaces' with args {} on 1 hosts
+2021-02-11 13:13:31,449 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'reset_interfaces'
+2021-02-11 13:13:31,449 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 13:13:41,133 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 13:13:44,882 -  nornir.core -     INFO -        run() - Running task 'reset_map' with args {} on 1 hosts
+2021-02-11 13:13:44,882 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'reset_map'
+2021-02-11 13:13:44,882 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 13:13:45,430 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 13:14:08,364 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-11 13:14:08,364 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-11 13:14:08,364 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 13:14:14,413 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 13:14:15,354 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 13:14:16,066 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'

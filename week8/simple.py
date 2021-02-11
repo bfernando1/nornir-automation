@@ -12,7 +12,6 @@ def show_interfaces(task):
                 use_genie=True
     )
     result = int_brief[0].result
-    
             
     # Check if zero interfaces configured
     if type(result) == str:
@@ -59,10 +58,30 @@ def config_interface(task):
         task=networking.napalm_configure, configuration=config
     )
 
+def set_config_flags(task):
+    show_prefix = task.run(task=networking.netmiko_send_command, 
+                           command_string="show ip prefix-list"
+    )
+    show_map = task.run(task=networking.netmiko_send_command,
+                        command_string="show route-map"
+    )
+    config_prefix = "ip prefix-list PL_BGP_BOGUS permit 1.1.1.1/32"
+    config_map = "route-map RM_BGP_BOGUS"
+    
+    # Create bogus prefix-list if none exist
+    if not show_prefix.result:
+        task.run(task=networking.netmiko_send_config, config_commands=config_prefix)
+    if not show_map.result:
+        task.run(task=networking.netmiko_send_config, config_commands=config_map)
+
+
 
 def main():
     nr = InitNornir(config_file="config.yaml")
     nr = nr.filter(name="nxos1")
+
+    # Configure interfaces
+    """
     check_int_results = nr.run(task=show_interfaces)
     for _, hosts in enumerate(nr.inventory.hosts):
         if check_int_results[hosts].changed:
@@ -71,7 +90,10 @@ def main():
             print_result(config_int_results)
         else:
             print_result(check_int_results)
-
+    """
+    # Set config flags
+    flag_results = nr.run(task=set_config_flags)
+    print_result(flag_results)
 
 if __name__ == "__main__":
     main()

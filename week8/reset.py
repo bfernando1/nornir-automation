@@ -9,12 +9,20 @@ def reset_interfaces(task):
     for intf in interfaces:
         task.run(task=networking.netmiko_send_config, config_commands=f"{cmd}{intf}")  
 
+def reset_map(task):
+    mapping = ["ip prefix-list PL_BGP_BOGUS", "route-map RM_BGP_BOGUS"]
+    for maps in mapping:
+        task.run(task=networking.netmiko_send_config, config_commands=f"no {maps}")  
+
 
 def main():
     nr = InitNornir(config_file="config.yaml")
     nr = nr.filter(name="nxos1")
-    agg_results = nr.run(task=reset_interfaces)
-    print_result(agg_results) 
+    int_agg_results = nr.run(task=reset_interfaces)
+    print_result(int_agg_results) 
+
+    map_agg_results = nr.run(task=reset_map)
+    print_result(map_agg_results)
 
 
 if __name__ == "__main__":
