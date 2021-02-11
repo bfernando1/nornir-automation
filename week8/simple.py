@@ -69,13 +69,30 @@ def set_config_flags(task):
     config_map = "route-map RM_BGP_BOGUS"
     
     # Create bogus prefix-list if none exist
-    if not show_prefix.result:
+    if "PL_BGP" in show_prefix.result:
+        pass
+    else:
         task.run(task=networking.netmiko_send_config, config_commands=config_prefix)
-    if not show_map.result:
+    
+    # Create bogus route-map if none exists 
+    if "RM_BGP" in show_map.result:
+        pass
+    else:
         task.run(task=networking.netmiko_send_config, config_commands=config_map)
+   
+    # Add remaining base configs for bgp  
+    config_path = f"{task.host.platform}/" 
+    bgp_base_config = task.run(
+        task=text.template_file, template="base_config.j2", path=config_path, **task.host)
+    bgp_base_config = bgp_base_config.result
+    task.run(task=networking.napalm_configure, configuration=bgp_base_config)
 
-
-
+def get_checkpoint(task):
+    napalm_connect = task.host.get_connection("napalm", task.nornir.config)
+    checkpoint = napalm_connect._get_checkpoint_file()
+    task.host["checkpoint"] = checkpoint
+    ipdb.set_trace()
+    
 def main():
     nr = InitNornir(config_file="config.yaml")
     nr = nr.filter(name="nxos1")
@@ -92,8 +109,13 @@ def main():
             print_result(check_int_results)
     """
     # Set config flags
+    """
     flag_results = nr.run(task=set_config_flags)
     print_result(flag_results)
+    """
+
+    # Retrieve checkpoint
+    nr.run(task=get_checkpoint)
 
 if __name__ == "__main__":
     main()

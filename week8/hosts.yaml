@@ -24,6 +24,8 @@ nxos1:
         - int_name: Lo102
           ip_address: 172.31.102.101
           subnet_mask: 255.255.255.255
+      bgp:
+        asn: 22
       Eth1/3:
         ip_address: 2.2.2.2
         subnet_mask: 255.255.255.255
