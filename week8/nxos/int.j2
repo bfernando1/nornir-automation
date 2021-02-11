@@ -1,0 +1,5 @@
+{% for intf in interfaces %}
+interface {{ intf.int_name }}
+  ip address {{ intf.ip_address }} {{ intf.subnet_mask }}
+  no shut
+{% endfor %}
