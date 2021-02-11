@@ -2145,3 +2145,284 @@ Traceback (most recent call last):
     if self.quitting: raise BdbQuit
 bdb.BdbQuit
 
+2021-02-10 17:55:14,566 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-10 17:55:14,566 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-10 17:55:14,567 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-10 17:55:21,071 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'interface_checker'
+2021-02-11 08:42:13,887 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 08:42:13,887 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 08:42:13,887 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 08:42:20,528 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {} on 1 hosts
+2021-02-11 08:42:20,528 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-11 08:42:20,528 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-11 08:42:20,529 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-11 08:42:20,533 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-11 08:53:40,178 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 08:53:40,178 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 08:53:40,179 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 08:53:46,804 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {} on 1 hosts
+2021-02-11 08:53:46,804 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-11 08:53:46,805 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-11 08:53:46,805 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-11 08:53:46,809 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-11 08:59:04,605 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 08:59:04,605 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 08:59:04,606 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 08:59:11,164 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {} on 1 hosts
+2021-02-11 08:59:11,164 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-11 08:59:11,164 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-11 08:59:11,164 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-11 08:59:11,168 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-11 09:00:07,392 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'config_interface' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 64, in config_interface
+    return config_interface
+  File "simple.py", line 64, in config_interface
+    return config_interface
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-11 09:03:31,659 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 09:03:31,660 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 09:03:31,660 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 09:03:38,132 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {} on 1 hosts
+2021-02-11 09:03:38,133 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-11 09:03:38,133 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-11 09:03:38,133 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-11 09:03:38,137 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-11 09:03:52,074 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'config_interface' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 63, in config_interface
+    config_interface = config_intrface.result
+NameError: name 'config_intrface' is not defined
+
+2021-02-11 09:14:32,616 -  nornir.core -     INFO -        run() - Running task 'reset_interfaces' with args {} on 1 hosts
+2021-02-11 09:14:32,617 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'reset_interfaces'
+2021-02-11 09:14:32,617 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'reset_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "reset.py", line 10, in reset_interfaces
+    task.run(task=netmiko_send_config, config_commands=f"{cmd} {intf}")
+NameError: name 'netmiko_send_config' is not defined
+
+2021-02-11 09:14:47,231 -  nornir.core -     INFO -        run() - Running task 'reset_interfaces' with args {} on 1 hosts
+2021-02-11 09:14:47,231 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'reset_interfaces'
+2021-02-11 09:14:47,231 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:14:57,050 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:15:00,597 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:18:01,550 -  nornir.core -     INFO -        run() - Running task 'reset_interfaces' with args {} on 1 hosts
+2021-02-11 09:18:01,551 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'reset_interfaces'
+2021-02-11 09:18:01,551 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:18:10,938 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:19:54,321 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 09:19:54,321 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 09:19:54,321 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 09:20:00,974 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {} on 1 hosts
+2021-02-11 09:20:00,974 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-11 09:20:00,974 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-11 09:20:00,975 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-11 09:20:00,979 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-11 09:22:01,424 -  nornir.core -     INFO -        run() - Running task 'reset_interfaces' with args {} on 1 hosts
+2021-02-11 09:22:01,425 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'reset_interfaces'
+2021-02-11 09:22:01,425 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:22:11,701 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:22:18,279 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 09:22:18,280 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 09:22:18,280 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 09:22:24,818 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {} on 1 hosts
+2021-02-11 09:22:24,818 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-11 09:22:24,819 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-11 09:22:24,819 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-11 09:22:24,823 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-11 09:23:01,180 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 09:23:01,180 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 09:23:01,181 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 09:23:09,105 -  nornir.core -     INFO -        run() - Running task 'reset_interfaces' with args {} on 1 hosts
+2021-02-11 09:23:09,106 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'reset_interfaces'
+2021-02-11 09:23:09,106 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:23:19,256 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:23:28,072 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 09:23:28,073 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 09:23:28,073 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 09:23:34,574 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {} on 1 hosts
+2021-02-11 09:23:34,574 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-11 09:23:34,575 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-11 09:23:34,575 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-11 09:23:34,579 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-11 09:24:04,915 -  nornir.core -     INFO -        run() - Running task 'reset_interfaces' with args {} on 1 hosts
+2021-02-11 09:24:04,916 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'reset_interfaces'
+2021-02-11 09:24:04,916 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:24:15,086 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:24:44,124 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 09:24:44,125 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 09:24:44,125 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 09:24:50,634 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {} on 1 hosts
+2021-02-11 09:24:50,634 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-11 09:24:50,634 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-11 09:24:50,634 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-11 09:24:50,638 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-11 09:26:30,086 -  nornir.core -     INFO -        run() - Running task 'reset_interfaces' with args {} on 1 hosts
+2021-02-11 09:26:30,087 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'reset_interfaces'
+2021-02-11 09:26:30,087 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:26:40,110 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:26:51,186 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 09:26:51,186 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 09:26:51,187 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 09:26:57,720 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {} on 1 hosts
+2021-02-11 09:26:57,720 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-11 09:26:57,720 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-11 09:26:57,721 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-11 09:26:57,725 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-11 09:28:45,948 -  nornir.core -     INFO -        run() - Running task 'reset_interfaces' with args {} on 1 hosts
+2021-02-11 09:28:45,948 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'reset_interfaces'
+2021-02-11 09:28:45,948 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:28:56,244 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:29:06,599 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 09:29:06,599 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 09:29:06,600 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 09:29:13,189 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {} on 1 hosts
+2021-02-11 09:29:13,189 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-11 09:29:13,189 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-11 09:29:13,189 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-11 09:29:32,770 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-11 09:31:40,354 -  nornir.core -     INFO -        run() - Running task 'reset_interfaces' with args {} on 1 hosts
+2021-02-11 09:31:40,354 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'reset_interfaces'
+2021-02-11 09:31:40,354 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:31:50,016 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:31:59,276 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 09:31:59,279 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 09:31:59,279 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 09:32:05,868 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {} on 1 hosts
+2021-02-11 09:32:05,868 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-11 09:32:05,868 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-11 09:32:05,869 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-11 09:32:05,873 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-11 09:32:39,614 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 09:32:39,614 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 09:32:39,614 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 09:32:46,257 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'interface_checker'
+2021-02-11 09:34:02,471 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 09:34:02,472 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 09:34:02,472 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 09:34:08,957 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'interface_checker'
+2021-02-11 09:34:08,958 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {} on 1 hosts
+2021-02-11 09:34:08,958 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-11 09:34:08,958 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-11 09:34:08,959 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-11 09:34:08,963 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-11 09:42:19,304 -  nornir.core -     INFO -        run() - Running task 'bogus_interface' with args {} on 1 hosts
+2021-02-11 09:42:19,305 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'bogus_interface'
+2021-02-11 09:42:19,305 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'bogus_interface' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "test_interface.py", line 9, in bogus_interface
+    task.run(task=napalm_configure, configuration=cmd)
+NameError: name 'napalm_configure' is not defined
+
+2021-02-11 09:42:39,985 -  nornir.core -     INFO -        run() - Running task 'bogus_interface' with args {} on 1 hosts
+2021-02-11 09:42:39,985 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'bogus_interface'
+2021-02-11 09:42:39,985 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-11 09:43:07,516 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 09:43:07,517 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 09:43:07,517 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 09:43:14,150 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'interface_checker'
+2021-02-11 09:43:38,753 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {} on 1 hosts
+2021-02-11 09:43:38,753 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-11 09:43:38,753 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-11 09:43:38,753 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-11 09:43:38,757 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-11 09:44:23,672 -  nornir.core -     INFO -        run() - Running task 'bogus_interface' with args {} on 1 hosts
+2021-02-11 09:44:23,672 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'bogus_interface'
+2021-02-11 09:44:23,673 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-11 09:44:44,017 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 09:44:44,018 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 09:44:44,018 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 09:44:50,563 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'interface_checker'
+2021-02-11 09:45:41,244 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {} on 1 hosts
+2021-02-11 09:45:41,244 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-11 09:45:41,244 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-11 09:45:41,244 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-11 09:45:41,248 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-11 09:46:47,546 -  nornir.core -     INFO -        run() - Running task 'bogus_interface' with args {} on 1 hosts
+2021-02-11 09:46:47,547 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'bogus_interface'
+2021-02-11 09:46:47,547 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-11 09:47:09,113 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 09:47:09,114 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 09:47:09,114 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 09:47:15,634 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'interface_checker'
+2021-02-11 09:47:23,615 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'show_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 29, in show_interfaces
+    return Result(host=task.host, result=result, changed=changed)
+  File "simple.py", line 29, in show_interfaces
+    return Result(host=task.host, result=result, changed=changed)
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-11 09:47:23,615 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {} on 1 hosts
+2021-02-11 09:49:01,428 -  nornir.core -     INFO -        run() - Running task 'bogus_interface' with args {} on 1 hosts
+2021-02-11 09:49:01,428 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'bogus_interface'
+2021-02-11 09:49:01,429 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-11 09:49:22,634 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 09:49:22,635 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 09:49:22,635 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 09:49:29,251 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'interface_checker'
+2021-02-11 09:49:29,252 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {} on 1 hosts
+2021-02-11 09:49:29,252 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-11 09:49:29,252 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-11 09:49:29,252 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-11 09:49:29,257 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-11 09:50:03,664 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 09:50:03,664 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 09:50:03,664 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 09:50:10,198 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'interface_checker'
+2021-02-11 09:50:33,540 -  nornir.core -     INFO -        run() - Running task 'reset_interfaces' with args {} on 1 hosts
+2021-02-11 09:50:33,540 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'reset_interfaces'
+2021-02-11 09:50:33,540 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:50:44,621 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:50:55,009 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 09:50:55,010 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 09:50:55,010 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 09:51:01,528 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {} on 1 hosts
+2021-02-11 09:51:01,529 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-11 09:51:01,529 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-11 09:51:01,529 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-11 09:51:01,533 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-11 09:54:06,221 -  nornir.core -     INFO -        run() - Running task 'reset_interfaces' with args {} on 1 hosts
+2021-02-11 09:54:06,221 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'reset_interfaces'
+2021-02-11 09:54:06,221 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:54:15,351 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:54:26,359 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 09:54:26,359 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 09:54:26,359 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 09:54:32,855 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {} on 1 hosts
+2021-02-11 09:54:32,856 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-11 09:54:32,856 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-11 09:54:32,856 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-11 09:54:32,860 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-11 09:56:35,150 -  nornir.core -     INFO -        run() - Running task 'reset_interfaces' with args {} on 1 hosts
+2021-02-11 09:56:35,150 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'reset_interfaces'
+2021-02-11 09:56:35,150 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:56:45,994 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-11 09:56:55,826 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-11 09:56:55,826 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-11 09:56:55,826 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-11 09:57:02,387 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {} on 1 hosts
+2021-02-11 09:57:02,388 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-11 09:57:02,388 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-11 09:57:02,388 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-11 09:57:02,392 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'

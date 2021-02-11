@@ -17,6 +17,7 @@ def show_interfaces(task):
     # Check if zero interfaces configured
     if type(result) == str:
         changed = True
+        result = "adding new interfaces"
     # Check if interfaces are configured correctly
     elif type(result) != str:
         int_checker_result = task.run(task=interface_checker, int_config=result)
@@ -25,7 +26,6 @@ def show_interfaces(task):
     else:
         changed = False
         result = "no interface changes"
-
     return Result(host=task.host, result=result, changed=changed)
 
 
@@ -50,18 +50,15 @@ def render_int_config(task):
     rendered_interface = task.run(
         task=text.template_file, template="int.j2", path=config_path, **task.host
     ) 
-    return rendered_interface.result
 
 
 def config_interface(task):
     config = task.run(task=render_int_config)
-    
     config = config[-1].result
     config_interface = task.run(
         task=networking.napalm_configure, configuration=config
     )
-    return config_interface
-        
+
 
 def main():
     nr = InitNornir(config_file="config.yaml")
@@ -69,6 +66,7 @@ def main():
     check_int_results = nr.run(task=show_interfaces)
     for _, hosts in enumerate(nr.inventory.hosts):
         if check_int_results[hosts].changed:
+            print(check_int_results[hosts].result)
             config_int_results = nr.run(task=config_interface)
             print_result(config_int_results)
         else:
