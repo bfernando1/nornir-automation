@@ -4,6 +4,7 @@ from nornir.plugins.functions.text import print_result
 from nornir.core.task import Result
 import ipdb
 
+config_path = "nxos/"
 
 def show_interfaces(task):
     cmd = "show ip int brief"
@@ -91,8 +92,17 @@ def get_checkpoint(task):
     napalm_connect = task.host.get_connection("napalm", task.nornir.config)
     checkpoint = napalm_connect._get_checkpoint_file()
     task.host["checkpoint"] = checkpoint
+   
+
+def render_configs(task):
+
+    bgp_config = task.run(
+        task=text.template_file, template="bgp_config.j2", path=config_path, **task.host
+    )
     ipdb.set_trace()
     
+
+
 def main():
     nr = InitNornir(config_file="config.yaml")
     nr = nr.filter(name="nxos1")
@@ -115,7 +125,10 @@ def main():
     """
 
     # Retrieve checkpoint
+    """
     nr.run(task=get_checkpoint)
-
+    """ 
+    nr.run(task=render_configs)
+    
 if __name__ == "__main__":
     main()

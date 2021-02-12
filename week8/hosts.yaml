@@ -26,10 +26,15 @@ nxos1:
           subnet_mask: 255.255.255.255
       bgp:
         asn: 22
-      Eth1/3:
-        ip_address: 2.2.2.2
-        subnet_mask: 255.255.255.255
-
+        router_id: 172.31.101.101
+        networks:
+          - {ip: 172.31.101.101, route_mask: 32}
+          - {ip: 172.31.102.101, route_mask: 32}
+        remote_asn: 22
+        remote_peer: 172.31.254.2
+        route_map: RM_BGP_NXOS2_Peer
+        prefix_list: PL_BGP_Loopback101
+        
 nxos2:
     hostname: nxos2.lasthop.io
     groups:
