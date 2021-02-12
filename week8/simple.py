@@ -103,6 +103,9 @@ def render_configs(task):
     map_config = task.run( 
         task=text.template_file, template="route_map.j2", path=config_path, **task.host
     )
+    task.host["bgp_config"] = bgp_config.result
+    task.host["map_config"] = prefix_config.result + map_config.result
+
     ipdb.set_trace()
     
 
@@ -123,10 +126,10 @@ def main():
             print_result(check_int_results)
     """
     # Set config flags
-    """
+    
     flag_results = nr.run(task=set_config_flags)
     print_result(flag_results)
-    """
+   
 
     # Retrieve checkpoint
     """
