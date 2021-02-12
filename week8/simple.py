@@ -2,6 +2,8 @@ from nornir import InitNornir
 from nornir.plugins.tasks import networking, text
 from nornir.plugins.functions.text import print_result
 from nornir.core.task import Result
+from ciscoconfparse import CiscoConfParse
+from pathlib import Path
 import ipdb
 
 config_path = "nxos/"
@@ -90,7 +92,11 @@ def get_checkpoint(task):
     napalm_connect = task.host.get_connection("napalm", task.nornir.config)
     checkpoint = napalm_connect._get_checkpoint_file()
     task.host["checkpoint"] = checkpoint
-   
+  
+def save_backup(task):
+    Path(f"{config_path}backups").mkdir(parents=True, exist_ok=True)     
+    with open(f"{config_path}backups/{task.host}_checkpoint_pre_deployment", "w") as f:
+        f.write(task.host["checkpoint"])
 
 def render_configs(task):
 
@@ -106,8 +112,10 @@ def render_configs(task):
     task.host["bgp_config"] = bgp_config.result
     task.host["map_config"] = prefix_config.result + map_config.result
 
+
+def merge_configs(task):
     ipdb.set_trace()
-    
+    parse = CiscoConfParse(task.host["checkpoint"], syntax="nxos")  
 
 
 def main():
@@ -115,7 +123,6 @@ def main():
     nr = nr.filter(name="nxos1")
 
     # Configure interfaces
-    """
     check_int_results = nr.run(task=show_interfaces)
     for _, hosts in enumerate(nr.inventory.hosts):
         if check_int_results[hosts].changed:
@@ -124,18 +131,23 @@ def main():
             print_result(config_int_results)
         else:
             print_result(check_int_results)
-    """
+
     # Set config flags
-    
     flag_results = nr.run(task=set_config_flags)
     print_result(flag_results)
    
 
     # Retrieve checkpoint
-    """
     nr.run(task=get_checkpoint)
-    """ 
+
+    # Save backup
+    nr.run(task=save_backup)
+
+    # Render configs
     nr.run(task=render_configs)
+
+    # Merge config
+    nr.run(task=merge_configs)
     
 if __name__ == "__main__":
     main()
