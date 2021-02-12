@@ -46,7 +46,6 @@ def interface_checker(task, int_config):
     
 
 def render_int_config(task):
-    config_path = f"{task.host.platform}/"
     rendered_interface = task.run(
         task=text.template_file, template="int.j2", path=config_path, **task.host
     ) 
@@ -82,7 +81,6 @@ def set_config_flags(task):
         task.run(task=networking.netmiko_send_config, config_commands=config_map)
    
     # Add remaining base configs for bgp  
-    config_path = f"{task.host.platform}/" 
     bgp_base_config = task.run(
         task=text.template_file, template="base_config.j2", path=config_path, **task.host)
     bgp_base_config = bgp_base_config.result
@@ -98,6 +96,12 @@ def render_configs(task):
 
     bgp_config = task.run(
         task=text.template_file, template="bgp_config.j2", path=config_path, **task.host
+    )
+    prefix_config = task.run(
+        task=text.template_file, template="prefix_list.j2", path=config_path, **task.host
+    )
+    map_config = task.run( 
+        task=text.template_file, template="route_map.j2", path=config_path, **task.host
     )
     ipdb.set_trace()
     
