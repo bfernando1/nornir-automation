@@ -1,6 +1,6 @@
 
 !Command: Checkpoint cmd vdc 1
-!Time: Sat Feb 13 00:23:42 2021
+!Time: Sat Feb 13 22:34:54 2021
 
 version 9.2(3) Bios:version  
 hostname nxos1
@@ -238,9 +238,18 @@ vlan 1
 vlan 2
 vlan 3
 vlan 4
+vlan 401
+  name john_1
+vlan 402
+  name john_2
+vlan 403
+  name john_3
+vlan 404
+  name john_4
+vlan 405
+  name john_5
 ip prefix-list PL_BGP_BOGUS seq 5 permit 1.1.1.1/32 
-route-map RM_BGP_NXOS2_Peer permit 100
-  match ip address prefix-list PL_BGP_Loopback101 
+route-map RM_BGP_BOGUS permit 10
 vrf context management
   ip route 0.0.0.0/0 10.0.2.2
 
@@ -265,10 +274,12 @@ interface Ethernet1/2
 interface Ethernet1/3
   !#no switchport
   mac-address 000c.29d1.0003
+  ip address 10.1.103.1/24
   no shutdown
 
 interface Ethernet1/4
   !#no switchport
+  mac-address 000c.29d1.0004
   ip address 172.31.254.1/30
   no shutdown
 
@@ -784,9 +795,9 @@ line console
 line vty
 boot nxos bootflash:/nxos.9.2.3.bin 
 router bgp 22
-  router-id 1.1.1.1
-  neighbor 2.2.2.2
+  neighbor 10.1.103.2
     remote-as 22
+    address-family ipv4 unicast
 xml server timeout 1200
 
 no priority-flow-control override-interface mode off

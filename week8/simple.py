@@ -5,6 +5,8 @@ from nornir.core.task import Result
 from ciscoconfparse import CiscoConfParse
 from pathlib import Path
 import ipdb
+import re
+
 
 config_path = "nxos/"
 
@@ -100,37 +102,41 @@ def save_backup(task):
 
 def render_configs(task):
 
-    bgp_config = task.run(
-        task=text.template_file, template="bgp_config.j2", path=config_path, **task.host
+    bgp_rendered = task.run(
+        task=text.template_file, template="bgp_rendered.j2", path=config_path, **task.host
     )
-    prefix_config = task.run(
+    prefix_rendered = task.run(
         task=text.template_file, template="prefix_list.j2", path=config_path, **task.host
     )
-    map_config = task.run( 
+    map_rendered = task.run( 
         task=text.template_file, template="route_map.j2", path=config_path, **task.host
     )
-    task.host["bgp_config"] = bgp_config.result.strip()
-    task.host["prefix_config"] = prefix_config.result.strip()
-    task.host["map_config"] = map_config.result.strip()
+    task.host["bgp_rendered"] = bgp_rendered.result.strip()
+    task.host["prefix_rendered"] = prefix_rendered.result.strip()
+    task.host["map_rendered"] = map_rendered.result.strip()
 
 
-def merge_configs(task):
+def merge_RM_configs(task):
     parse = CiscoConfParse(
         "nxos/backups/nxos1_checkpoint_pre_deployment", syntax="nxos", factory=True
     )
-
-    # parse for route-maps in checkpoint
     map_text = ""
+
+    # Parse current config for route-maps
     for maps in parse.find_blocks("RM_BGP"):
         map_text += f"{maps}\n"
     map_text = map_text.strip()
-    ipdb.set_trace() 
-    # comapre with rendered route-map    
-    if task.host["map_config"] == map_text:
+
+    # Comapre configured and rendered route-maps
+    if task.host["map_rendered"] == map_text:
         pass
     else:
-        print("need to replace")
+        task.host["checkpoint"] = re.sub(
+            map_text, task.host["map_rendered"], task.host["checkpoint"]
+        ) 
         ipdb.set_trace()
+
+    
     
 def main():
     nr = InitNornir(config_file="config.yaml")
@@ -161,7 +167,7 @@ def main():
     nr.run(task=render_configs)
 
     # Merge config
-    nr.run(task=merge_configs)
+    nr.run(task=merge_RM_configs)
     
 if __name__ == "__main__":
     main()
