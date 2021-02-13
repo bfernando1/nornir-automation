@@ -103,7 +103,7 @@ def save_backup(task):
 def render_configs(task):
 
     bgp_rendered = task.run(
-        task=text.template_file, template="bgp_rendered.j2", path=config_path, **task.host
+        task=text.template_file, template="bgp_config.j2", path=config_path, **task.host
     )
     prefix_rendered = task.run(
         task=text.template_file, template="prefix_list.j2", path=config_path, **task.host
@@ -116,28 +116,25 @@ def render_configs(task):
     task.host["map_rendered"] = map_rendered.result.strip()
 
 
-def merge_RM_configs(task):
+def merge_configs(task, search_str, rendered_conf):
     parse = CiscoConfParse(
         "nxos/backups/nxos1_checkpoint_pre_deployment", syntax="nxos", factory=True
     )
-    map_text = ""
+    parse_text = ""
 
     # Parse current config for route-maps
-    for maps in parse.find_blocks("RM_BGP"):
-        map_text += f"{maps}\n"
-    map_text = map_text.strip()
-
+    for search in parse.find_blocks(search_str):
+        parse_text += f"{search}\n"
+    parse_text = parse_text.strip()
+    
     # Comapre configured and rendered route-maps
-    if task.host["map_rendered"] == map_text:
+    if task.host[rendered_conf] == parse_text:
         pass
     else:
         task.host["checkpoint"] = re.sub(
-            map_text, task.host["map_rendered"], task.host["checkpoint"]
+            parse_text, task.host[rendered_conf], task.host["checkpoint"]
         ) 
-        ipdb.set_trace()
 
-    
-    
 def main():
     nr = InitNornir(config_file="config.yaml")
     nr = nr.filter(name="nxos1")
@@ -167,7 +164,9 @@ def main():
     nr.run(task=render_configs)
 
     # Merge config
-    nr.run(task=merge_RM_configs)
+    nr.run(task=merge_configs, search_str="RM_BGP", rendered_conf="map_rendered")
+    nr.run(task=merge_configs, search_str="PL_BGP", rendered_conf="prefix_rendered")
+    nr.run(task=merge_configs, search_str="router bgp 22", rendered_conf="bgp_rendered")
     
 if __name__ == "__main__":
     main()
