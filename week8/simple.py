@@ -33,7 +33,7 @@ def show_interfaces(task):
 
 def interface_checker(task, int_config):
     changed = False
-    result = "no interface changes"
+    result = ""
 
     for intf in task.host.data["interfaces"]:
         check_interface = intf["int_name"]
@@ -109,15 +109,29 @@ def render_configs(task):
     map_config = task.run( 
         task=text.template_file, template="route_map.j2", path=config_path, **task.host
     )
-    task.host["bgp_config"] = bgp_config.result
-    task.host["map_config"] = prefix_config.result + map_config.result
+    task.host["bgp_config"] = bgp_config.result.strip()
+    task.host["prefix_config"] = prefix_config.result.strip()
+    task.host["map_config"] = map_config.result.strip()
 
 
 def merge_configs(task):
-    ipdb.set_trace()
-    parse = CiscoConfParse(task.host["checkpoint"], syntax="nxos")  
+    parse = CiscoConfParse(
+        "nxos/backups/nxos1_checkpoint_pre_deployment", syntax="nxos", factory=True
+    )
 
-
+    # parse for route-maps in checkpoint
+    map_text = ""
+    for maps in parse.find_blocks("RM_BGP"):
+        map_text += f"{maps}\n"
+    map_text = map_text.strip()
+    ipdb.set_trace() 
+    # comapre with rendered route-map    
+    if task.host["map_config"] == map_text:
+        pass
+    else:
+        print("need to replace")
+        ipdb.set_trace()
+    
 def main():
     nr = InitNornir(config_file="config.yaml")
     nr = nr.filter(name="nxos1")
