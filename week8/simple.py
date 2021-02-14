@@ -130,12 +130,20 @@ def merge_configs(task, search_str, rendered_conf):
     changed=False
 
     # Parse current config 
-    for search in parse.find_blocks(search_str):
-        parse_text += f"{search}\n"
+    for parent_OBJ in parse.find_objects(search_str):
+        parse_text += parent_OBJ.parent.text
+        try:
+            for child_OBJ in parent_OBJ.all_children:
+                parse_text += f"\n{child_OBJ.text}"
+        except AttributeError:
+            pass
+
     parse_text = parse_text.strip()
+    #for search in parse.find_blocks(search_str):
+    #    parse_text += f"{search}\n"
     
     # Comapare current config and rendered configs
-    if task.host[rendered_conf] == parse_text:
+    if parse_text == task.host[rendered_conf]:
         pass
     else:
         updated_config = re.sub(
