@@ -90,14 +90,16 @@ def set_config_flags(task):
     bgp_base_config = bgp_base_config.result
     task.run(task=networking.napalm_configure, configuration=bgp_base_config)
 
+
 def get_checkpoint(task):
     napalm_connect = task.host.get_connection("napalm", task.nornir.config)
     checkpoint = napalm_connect._get_checkpoint_file()
     task.host["checkpoint"] = checkpoint
+
   
-def save_backup(task):
+def save_backup(task, config_type):
     Path(f"{config_path}backups").mkdir(parents=True, exist_ok=True)     
-    with open(f"{config_path}backups/{task.host}_checkpoint_pre_deployment", "w") as f:
+    with open(f"{config_path}backups/{task.host}_checkpoint_{config_type}", "w") as f:
         f.write(task.host["checkpoint"])
 
 def render_configs(task):
@@ -153,20 +155,31 @@ def main():
     flag_results = nr.run(task=set_config_flags)
     print_result(flag_results)
    
+    checkpoint_results = nr.run(task=get_checkpoint)
+    print_result(checkpoint_results) 
 
-    # Retrieve checkpoint
-    nr.run(task=get_checkpoint)
-
-    # Save backup
-    nr.run(task=save_backup)
+    pre_deploy_config = nr.run(task=save_backup, config_type="pre_deployment")
+    print_result(pre_deploy_config)
 
     # Render configs
-    nr.run(task=render_configs)
+    render_results = nr.run(task=render_configs)
+    print_result(render_results)
+    
 
     # Merge config
-    nr.run(task=merge_configs, search_str="RM_BGP", rendered_conf="map_rendered")
-    nr.run(task=merge_configs, search_str="PL_BGP", rendered_conf="prefix_rendered")
-    nr.run(task=merge_configs, search_str="router bgp 22", rendered_conf="bgp_rendered")
+    merge_dict = [
+        {'search': 'RM_BGP', 'rendered': 'map_rendered'},
+        {'search': 'PL_BGP', 'rendered': 'prefix_rendered'},
+        {'search': 'router bgp 22', 'rendered': 'bgp_rendered'}
+    ]
+    for parse in merge_dict:
+        merge_results = nr.run(task=
+            merge_configs, search_str=parse["search"], rendered_conf=parse["rendered"])
+        print_result(merge_results)
+
+
+    deploy_config_results = nr.run(task=save_backup, config_type="post_deployment")
+    print_result(deploy_config_results)
     
 if __name__ == "__main__":
     main()

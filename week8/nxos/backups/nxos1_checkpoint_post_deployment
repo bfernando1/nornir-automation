@@ -248,8 +248,9 @@ vlan 404
   name john_4
 vlan 405
   name john_5
-ip prefix-list PL_BGP_BOGUS seq 5 permit 1.1.1.1/32 
-route-map RM_BGP_BOGUS permit 10
+ip prefix-list PL_BGP_Loopback101 seq 5 permit 172.31.101.101/32 
+route-map RM_BGP_NXOS2_Peer permit 100
+  match ip address prefix-list PL_BGP_Loopback101
 vrf context management
   ip route 0.0.0.0/0 10.0.2.2
 
@@ -795,7 +796,15 @@ line console
 line vty
 boot nxos bootflash:/nxos.9.2.3.bin 
 router bgp 22
-  neighbor 10.1.103.2
+  router-id 172.31.101.101
+  address-family ipv4 unicast
+    network 172.31.101.101/32
+    network 172.31.102.101/32
+  neighbor 172.31.254.2
+    remote-as 22
+    description configured by nornir
+    address-family ipv4 unicast
+      route-map RM_BGP_NXOS2_Peer
     remote-as 22
     address-family ipv4 unicast
 xml server timeout 1200
