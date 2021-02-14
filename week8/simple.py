@@ -88,11 +88,12 @@ def set_config_flags(task):
    
     # Add remaining base configs for bgp  
     bgp_base_config = task.run(
-        task=text.template_file, template="base_config.j2", path=CONFIG_PATH, **task.host)
+        task=text.template_file, template="base_config.j2", path=CONFIG_PATH, **task.host
+    )
     bgp_base_config = bgp_base_config.result
     task.run(task=networking.napalm_configure, configuration=bgp_base_config)
-
-
+    
+    
 def get_checkpoint(task):
     napalm_connect = task.host.get_connection("napalm", task.nornir.config)
     checkpoint = napalm_connect._get_checkpoint_file()
@@ -126,20 +127,23 @@ def merge_configs(task, search_str, rendered_conf):
         "nxos/backups/nxos1_checkpoint_pre_deployment", syntax="nxos", factory=True
     )
     parse_text = ""
+    changed=False
 
-    # Parse current config for route-maps
+    # Parse current config 
     for search in parse.find_blocks(search_str):
         parse_text += f"{search}\n"
     parse_text = parse_text.strip()
     
-    # Comapre configured and rendered route-maps
+    # Comapare current config and rendered configs
     if task.host[rendered_conf] == parse_text:
         pass
     else:
-        task.host["checkpoint"] = re.sub(
+        updated_config = re.sub(
             parse_text, task.host[rendered_conf], task.host["checkpoint"]
         ) 
         changed=True
+        ipdb.set_trace()
+        task.host["checkpoint"] = updated_config
 
     return Result(host=task.host, changed=changed)
 
@@ -148,7 +152,6 @@ def push_configs(task):
     with open(f"{CONFIG_PATH}backups/{task.host}_checkpoint_{POST_DEPLOY}") as f:
         cfg_file = f.read()
 
-    ipdb.set_trace()
     check_config = task.run(
         task=networking.napalm_configure, replace=True, configuration=cfg_file, dry_run=True
     )
@@ -195,9 +198,9 @@ def main():
 
     # Merge config
     merge_dict = [
-        {'search': 'RM_BGP', 'rendered': 'map_rendered'},
-        {'search': 'PL_BGP', 'rendered': 'prefix_rendered'},
-        {'search': 'router bgp 22', 'rendered': 'bgp_rendered'}
+        {"search": "RM_BGP\w+ permit|deny", "rendered": "map_rendered"},
+        {"search": "PL_BGP.* permit|deny", "rendered": "prefix_rendered"},
+        {"search": "router bgp 22", "rendered": "bgp_rendered"}
     ]
     for parse in merge_dict:
         merge_results = nr.run(task=
