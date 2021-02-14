@@ -11,5 +11,4 @@ router bgp {{ bgp.asn }}
     remote-as {{ bgp.remote_asn }}
     description configured by nornir
     address-family ipv4 unicast
-      route-map {{ bgp.route_map }}
-
+      route-map {{ bgp.route_map }} out

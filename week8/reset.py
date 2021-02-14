@@ -16,6 +16,7 @@ def reset_map(task):
         "ip prefix-list PL_BGP_Loopback101",
         "route-map RM_BGP_BOGUS",
         "route-map RM_BGP_NXOS2_Peer",
+        "router bgp 22"
     ]
     for maps in mapping:
         task.run(task=networking.netmiko_send_config, config_commands=f"no {maps}")

@@ -5140,3 +5140,287 @@ Traceback (most recent call last):
     if self.quitting: raise BdbQuit
 bdb.BdbQuit
 
+2021-02-13 17:36:32,574 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-13 17:36:32,575 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-13 17:36:32,575 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-13 17:36:39,122 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'interface_checker'
+2021-02-13 17:36:39,123 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-13 17:36:39,124 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-13 17:36:39,124 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-13 17:36:40,063 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-13 17:36:41,015 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 17:36:41,018 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-13 17:36:55,362 -  nornir.core -     INFO -        run() - Running task 'get_checkpoint' with args {} on 1 hosts
+2021-02-13 17:36:55,362 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'get_checkpoint'
+2021-02-13 17:36:57,637 -  nornir.core -     INFO -        run() - Running task 'save_backup' with args {'config_type': 'pre_deployment'} on 1 hosts
+2021-02-13 17:36:57,637 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'save_backup'
+2021-02-13 17:36:57,638 -  nornir.core -     INFO -        run() - Running task 'render_configs' with args {} on 1 hosts
+2021-02-13 17:36:57,638 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_configs'
+2021-02-13 17:36:57,638 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 17:36:57,642 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 17:36:57,644 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 17:36:57,645 -  nornir.core -     INFO -        run() - Running task 'merge_configs' with args {'search_str': 'RM_BGP', 'rendered_conf': 'map_rendered'} on 1 hosts
+2021-02-13 17:36:57,646 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'merge_configs'
+2021-02-13 17:36:57,674 -  nornir.core -     INFO -        run() - Running task 'merge_configs' with args {'search_str': 'PL_BGP', 'rendered_conf': 'prefix_rendered'} on 1 hosts
+2021-02-13 17:36:57,674 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'merge_configs'
+2021-02-13 17:36:57,700 -  nornir.core -     INFO -        run() - Running task 'merge_configs' with args {'search_str': 'router bgp 22', 'rendered_conf': 'bgp_rendered'} on 1 hosts
+2021-02-13 17:36:57,701 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'merge_configs'
+2021-02-13 17:36:57,726 -  nornir.core -     INFO -        run() - Running task 'save_backup' with args {'config_type': 'post_deloyment'} on 1 hosts
+2021-02-13 17:36:57,727 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'save_backup'
+2021-02-13 17:36:57,727 -  nornir.core -     INFO -        run() - Running task 'push_configs' with args {} on 1 hosts
+2021-02-13 17:36:57,728 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'push_configs'
+2021-02-13 17:36:57,728 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-13 17:37:10,915 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-13 17:37:44,235 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 37, in napalm_configure
+    device.commit_config()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 227, in commit_config
+    self._load_cfg_from_checkpoint()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 784, in _load_cfg_from_checkpoint
+    rollback_result = self._send_command_list(commands)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 715, in _send_command_list
+    return self.device.config_list(commands)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/device.py", line 132, in config_list
+    return self.api._nxapi_command_conf(commands)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 117, in _nxapi_command_conf
+    return self._nxapi_command(commands=commands, method=method)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 110, in _nxapi_command
+    response = self._send_request(commands, method=method)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 87, in _send_request
+    raise NXAPIPostError(msg)
+napalm.nxapi_plumbing.errors.NXAPIPostError: Invalid status code returned on NX-API POST
+commands: ['terminal dont-ask', 'rollback running-config file candidate_config.txt', 'no terminal dont-ask']
+status_code: 500
+
+2021-02-13 17:37:44,235 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'push_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 156, in push_configs
+    task=networking.napalm_configure, replace=True, configuration=cfg_file
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function napalm_configure at 0x7f36ad68f7a0> (failed)
+
+
+2021-02-13 19:23:46,892 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-13 19:23:46,892 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-13 19:23:46,892 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-13 19:23:53,445 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'interface_checker'
+2021-02-13 19:23:53,446 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-13 19:23:53,446 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-13 19:23:53,446 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-13 19:23:54,385 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-13 19:23:55,330 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 19:23:55,334 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-13 19:24:08,795 -  nornir.core -     INFO -        run() - Running task 'get_checkpoint' with args {} on 1 hosts
+2021-02-13 19:24:08,795 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'get_checkpoint'
+2021-02-13 19:24:10,885 -  nornir.core -     INFO -        run() - Running task 'save_backup' with args {'config_type': 'pre_deployment'} on 1 hosts
+2021-02-13 19:24:10,885 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'save_backup'
+2021-02-13 19:24:10,886 -  nornir.core -     INFO -        run() - Running task 'render_configs' with args {} on 1 hosts
+2021-02-13 19:24:10,886 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_configs'
+2021-02-13 19:24:10,887 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 19:24:10,890 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 19:24:10,892 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 19:24:10,893 -  nornir.core -     INFO -        run() - Running task 'merge_configs' with args {'search_str': 'RM_BGP', 'rendered_conf': 'map_rendered'} on 1 hosts
+2021-02-13 19:24:10,894 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'merge_configs'
+2021-02-13 19:24:10,924 -  nornir.core -     INFO -        run() - Running task 'merge_configs' with args {'search_str': 'PL_BGP', 'rendered_conf': 'prefix_rendered'} on 1 hosts
+2021-02-13 19:24:10,925 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'merge_configs'
+2021-02-13 19:24:10,951 -  nornir.core -     INFO -        run() - Running task 'merge_configs' with args {'search_str': 'router bgp 22', 'rendered_conf': 'bgp_rendered'} on 1 hosts
+2021-02-13 19:24:10,951 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'merge_configs'
+2021-02-13 19:24:10,977 -  nornir.core -     INFO -        run() - Running task 'save_backup' with args {'config_type': 'post_deloyment'} on 1 hosts
+2021-02-13 19:24:10,977 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'save_backup'
+2021-02-13 19:24:10,978 -  nornir.core -     INFO -        run() - Running task 'push_configs' with args {} on 1 hosts
+2021-02-13 19:24:10,978 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'push_configs'
+2021-02-13 19:24:10,978 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-13 19:24:52,756 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 37, in napalm_configure
+    device.commit_config()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 227, in commit_config
+    self._load_cfg_from_checkpoint()
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 784, in _load_cfg_from_checkpoint
+    rollback_result = self._send_command_list(commands)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxos/nxos.py", line 715, in _send_command_list
+    return self.device.config_list(commands)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/device.py", line 132, in config_list
+    return self.api._nxapi_command_conf(commands)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 117, in _nxapi_command_conf
+    return self._nxapi_command(commands=commands, method=method)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 110, in _nxapi_command
+    response = self._send_request(commands, method=method)
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/napalm/nxapi_plumbing/api_client.py", line 87, in _send_request
+    raise NXAPIPostError(msg)
+napalm.nxapi_plumbing.errors.NXAPIPostError: Invalid status code returned on NX-API POST
+commands: ['terminal dont-ask', 'rollback running-config file candidate_config.txt', 'no terminal dont-ask']
+status_code: 500
+
+2021-02-13 19:24:52,756 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'push_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 149, in push_configs
+    task=networking.napalm_configure, replace=True, configuration=cfg_file, dry_run=False
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 147, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: <function napalm_configure at 0x7fa14ea237a0> (failed)
+
+
+2021-02-13 19:30:28,641 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-13 19:30:28,641 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-13 19:30:28,641 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-13 19:30:35,222 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'interface_checker'
+2021-02-13 19:30:35,223 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-13 19:30:35,223 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-13 19:30:35,224 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-13 19:30:36,175 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-13 19:30:37,117 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 19:30:37,121 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-13 19:30:50,919 -  nornir.core -     INFO -        run() - Running task 'get_checkpoint' with args {} on 1 hosts
+2021-02-13 19:30:50,919 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'get_checkpoint'
+2021-02-13 19:30:53,541 -  nornir.core -     INFO -        run() - Running task 'save_backup' with args {'config_type': 'pre_deployment'} on 1 hosts
+2021-02-13 19:30:53,541 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'save_backup'
+2021-02-13 19:30:53,542 -  nornir.core -     INFO -        run() - Running task 'render_configs' with args {} on 1 hosts
+2021-02-13 19:30:53,542 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_configs'
+2021-02-13 19:30:53,542 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 19:30:53,546 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 19:30:53,548 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 19:30:53,549 -  nornir.core -     INFO -        run() - Running task 'merge_configs' with args {'search_str': 'RM_BGP', 'rendered_conf': 'map_rendered'} on 1 hosts
+2021-02-13 19:30:53,549 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'merge_configs'
+2021-02-13 19:30:53,577 -  nornir.core -     INFO -        run() - Running task 'merge_configs' with args {'search_str': 'PL_BGP', 'rendered_conf': 'prefix_rendered'} on 1 hosts
+2021-02-13 19:30:53,578 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'merge_configs'
+2021-02-13 19:30:53,604 -  nornir.core -     INFO -        run() - Running task 'merge_configs' with args {'search_str': 'router bgp 22', 'rendered_conf': 'bgp_rendered'} on 1 hosts
+2021-02-13 19:30:53,605 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'merge_configs'
+2021-02-13 19:30:53,631 -  nornir.core -     INFO -        run() - Running task 'save_backup' with args {'config_type': 'post_deployment'} on 1 hosts
+2021-02-13 19:30:53,631 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'save_backup'
+2021-02-13 19:30:53,632 -  nornir.core -     INFO -        run() - Running task 'push_configs' with args {} on 1 hosts
+2021-02-13 19:30:53,632 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'push_configs'
+2021-02-13 19:31:40,829 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-13 19:33:33,486 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-13 19:33:33,486 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-13 19:33:33,486 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-13 19:33:40,068 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'interface_checker'
+2021-02-13 19:33:40,069 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-13 19:33:40,069 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-13 19:33:40,070 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-13 19:33:41,011 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-13 19:33:41,968 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 19:33:41,972 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-13 19:33:56,875 -  nornir.core -     INFO -        run() - Running task 'get_checkpoint' with args {} on 1 hosts
+2021-02-13 19:33:56,875 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'get_checkpoint'
+2021-02-13 19:33:59,346 -  nornir.core -     INFO -        run() - Running task 'save_backup' with args {'config_type': 'pre_deployment'} on 1 hosts
+2021-02-13 19:33:59,346 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'save_backup'
+2021-02-13 19:33:59,347 -  nornir.core -     INFO -        run() - Running task 'render_configs' with args {} on 1 hosts
+2021-02-13 19:33:59,347 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_configs'
+2021-02-13 19:33:59,347 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 19:33:59,351 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 19:33:59,353 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 19:33:59,354 -  nornir.core -     INFO -        run() - Running task 'merge_configs' with args {'search_str': 'RM_BGP', 'rendered_conf': 'map_rendered'} on 1 hosts
+2021-02-13 19:33:59,355 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'merge_configs'
+2021-02-13 19:33:59,383 -  nornir.core -     INFO -        run() - Running task 'merge_configs' with args {'search_str': 'PL_BGP', 'rendered_conf': 'prefix_rendered'} on 1 hosts
+2021-02-13 19:33:59,383 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'merge_configs'
+2021-02-13 19:33:59,410 -  nornir.core -     INFO -        run() - Running task 'merge_configs' with args {'search_str': 'router bgp 22', 'rendered_conf': 'bgp_rendered'} on 1 hosts
+2021-02-13 19:33:59,410 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'merge_configs'
+2021-02-13 19:33:59,436 -  nornir.core -     INFO -        run() - Running task 'save_backup' with args {'config_type': 'post_deployment'} on 1 hosts
+2021-02-13 19:33:59,437 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'save_backup'
+2021-02-13 19:33:59,438 -  nornir.core -     INFO -        run() - Running task 'push_configs' with args {} on 1 hosts
+2021-02-13 19:33:59,438 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'push_configs'
+2021-02-13 19:34:11,447 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-13 19:39:09,100 - nornir.core.task -    ERROR -      start() - Host 'nxos1': task 'push_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/bradfernan/VENV/py3_venv/lib64/python3.7/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "simple.py", line 161, in push_configs
+    """
+  File "simple.py", line 161, in push_configs
+    """
+  File "/usr/lib64/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2021-02-13 19:40:47,473 -  nornir.core -     INFO -        run() - Running task 'reset_interfaces' with args {} on 1 hosts
+2021-02-13 19:40:47,474 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'reset_interfaces'
+2021-02-13 19:40:47,474 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-13 19:40:57,951 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-13 19:41:01,887 -  nornir.core -     INFO -        run() - Running task 'reset_map' with args {} on 1 hosts
+2021-02-13 19:41:01,887 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'reset_map'
+2021-02-13 19:41:01,888 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-13 19:41:02,506 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-13 19:41:03,038 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-13 19:41:03,418 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-13 19:41:03,798 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-13 19:41:11,273 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-13 19:41:11,273 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-13 19:41:11,273 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-13 19:41:17,657 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'interface_checker'
+2021-02-13 19:41:17,657 -  nornir.core -     INFO -        run() - Running task 'config_interface' with args {} on 1 hosts
+2021-02-13 19:41:17,658 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'config_interface'
+2021-02-13 19:41:17,658 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_int_config'
+2021-02-13 19:41:17,658 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 19:41:17,662 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-13 19:41:33,297 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-13 19:41:33,298 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-13 19:41:33,298 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-13 19:41:34,249 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-13 19:41:35,201 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-13 19:41:35,800 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_config'
+2021-02-13 19:41:36,346 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 19:41:36,348 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-13 19:41:53,432 -  nornir.core -     INFO -        run() - Running task 'get_checkpoint' with args {} on 1 hosts
+2021-02-13 19:41:53,433 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'get_checkpoint'
+2021-02-13 19:41:55,696 -  nornir.core -     INFO -        run() - Running task 'save_backup' with args {'config_type': 'pre_deployment'} on 1 hosts
+2021-02-13 19:41:55,697 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'save_backup'
+2021-02-13 19:41:55,697 -  nornir.core -     INFO -        run() - Running task 'render_configs' with args {} on 1 hosts
+2021-02-13 19:41:55,697 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_configs'
+2021-02-13 19:41:55,698 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 19:41:55,701 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 19:41:55,703 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 19:41:55,704 -  nornir.core -     INFO -        run() - Running task 'merge_configs' with args {'search_str': 'RM_BGP', 'rendered_conf': 'map_rendered'} on 1 hosts
+2021-02-13 19:41:55,705 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'merge_configs'
+2021-02-13 19:41:55,732 -  nornir.core -     INFO -        run() - Running task 'merge_configs' with args {'search_str': 'PL_BGP', 'rendered_conf': 'prefix_rendered'} on 1 hosts
+2021-02-13 19:41:55,733 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'merge_configs'
+2021-02-13 19:41:55,758 -  nornir.core -     INFO -        run() - Running task 'merge_configs' with args {'search_str': 'router bgp 22', 'rendered_conf': 'bgp_rendered'} on 1 hosts
+2021-02-13 19:41:55,759 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'merge_configs'
+2021-02-13 19:41:55,786 -  nornir.core -     INFO -        run() - Running task 'save_backup' with args {'config_type': 'post_deployment'} on 1 hosts
+2021-02-13 19:41:55,787 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'save_backup'
+2021-02-13 19:41:55,787 -  nornir.core -     INFO -        run() - Running task 'push_configs' with args {} on 1 hosts
+2021-02-13 19:41:55,787 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'push_configs'
+2021-02-13 19:42:28,019 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-13 19:44:45,610 -  nornir.core -     INFO -        run() - Running task 'show_interfaces' with args {} on 1 hosts
+2021-02-13 19:44:45,610 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'show_interfaces'
+2021-02-13 19:44:45,610 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-13 19:44:51,979 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'interface_checker'
+2021-02-13 19:44:51,980 -  nornir.core -     INFO -        run() - Running task 'set_config_flags' with args {} on 1 hosts
+2021-02-13 19:44:51,980 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'set_config_flags'
+2021-02-13 19:44:51,980 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-13 19:44:52,923 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'netmiko_send_command'
+2021-02-13 19:44:53,873 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 19:44:53,877 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-13 19:45:07,861 -  nornir.core -     INFO -        run() - Running task 'get_checkpoint' with args {} on 1 hosts
+2021-02-13 19:45:07,861 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'get_checkpoint'
+2021-02-13 19:45:10,247 -  nornir.core -     INFO -        run() - Running task 'save_backup' with args {'config_type': 'pre_deployment'} on 1 hosts
+2021-02-13 19:45:10,248 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'save_backup'
+2021-02-13 19:45:10,248 -  nornir.core -     INFO -        run() - Running task 'render_configs' with args {} on 1 hosts
+2021-02-13 19:45:10,249 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'render_configs'
+2021-02-13 19:45:10,249 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 19:45:10,252 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 19:45:10,254 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'template_file'
+2021-02-13 19:45:10,256 -  nornir.core -     INFO -        run() - Running task 'merge_configs' with args {'search_str': 'RM_BGP', 'rendered_conf': 'map_rendered'} on 1 hosts
+2021-02-13 19:45:10,256 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'merge_configs'
+2021-02-13 19:45:10,284 -  nornir.core -     INFO -        run() - Running task 'merge_configs' with args {'search_str': 'PL_BGP', 'rendered_conf': 'prefix_rendered'} on 1 hosts
+2021-02-13 19:45:10,285 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'merge_configs'
+2021-02-13 19:45:10,311 -  nornir.core -     INFO -        run() - Running task 'merge_configs' with args {'search_str': 'router bgp 22', 'rendered_conf': 'bgp_rendered'} on 1 hosts
+2021-02-13 19:45:10,311 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'merge_configs'
+2021-02-13 19:45:10,336 -  nornir.core -     INFO -        run() - Running task 'save_backup' with args {'config_type': 'post_deployment'} on 1 hosts
+2021-02-13 19:45:10,337 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'save_backup'
+2021-02-13 19:45:10,338 -  nornir.core -     INFO -        run() - Running task 'push_configs' with args {} on 1 hosts
+2021-02-13 19:45:10,338 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'push_configs'
+2021-02-13 19:45:18,327 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'
+2021-02-13 19:45:30,401 - nornir.core.task -    DEBUG -      start() - Host 'nxos1': running task 'napalm_configure'

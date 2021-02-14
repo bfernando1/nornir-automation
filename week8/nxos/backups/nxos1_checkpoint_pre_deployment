@@ -1,6 +1,6 @@
 
 !Command: Checkpoint cmd vdc 1
-!Time: Sun Feb 14 01:32:14 2021
+!Time: Sun Feb 14 03:45:09 2021
 
 version 9.2(3) Bios:version  
 hostname nxos1
@@ -279,7 +279,6 @@ interface Ethernet1/3
 
 interface Ethernet1/4
   !#no switchport
-  mac-address 000c.29d1.0004
   ip address 172.31.254.1/30
   no shutdown
 
@@ -795,9 +794,6 @@ line console
 line vty
 boot nxos bootflash:/nxos.9.2.3.bin 
 router bgp 22
-  neighbor 10.1.103.2
-    remote-as 22
-    address-family ipv4 unicast
 xml server timeout 1200
 
 no priority-flow-control override-interface mode off

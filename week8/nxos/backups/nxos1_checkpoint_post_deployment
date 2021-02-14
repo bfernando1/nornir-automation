@@ -1,6 +1,6 @@
 
 !Command: Checkpoint cmd vdc 1
-!Time: Sun Feb 14 00:37:50 2021
+!Time: Sun Feb 14 03:45:09 2021
 
 version 9.2(3) Bios:version  
 hostname nxos1
@@ -280,7 +280,6 @@ interface Ethernet1/3
 
 interface Ethernet1/4
   !#no switchport
-  mac-address 000c.29d1.0004
   ip address 172.31.254.1/30
   no shutdown
 
@@ -804,9 +803,7 @@ router bgp 22
     remote-as 22
     description configured by nornir
     address-family ipv4 unicast
-      route-map RM_BGP_NXOS2_Peer
-    remote-as 22
-    address-family ipv4 unicast
+      route-map RM_BGP_NXOS2_Peer out
 xml server timeout 1200
 
 no priority-flow-control override-interface mode off

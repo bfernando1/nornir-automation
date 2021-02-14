@@ -10,7 +10,7 @@ import re
 
 CONFIG_PATH = "nxos/"
 PRE_DEPLOY = "pre_deployment"
-POST_DEPLOY = "post_deloyment"
+POST_DEPLOY = "post_deployment"
 
 def show_interfaces(task):
     cmd = "show ip int brief"
@@ -139,15 +139,21 @@ def merge_configs(task, search_str, rendered_conf):
         task.host["checkpoint"] = re.sub(
             parse_text, task.host[rendered_conf], task.host["checkpoint"]
         ) 
+        changed=True
+
+    return Result(host=task.host, changed=changed)
 
 
 def push_configs(task):
     with open(f"{CONFIG_PATH}backups/{task.host}_checkpoint_{POST_DEPLOY}") as f:
         cfg_file = f.read()
 
+    ipdb.set_trace()
     check_config = task.run(
         task=networking.napalm_configure, replace=True, configuration=cfg_file, dry_run=True
     )
+
+
     # Check for changes before replacing config
     if check_config[0].diff == "":
         pass
@@ -155,7 +161,7 @@ def push_configs(task):
         push_config = task.run(
             task=networking.napalm_configure, replace=True, configuration=cfg_file
     )
-    ipdb.set_trace()
+   
 
 
 def main():
