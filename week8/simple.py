@@ -8,7 +8,9 @@ import ipdb
 import re
 
 
-config_path = "nxos/"
+CONFIG_PATH = "nxos/"
+PRE_DEPLOY = "pre_deployment"
+POST_DEPLOY = "post_deloyment"
 
 def show_interfaces(task):
     cmd = "show ip int brief"
@@ -51,7 +53,7 @@ def interface_checker(task, int_config):
 
 def render_int_config(task):
     rendered_interface = task.run(
-        task=text.template_file, template="int.j2", path=config_path, **task.host
+        task=text.template_file, template="int.j2", path=CONFIG_PATH, **task.host
     ) 
 
 
@@ -86,7 +88,7 @@ def set_config_flags(task):
    
     # Add remaining base configs for bgp  
     bgp_base_config = task.run(
-        task=text.template_file, template="base_config.j2", path=config_path, **task.host)
+        task=text.template_file, template="base_config.j2", path=CONFIG_PATH, **task.host)
     bgp_base_config = bgp_base_config.result
     task.run(task=networking.napalm_configure, configuration=bgp_base_config)
 
@@ -98,20 +100,21 @@ def get_checkpoint(task):
 
   
 def save_backup(task, config_type):
-    Path(f"{config_path}backups").mkdir(parents=True, exist_ok=True)     
-    with open(f"{config_path}backups/{task.host}_checkpoint_{config_type}", "w") as f:
+    Path(f"{CONFIG_PATH}backups").mkdir(parents=True, exist_ok=True)     
+    with open(f"{CONFIG_PATH}backups/{task.host}_checkpoint_{config_type}", "w") as f:
         f.write(task.host["checkpoint"])
+
 
 def render_configs(task):
 
     bgp_rendered = task.run(
-        task=text.template_file, template="bgp_config.j2", path=config_path, **task.host
+        task=text.template_file, template="bgp_config.j2", path=CONFIG_PATH, **task.host
     )
     prefix_rendered = task.run(
-        task=text.template_file, template="prefix_list.j2", path=config_path, **task.host
+        task=text.template_file, template="prefix_list.j2", path=CONFIG_PATH, **task.host
     )
     map_rendered = task.run( 
-        task=text.template_file, template="route_map.j2", path=config_path, **task.host
+        task=text.template_file, template="route_map.j2", path=CONFIG_PATH, **task.host
     )
     task.host["bgp_rendered"] = bgp_rendered.result.strip()
     task.host["prefix_rendered"] = prefix_rendered.result.strip()
@@ -137,6 +140,24 @@ def merge_configs(task, search_str, rendered_conf):
             parse_text, task.host[rendered_conf], task.host["checkpoint"]
         ) 
 
+
+def push_configs(task):
+    with open(f"{CONFIG_PATH}backups/{task.host}_checkpoint_{POST_DEPLOY}") as f:
+        cfg_file = f.read()
+
+    check_config = task.run(
+        task=networking.napalm_configure, replace=True, configuration=cfg_file, dry_run=True
+    )
+    # Check for changes before replacing config
+    if check_config[0].diff == "":
+        pass
+    else:
+        push_config = task.run(
+            task=networking.napalm_configure, replace=True, configuration=cfg_file
+    )
+    ipdb.set_trace()
+
+
 def main():
     nr = InitNornir(config_file="config.yaml")
     nr = nr.filter(name="nxos1")
@@ -158,7 +179,7 @@ def main():
     checkpoint_results = nr.run(task=get_checkpoint)
     print_result(checkpoint_results) 
 
-    pre_deploy_config = nr.run(task=save_backup, config_type="pre_deployment")
+    pre_deploy_config = nr.run(task=save_backup, config_type=PRE_DEPLOY)
     print_result(pre_deploy_config)
 
     # Render configs
@@ -178,8 +199,12 @@ def main():
         print_result(merge_results)
 
 
-    deploy_config_results = nr.run(task=save_backup, config_type="post_deployment")
+    deploy_config_results = nr.run(task=save_backup, config_type=POST_DEPLOY)
     print_result(deploy_config_results)
+
+    push_config_results = nr.run(task=push_configs)  
+    print_result(push_config_results)
+    
     
 if __name__ == "__main__":
     main()
