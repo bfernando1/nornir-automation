@@ -1,11 +1,13 @@
 from nornir import InitNornir
 from nornir.plugins.tasks import networking, text
 from nornir.plugins.functions.text import print_result
+from nornir.core.filter import F
 from nornir.core.task import Result
 from ciscoconfparse import CiscoConfParse
 from pathlib import Path
 import ipdb
 import re
+import time
 
 
 CONFIG_PATH = "nxos/"
@@ -23,7 +25,7 @@ def show_interfaces(task):
     # Check if zero interfaces configured
     if type(result) == str:
         changed = True
-        result = "adding new interfaces"
+        result = f"{task.host.name}: adding new interfaces"
     # Check if interfaces are configured correctly
     elif type(result) != str:
         int_checker_result = task.run(task=interface_checker, int_config=result)
@@ -31,7 +33,7 @@ def show_interfaces(task):
         result = int_checker_result.result
     else:
         changed = False
-        result = "no interface changes"
+        result = f"{task.host.name}: no interface changes"
     return Result(host=task.host, result=result, changed=changed)
 
 
@@ -51,7 +53,7 @@ def interface_checker(task, int_config):
             pass 
         else:
             changed = True
-            result = "correcting 1 or more interface configuration"
+            result = f"{task.host.name}: correcting 1 or more interface configuration"
     return Result(host=task.host, changed=changed, result=result)
     
 
@@ -156,7 +158,6 @@ def merge_configs(task, search_str, rendered_conf):
         ) 
         changed = True
         task.host["checkpoint"] = updated_config
-        ipdb.set_trace()
 
     return Result(host=task.host, changed=changed)
 
@@ -180,10 +181,26 @@ def push_configs(task):
             task=networking.napalm_configure, replace=True, configuration=cfg_file
         )
 
+def validate_bgp(task):
+    bgp_peer = f"{task.host['bgp']['remote_peer']}"
+    bgp_result = task.run(
+        task=networking.napalm_get, getters=["bgp_neighbors"]
+    )
+    print("*" * 80)
+    if not bgp_result.result["bgp_neighbors"]["global"]["peers"][bgp_peer][
+        "is_up"
+    ]:
+        print(f"Failed, BGP peer {bgp_peer} is not up...")
+    else:
+        print(f"Success, BGP peer {bgp_peer} is up!")
+    print("*" * 80)
+    print()
+    
 
 def main():
     nr = InitNornir(config_file="config.yaml")
-    nr = nr.filter(name="nxos2")
+    #nr = nr.filter(name="nxos1")
+    nr = nr.filter(F(groups__contains="nxos"))
 
     # Configure interfaces
     check_int_results = nr.run(task=show_interfaces)
@@ -230,9 +247,14 @@ def main():
     print_result(deploy_config_results)
     
     # Push configs
-    push_config_results = nr.run(task=push_configs)  
+    push_config_results = nr.run(task=push_configs)
     print_result(push_config_results)
-    
-    
+   
+    # Validate BGP 
+    for i in range(5, 0, -1):
+        time.sleep(1)
+    nr.run(task=validate_bgp)
+
+
 if __name__ == "__main__":
     main()

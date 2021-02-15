@@ -5,7 +5,7 @@ from nornir.core.filter import F
 
 
 def reset_interfaces(task):
-    interfaces = ["e1/4", "lo101-102"]
+    interfaces = ["e1/1", "lo101-102"]
     cmd = "default int "
     for intf in interfaces:
         task.run(task=networking.netmiko_send_config, config_commands=f"{cmd}{intf}")

@@ -3,7 +3,7 @@
 !Time: Mon Feb 15 04:51:29 2021
 
 version 9.2(3) Bios:version  
-hostname nxos1
+hostname nxos2
 class-map type network-qos c-nq1
   description Default class on qos-group 1
   match qos-group 1
@@ -66,7 +66,7 @@ policy-map type network-qos default-8q-nq-policy
     mtu 1500
   class type network-qos c-8q-nq-default
     mtu 1500
-vdc nxos1 id 1
+vdc nxos2 id 1
   limit-resource vlan minimum 16 maximum 4094
   limit-resource vrf minimum 2 maximum 4096
   limit-resource port-channel minimum 0 maximum 511
@@ -239,7 +239,8 @@ vlan 2
 vlan 3
 vlan 4
 ip prefix-list PL_BGP_BOGUS seq 5 permit 1.1.1.1/32 
-route-map RM_BGP_BOGUS permit 10
+route-map RM_BGP_NXOS1_Peer permit 100
+  match ip address prefix-list PL_BGP_Loopback101 
 vrf context management
   ip route 0.0.0.0/0 10.0.2.2
 
@@ -253,12 +254,12 @@ interface Vlan1
 
 interface Ethernet1/1
   !#no switchport
-  ip address 172.31.100.1/30
+  ip address 172.31.100.2/30
   no shutdown
 
 interface Ethernet1/2
   !#no switchport
-  mac-address 000c.29d1.0002
+  mac-address 000c.29d2.0002
   no shutdown
 
 interface Ethernet1/3
@@ -267,7 +268,7 @@ interface Ethernet1/3
 
 interface Ethernet1/4
   !#no switchport
-  ip address 172.31.254.1/30
+  ip address 172.31.254.2/30
   no shutdown
 
 interface Ethernet1/5
@@ -771,11 +772,11 @@ interface mgmt0
   vrf member management
 
 interface loopback101
-  ip address 172.31.101.101/32
+  ip address 172.31.101.102/32
   !#no shutdown
 
 interface loopback102
-  ip address 172.31.102.101/32
+  ip address 172.31.102.102/32
   !#no shutdown
 cli alias name wr copy run start
 line console

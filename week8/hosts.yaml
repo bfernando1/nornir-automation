@@ -15,8 +15,8 @@ nxos1:
       - nxos
     data:
       interfaces:
-        - int_name: Eth1/4
-          ip_address: 172.31.254.1
+        - int_name: Eth1/1
+          ip_address: 172.31.100.1
           subnet_mask: 255.255.255.252 
         - int_name: Lo101
           ip_address: 172.31.101.101
@@ -31,7 +31,7 @@ nxos1:
           - {ip: 172.31.101.101, route_mask: 32}
           - {ip: 172.31.102.101, route_mask: 32}
         remote_asn: 22
-        remote_peer: 172.31.254.2
+        remote_peer: 172.31.100.2
         route_map: RM_BGP_NXOS2_Peer
         prefix_list: PL_BGP_Loopback101
         
@@ -41,8 +41,8 @@ nxos2:
       - nxos
     data:
       interfaces:
-        - int_name: Eth1/4
-          ip_address: 172.31.254.2
+        - int_name: Eth1/1
+          ip_address: 172.31.100.2
           subnet_mask: 255.255.255.252 
         - int_name: Lo101
           ip_address: 172.31.101.102
@@ -57,7 +57,7 @@ nxos2:
           - {ip: 172.31.101.102, route_mask: 32}
           - {ip: 172.31.102.102, route_mask: 32}
         remote_asn: 22
-        remote_peer: 172.31.254.1
+        remote_peer: 172.31.100.1
         route_map: RM_BGP_NXOS1_Peer
         prefix_list: PL_BGP_Loopback101
 
