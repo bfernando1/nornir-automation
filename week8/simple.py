@@ -130,7 +130,9 @@ def render_configs(task):
 
 def merge_configs(task, search_str, rendered_conf):
     parse = CiscoConfParse(
-        "nxos/backups/nxos1_checkpoint_pre_deployment", syntax="nxos", factory=True
+        f"{CONFIG_PATH}backups/{task.host}_checkpoint_{PRE_DEPLOY}",
+        syntax="nxos", 
+        factory=True,
     )
     parse_text = ""
     changed = False
@@ -154,6 +156,7 @@ def merge_configs(task, search_str, rendered_conf):
         ) 
         changed = True
         task.host["checkpoint"] = updated_config
+        ipdb.set_trace()
 
     return Result(host=task.host, changed=changed)
 
@@ -180,7 +183,7 @@ def push_configs(task):
 
 def main():
     nr = InitNornir(config_file="config.yaml")
-    nr = nr.filter(name="nxos1")
+    nr = nr.filter(name="nxos2")
 
     # Configure interfaces
     check_int_results = nr.run(task=show_interfaces)
@@ -221,6 +224,8 @@ def main():
             rendered_conf=parse["rendered"],
         )
         print_result(merge_results)
+    
+    # Save updated config to disk
     deploy_config_results = nr.run(task=save_backup, config_type=POST_DEPLOY)
     print_result(deploy_config_results)
     

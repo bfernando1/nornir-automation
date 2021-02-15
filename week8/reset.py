@@ -1,6 +1,7 @@
 from nornir import InitNornir
 from nornir.plugins.functions.text import print_result
 from nornir.plugins.tasks import networking
+from nornir.core.filter import F
 
 
 def reset_interfaces(task):
@@ -24,7 +25,7 @@ def reset_map(task):
 
 def main():
     nr = InitNornir(config_file="config.yaml")
-    nr = nr.filter(name="nxos1")
+    nr = nr.filter(F(groups__contains="nxos"))
     int_agg_results = nr.run(task=reset_interfaces)
     print_result(int_agg_results)
 

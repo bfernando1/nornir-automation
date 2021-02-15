@@ -39,6 +39,27 @@ nxos2:
     hostname: nxos2.lasthop.io
     groups:
       - nxos
+    data:
+      interfaces:
+        - int_name: Eth1/4
+          ip_address: 172.31.254.2
+          subnet_mask: 255.255.255.252 
+        - int_name: Lo101
+          ip_address: 172.31.101.102
+          subnet_mask: 255.255.255.255
+        - int_name: Lo102
+          ip_address: 172.31.102.102
+          subnet_mask: 255.255.255.255
+      bgp:
+        asn: 22
+        router_id: 172.31.101.102
+        networks:
+          - {ip: 172.31.101.102, route_mask: 32}
+          - {ip: 172.31.102.102, route_mask: 32}
+        remote_asn: 22
+        remote_peer: 172.31.254.1
+        route_map: RM_BGP_NXOS1_Peer
+        prefix_list: PL_BGP_Loopback101
 
 arista1:
     hostname: arista1.lasthop.io
