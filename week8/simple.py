@@ -12,11 +12,11 @@ CONFIG_PATH = "nxos/"
 PRE_DEPLOY = "pre_deployment"
 POST_DEPLOY = "post_deployment"
 
+
 def show_interfaces(task):
     cmd = "show ip int brief"
-    int_brief = task.run(networking.netmiko_send_command,
-                command_string=cmd,
-                use_genie=True
+    int_brief = task.run(
+        networking.netmiko_send_command, command_string=cmd, use_genie=True
     )
     result = int_brief[0].result
             
@@ -41,9 +41,13 @@ def interface_checker(task, int_config):
 
     for intf in task.host.data["interfaces"]:
         check_interface = intf["int_name"]
-        if check_interface in int_config['interface'] and \
-            "admin-up" in int_config["interface"][check_interface]["interface_status"] and \
-            intf["ip_address"] == int_config["interface"][check_interface]['ip_address']:
+        if (
+            check_interface in int_config['interface'] 
+            and "admin-up" 
+            in int_config["interface"][check_interface]["interface_status"] 
+            and intf["ip_address"] 
+            == int_config["interface"][check_interface]['ip_address']
+        ):
             pass 
         else:
             changed = True
@@ -65,11 +69,11 @@ def config_interface(task):
     )
 
 def set_config_flags(task):
-    show_prefix = task.run(task=networking.netmiko_send_command, 
-                           command_string="show ip prefix-list"
+    show_prefix = task.run(
+        task=networking.netmiko_send_command, command_string="show ip prefix-list"
     )
-    show_map = task.run(task=networking.netmiko_send_command,
-                        command_string="show route-map"
+    show_map = task.run(
+        task=networking.netmiko_send_command, command_string="show route-map"
     )
     config_prefix = "ip prefix-list PL_BGP_BOGUS permit 1.1.1.1/32"
     config_map = "route-map RM_BGP_BOGUS"
@@ -88,7 +92,10 @@ def set_config_flags(task):
    
     # Add remaining base configs for bgp  
     bgp_base_config = task.run(
-        task=text.template_file, template="base_config.j2", path=CONFIG_PATH, **task.host
+        task=text.template_file, 
+        template="base_config.j2", 
+        path=CONFIG_PATH, 
+        **task.host
     )
     bgp_base_config = bgp_base_config.result
     task.run(task=networking.napalm_configure, configuration=bgp_base_config)
@@ -107,7 +114,6 @@ def save_backup(task, config_type):
 
 
 def render_configs(task):
-
     bgp_rendered = task.run(
         task=text.template_file, template="bgp_config.j2", path=CONFIG_PATH, **task.host
     )
@@ -127,20 +133,17 @@ def merge_configs(task, search_str, rendered_conf):
         "nxos/backups/nxos1_checkpoint_pre_deployment", syntax="nxos", factory=True
     )
     parse_text = ""
-    changed=False
+    changed = False
 
     # Parse current config 
     for parent_OBJ in parse.find_objects(search_str):
-        parse_text += parent_OBJ.parent.text
+        parse_text += f"\n{parent_OBJ.parent.text}"
         try:
             for child_OBJ in parent_OBJ.all_children:
                 parse_text += f"\n{child_OBJ.text}"
         except AttributeError:
-            pass
-
+            pass 
     parse_text = parse_text.strip()
-    #for search in parse.find_blocks(search_str):
-    #    parse_text += f"{search}\n"
     
     # Comapare current config and rendered configs
     if parse_text == task.host[rendered_conf]:
@@ -149,8 +152,7 @@ def merge_configs(task, search_str, rendered_conf):
         updated_config = re.sub(
             parse_text, task.host[rendered_conf], task.host["checkpoint"]
         ) 
-        changed=True
-        ipdb.set_trace()
+        changed = True
         task.host["checkpoint"] = updated_config
 
     return Result(host=task.host, changed=changed)
@@ -161,9 +163,11 @@ def push_configs(task):
         cfg_file = f.read()
 
     check_config = task.run(
-        task=networking.napalm_configure, replace=True, configuration=cfg_file, dry_run=True
+        task=networking.napalm_configure, 
+        replace=True, 
+        configuration=cfg_file, 
+        dry_run=True
     )
-
 
     # Check for changes before replacing config
     if check_config[0].diff == "":
@@ -171,8 +175,7 @@ def push_configs(task):
     else:
         push_config = task.run(
             task=networking.napalm_configure, replace=True, configuration=cfg_file
-    )
-   
+        )
 
 
 def main():
@@ -192,17 +195,18 @@ def main():
     # Set config flags
     flag_results = nr.run(task=set_config_flags)
     print_result(flag_results)
-   
+    
+    # Get checkpoint 
     checkpoint_results = nr.run(task=get_checkpoint)
     print_result(checkpoint_results) 
-
+    
+    # Save config locally
     pre_deploy_config = nr.run(task=save_backup, config_type=PRE_DEPLOY)
     print_result(pre_deploy_config)
 
     # Render configs
     render_results = nr.run(task=render_configs)
     print_result(render_results)
-    
 
     # Merge config
     merge_dict = [
@@ -211,14 +215,16 @@ def main():
         {"search": "router bgp 22", "rendered": "bgp_rendered"}
     ]
     for parse in merge_dict:
-        merge_results = nr.run(task=
-            merge_configs, search_str=parse["search"], rendered_conf=parse["rendered"])
+        merge_results = nr.run(
+            task=merge_configs, 
+            search_str=parse["search"], 
+            rendered_conf=parse["rendered"],
+        )
         print_result(merge_results)
-
-
     deploy_config_results = nr.run(task=save_backup, config_type=POST_DEPLOY)
     print_result(deploy_config_results)
-
+    
+    # Push configs
     push_config_results = nr.run(task=push_configs)  
     print_result(push_config_results)
     
