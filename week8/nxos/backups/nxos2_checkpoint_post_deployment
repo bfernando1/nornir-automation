@@ -1,6 +1,6 @@
 
 !Command: Checkpoint cmd vdc 1
-!Time: Tue Feb 16 05:44:44 2021
+!Time: Tue Feb 16 17:46:23 2021
 
 version 9.2(3) Bios:version  
 hostname nxos2
@@ -255,7 +255,6 @@ interface Vlan1
 interface Ethernet1/1
   !#shutdown
   !#no switchport
-  ip address 10.1.100.2/24
 
 interface Ethernet1/2
   !#no switchport
@@ -265,7 +264,7 @@ interface Ethernet1/2
 interface Ethernet1/3
   !#no switchport
   mac-address 000c.29d2.0003
-  ip address 10.1.79.2/24
+  ip address 10.23.23.2/24
   no shutdown
 
 interface Ethernet1/4
