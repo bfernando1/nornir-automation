@@ -15,7 +15,7 @@ nxos1:
       - nxos
     data:
       interfaces:
-        - int_name: Eth1/1
+        - int_name: Eth1/4
           ip_address: 172.31.100.1
           subnet_mask: 255.255.255.252 
         - int_name: Lo101
@@ -27,13 +27,25 @@ nxos1:
       bgp:
         asn: 22
         router_id: 172.31.101.101
-        networks:
+        ipv4_unicast_prefixes:
           - {ip: 172.31.101.101, route_mask: 32}
           - {ip: 172.31.102.101, route_mask: 32}
-        remote_asn: 22
-        remote_peer: 172.31.100.2
-        route_map: RM_BGP_NXOS2_Peer
-        prefix_list: PL_BGP_Loopback101
+        neighbors:
+          - remote_peer: 172.31.100.2
+            remote_asn: 22
+            route_maps:
+              - direction: out
+                name: NXOS2_Peer
+      bgp_prefix_lists:
+        - Loopback101:
+          - seq_num: 5
+            action: permit
+            prefix: 172.31.101.101/32
+      bgp_route_maps:
+        - NXOS2_Peer:
+          - seq_num: 100 
+            action: permit
+            match: Loopback101
         
 nxos2:
     hostname: nxos2.lasthop.io
@@ -41,7 +53,7 @@ nxos2:
       - nxos
     data:
       interfaces:
-        - int_name: Eth1/1
+        - int_name: Eth1/4
           ip_address: 172.31.100.2
           subnet_mask: 255.255.255.252 
         - int_name: Lo101
@@ -53,13 +65,25 @@ nxos2:
       bgp:
         asn: 22
         router_id: 172.31.101.102
-        networks:
+        ipv4_unicast_prefixes:
           - {ip: 172.31.101.102, route_mask: 32}
           - {ip: 172.31.102.102, route_mask: 32}
-        remote_asn: 22
-        remote_peer: 172.31.100.1
-        route_map: RM_BGP_NXOS1_Peer
-        prefix_list: PL_BGP_Loopback101
+        neighbors:
+          - remote_peer: 172.31.100.1
+            remote_asn: 22
+            route_maps:
+              - direction: out
+                name: NXOS1_Peer
+      bgp_prefix_lists:
+        - Loopback101:
+          - seq_num: 5
+            action: permit
+            prefix: 172.31.101.102/32
+      bgp_route_maps:
+        - NXOS1_Peer:
+          - seq_num: 100 
+            action: permit
+            match: Loopback101
 
 arista1:
     hostname: arista1.lasthop.io

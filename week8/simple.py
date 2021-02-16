@@ -11,6 +11,7 @@ import time
 
 
 CONFIG_PATH = "nxos/"
+TEMPLATES = f"{CONFIG_PATH}/templates/"
 PRE_DEPLOY = "pre_deployment"
 POST_DEPLOY = "post_deployment"
 
@@ -59,7 +60,7 @@ def interface_checker(task, int_config):
 
 def render_int_config(task):
     rendered_interface = task.run(
-        task=text.template_file, template="int.j2", path=CONFIG_PATH, **task.host
+        task=text.template_file, template="int.j2", path=TEMPLATES, **task.host
     ) 
 
 
@@ -72,31 +73,27 @@ def config_interface(task):
 
 def set_config_flags(task):
     show_prefix = task.run(
-        task=networking.netmiko_send_command, command_string="show ip prefix-list"
+        task=networking.netmiko_send_command, command_string="show ip prefix-list | i PL_BGP_"
     )
     show_map = task.run(
-        task=networking.netmiko_send_command, command_string="show route-map"
+        task=networking.netmiko_send_command, command_string="show route-map | i RM_BGP_"
     )
     config_prefix = "ip prefix-list PL_BGP_BOGUS permit 1.1.1.1/32"
     config_map = "route-map RM_BGP_BOGUS"
     
     # Create bogus prefix-list if none exist
-    if "PL_BGP" in show_prefix.result:
-        pass
-    else:
+    if not show_prefix.result:
         task.run(task=networking.netmiko_send_config, config_commands=config_prefix)
     
     # Create bogus route-map if none exists 
-    if "RM_BGP" in show_map.result:
-        pass
-    else:
+    if not show_map.result:
         task.run(task=networking.netmiko_send_config, config_commands=config_map)
    
     # Add remaining base configs for bgp  
     bgp_base_config = task.run(
         task=text.template_file, 
         template="base_config.j2", 
-        path=CONFIG_PATH, 
+        path=TEMPLATES, 
         **task.host
     )
     bgp_base_config = bgp_base_config.result
@@ -117,20 +114,24 @@ def save_backup(task, config_type):
 
 def render_configs(task):
     bgp_rendered = task.run(
-        task=text.template_file, template="bgp_config.j2", path=CONFIG_PATH, **task.host
+        task=text.template_file, template="bgp_config.j2", path=TEMPLATES, **task.host
     )
+
     prefix_rendered = task.run(
-        task=text.template_file, template="prefix_list.j2", path=CONFIG_PATH, **task.host
+        task=text.template_file, template="prefix_list.j2", path=TEMPLATES, **task.host
     )
+    
     map_rendered = task.run( 
-        task=text.template_file, template="route_map.j2", path=CONFIG_PATH, **task.host
+        task=text.template_file, template="route_map.j2", path=TEMPLATES, **task.host
     )
-    task.host["bgp_rendered"] = bgp_rendered.result.strip()
-    task.host["prefix_rendered"] = prefix_rendered.result.strip()
-    task.host["map_rendered"] = map_rendered.result.strip()
+
+    task.host["bgp_rendered"] = bgp_rendered.result
+    task.host["prefix_rendered"] = prefix_rendered.result
+    task.host["map_rendered"] = map_rendered.result
 
 
 def merge_configs(task, search_str, rendered_conf):
+    
     parse = CiscoConfParse(
         f"{CONFIG_PATH}backups/{task.host}_checkpoint_{PRE_DEPLOY}",
         syntax="nxos", 
@@ -182,17 +183,18 @@ def push_configs(task):
         )
 
 def validate_bgp(task):
-    bgp_peer = f"{task.host['bgp']['remote_peer']}"
     bgp_result = task.run(
         task=networking.napalm_get, getters=["bgp_neighbors"]
     )
     print("*" * 80)
-    if not bgp_result.result["bgp_neighbors"]["global"]["peers"][bgp_peer][
-        "is_up"
-    ]:
-        print(f"Failed, BGP peer {bgp_peer} is not up...")
-    else:
-        print(f"Success, BGP peer {bgp_peer} is up!")
+    for peer in task.host["bgp"]["neighbors"]:
+        bgp_peer = peer["remote_peer"] 
+        if not bgp_result.result["bgp_neighbors"]["global"]["peers"][bgp_peer][
+            "is_up"
+        ]:
+            print(f"Failed, BGP peer {bgp_peer} is not up...")
+        else:
+            print(f"Success, BGP peer {bgp_peer} is up!")
     print("*" * 80)
     print()
     

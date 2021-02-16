@@ -1,0 +1,7 @@
+{%- for pl_list in bgp_prefix_lists %}
+{%- for intf, names in pl_list.items() %}
+{%- for val in names %}
+ip prefix-list PL_BGP_{{ intf }} seq {{ val.seq_num }} {{ val.action }} {{ val.prefix }}
+{%- endfor %}
+{%- endfor %}
+{%- endfor %}

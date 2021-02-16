@@ -1,0 +1,8 @@
+{%- for route_maps in bgp_route_maps %}
+{%- for name, entries in route_maps.items() %}
+{%- for entry in entries %}
+route-map RM_BGP_{{ name }} {{ entry.action }} {{ entry.seq_num }}
+  match ip address prefix-list PL_BGP_{{ entry.match }}
+{%- endfor %}
+{%- endfor %}
+{%- endfor %}
